@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-//TODO cambiar el nombre
+//TODO cambiar el nombre, tengo que acordarme de cambiar el nombre
 public class New {
     public static void main(String[] arg) {
         Scanner in = new Scanner(System.in);

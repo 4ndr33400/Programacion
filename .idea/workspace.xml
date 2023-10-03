@@ -1,32 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1184aae8-58c0-4f06-88e1-a9c2bae423b1" name="Changes" comment="" />
+    <list default="true" id="1184aae8-58c0-4f06-88e1-a9c2bae423b1" name="Changes" comment="nuevos ej">
+      <change afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio20.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programacion.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Programacion.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Ejercicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Ejercicio10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema0/Ejercicio10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Ejercicio5.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema0/Ejercicio5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Ejercicio6.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema0/Ejercicio6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Ejercicio7.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema0/Ejercicio7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Ejercicio8.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema0/Ejercicio8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Ejercicio9.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema0/Ejercicio9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/New.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Tema1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Tema1Ejercicio7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Tema1Ejercicio9.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Ej10Tema1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Ej10Tema1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ej1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ej1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio11.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio11.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio12.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio12.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio13.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio13.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio14.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio14.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio15.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio15.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio16.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio16.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio17.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio17.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio18.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio18.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio19.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio19.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio3.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio4.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio5.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio6.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio7.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio8.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio9.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints>
+      <file url="file://$PROJECT_DIR$/Tema1/Tema1Ejercicio12.java" />
+    </disable_hints>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;4ndr33400&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="3d5b6a46-987c-45fc-b5d1-ed4ce603c613" />
+        <option name="url" value="https://github.com/4ndr33400/Programacion.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Tema1/Tema1Ejercicio12.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2VygJncqTFhkupUwffjnnWqnW3i" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "onboarding.tips.debug.path": "/home/andper/IdeaProjects/Programacion/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/andper/IdeaProjects/Programacion/src/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -36,7 +113,71 @@
       <option name="presentableId" value="Default" />
       <updated>1695813666647</updated>
     </task>
+    <task id="LOCAL-00001" summary="cambiar">
+      <option name="closed" value="true" />
+      <created>1695815692500</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695815692500</updated>
+    </task>
+    <task id="LOCAL-00002" summary="cambiar">
+      <option name="closed" value="true" />
+      <created>1695882390122</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695882390122</updated>
+    </task>
+    <task id="LOCAL-00003" summary="cambios">
+      <option name="closed" value="true" />
+      <created>1695885545192</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695885545192</updated>
+    </task>
+    <task id="LOCAL-00004" summary="nuevos ej">
+      <option name="closed" value="true" />
+      <created>1695896834106</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695896834106</updated>
+    </task>
+    <task id="LOCAL-00005" summary="nuevos ej">
+      <option name="closed" value="true" />
+      <created>1695896847229</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695896847229</updated>
+    </task>
+    <task id="LOCAL-00006" summary="nuevos ej">
+      <option name="closed" value="true" />
+      <created>1696234566701</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696234566701</updated>
+    </task>
+    <task id="LOCAL-00007" summary="nuevos ej">
+      <option name="closed" value="true" />
+      <created>1696326931789</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696326931789</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="cambiar" />
+    <MESSAGE value="cambios" />
+    <MESSAGE value="nuevos ej" />
+    <option name="LAST_COMMIT_MESSAGE" value="nuevos ej" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,4 +1,4 @@
-public class Tema1 {
+class Tema1 {
     public static void main(String[] arg) {
         int i = 24 % 5;
         System.out.println(i);

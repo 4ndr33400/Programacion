@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Ejercicio {
+class Ejercicio {
     public static void main (String[] arg){
         Scanner in = new Scanner(System.in);
         int X =in.nextInt();
@@ -7,9 +7,14 @@ public class Ejercicio {
 
         if (Y==X) {
             System.out.println("They are equals");
-        } else if (X>Y){   System.out.println(X+ " is bigger than "+ Y);
-        }else {System.out.println(Y+ " is bigger than "+X);
+        } else if (X>Y)
+        {   System.out.println(X+ " is bigger than "+ Y);
         }
+        else
+        {
+            System.out.println(Y+ " is bigger than "+X);
+        }
+
         }
     }
 

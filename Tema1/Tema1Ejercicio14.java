@@ -3,7 +3,7 @@ public class Tema1Ejercicio14 {
     public static void main (String [] args ){
         Scanner in = new Scanner (System.in);
 
-        System.out.println("Introduzca el numero de personas que deseen hospedarse");
+        System.out.println("Introduzca el numero de personas");
         int P = in.nextInt();
         System.out.println("Introduzca los dias de estancia");
         int D = in.nextInt();

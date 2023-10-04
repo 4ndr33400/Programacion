@@ -12,6 +12,6 @@ public class Tema1Ejercicio21 {
 
             if (i%2 == 0){ sum=sum+i;
             }i++;
-        }System.out.print("wawa" + sum);
+        }System.out.print(sum);
     }
 }

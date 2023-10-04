@@ -10,7 +10,7 @@ public class Tema1Ejercicio22 {
             i = i/10;
             count ++;
             }
-        System.out.println("wawa " + count);
+        System.out.println(count);
         }
 
 

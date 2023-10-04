@@ -20,7 +20,7 @@ public class Tema1Ejercicio23 {
             }
             imput++;
         }
-        System.out.println ("La media de los numeros es, "+ sum);
+        System.out.println ("La media de los numeros es "+ sum);
 
     }
 }

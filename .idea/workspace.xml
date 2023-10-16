@@ -1,7 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1184aae8-58c0-4f06-88e1-a9c2bae423b1" name="Changes" comment="" />
+    <list default="true" id="1184aae8-58c0-4f06-88e1-a9c2bae423b1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Ejercicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema0/Ejercicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Ejercicio10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema0/Ejercicio10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Ejercicio5.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema0/Ejercicio5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Ejercicio6.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema0/Ejercicio6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Ejercicio7.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema0/Ejercicio7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Ejercicio8.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema0/Ejercicio8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Ejercicio9.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema0/Ejercicio9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/New.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema0/New.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Tema1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema0/Tema1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Tema1Ejercicio7.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema0/Tema1Ejercicio7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema0/Tema1Ejercicio9.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema0/Tema1Ejercicio9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Ej10Tema1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Ej10Tema1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ej1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ej1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio10.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio11.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio11.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio12.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio12.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio13.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio13.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio14.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio14.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio15.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio15.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio16.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio16.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio17.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio17.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio18.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio18.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio19.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio19.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio20.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio20.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio21.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio21.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio22.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio22.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio23.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio23.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio24.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio24.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio3.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio4.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio5.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio6.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio7.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio8.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema1/Tema1Ejercicio9.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema1/Tema1Ejercicio9.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,23 +53,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2VygJncqTFhkupUwffjnnWqnW3i" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "onboarding.tips.debug.path": "/home/andper/IdeaProjects/Programacion/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/andper/IdeaProjects/Programacion/src/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

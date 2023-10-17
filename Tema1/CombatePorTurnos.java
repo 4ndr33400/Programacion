@@ -329,12 +329,10 @@ public class CombatePorTurnos {
 
            int atacar = random.nextInt(10);
 
-
            int curarse1 = random.nextInt(50);
            int curarse2 = random.nextInt(50);
            int hit1 = random.nextInt(Atq1);
            int hit2 = random.nextInt(Atq2);
-
 
            int decision = 0;
 
@@ -429,12 +427,17 @@ public class CombatePorTurnos {
                    next = shi.next().charAt(0);
                }
            }
-
+           
 
            if (Vida1 > 0 && Vida2 > 0){
            System.out.println ("Se han realizado " + rondas + " rondas");
-           System.out.println("Al Jugador 1 le quedan " + Vida1 + " puntos de vida");
-           System.out.println("Al Jugador 2 le quedan " + Vida2 + " puntos de vida");
+           System.out.println("Vida JUGADOR 1");
+           for (int i = 1; i <= vida1; i++) {
+            System.out.print("-"); 
+            }
+            System.out.println ("Vida JUGADOR 2");
+            for (int i = 1; i <= vida1; i++) {
+                System.out.print("-"); 
            System.out.println(" // Introduce n para continuar // ");
            next = shi.next().charAt(0);
            }
@@ -481,7 +484,6 @@ public class CombatePorTurnos {
                    System.out.println("EL JUGADOR 1 GANA LA PARTIDA");
                    break;
 
-
                } else if (Vida1 <= 0 ) {
                    System.out.println ("El jugador 1 ve su vida reducida a 0.....          // Introduce n para continuar//");
                    next = shi.next().charAt(0);
@@ -517,7 +519,6 @@ public class CombatePorTurnos {
                                    ⣀⠀⢘⣛⣛⡛⠛⡛⣟⢛⡛⣛⡛⠛⠛⢻⣉⡉⡉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⢉⣛⣛⣛⣛⣛⣛⣛⣛⣛⣓""");
                    System.out.println("EL JUGADOR 2 GANA LA PARTIDA");
                    break;
-
 
                } else if (rondas == 10){
                    System.out.println("Ambos jugadores caen al suelo exhaustos al superar el numero de rondas             //Introduce next para continuar//");

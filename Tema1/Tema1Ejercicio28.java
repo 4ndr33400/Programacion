@@ -1,18 +1,16 @@
 import java.util.Random;
 import java.util.Scanner;
-public class Tema1Ejericio28 {
-   public static void main(String [] arg){
-       Scanner lemonhope = new Scanner (System.in);
+class Tema1Ejericio28 {
+   public static void main(String [] arg) {
+       Scanner lemonhope = new Scanner(System.in);
 
 
-      Random random = new Random ();
-
-
+       Random random = new Random();
 
 
        int randomInt = random.nextInt(99999);
        System.out.println("Lets see if u are lucky" + randomInt);
-       int contador =0;
+       int contador = 0;
 
 
        while (contador <= 5) {
@@ -20,11 +18,15 @@ public class Tema1Ejericio28 {
            int N = lemonhope.nextInt();
 
 
-           if (N == randomInt ){
-               System.out.println ("You won the lottery");
+           if (N == randomInt) {
+               System.out.println("You won the lottery");
                break;
-           } else {System.out.println("U werent luck today");}
+           } else {
+               System.out.println("U werent luck today");
+           }
            contador++;
 
 
        }
+   }
+}

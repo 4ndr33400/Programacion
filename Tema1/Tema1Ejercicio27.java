@@ -1,4 +1,4 @@
-public class ejercicio27 {
+class ejercicio27 {
     public static void main(String[]args){
         int numero = 1;
         int condicion = 0;

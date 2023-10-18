@@ -3,7 +3,7 @@ public class Tema1Ejercicio19 {
     public static void main (String [] args){
         Scanner in = new Scanner (System.in);
 
-System.out.println ("A continuacion se van a mostrar todos los numeros pares del 1 al 1000");
+System.out.println ("A continuacion se van a mostrar todos los numeros pares del 1 al 1000 :)");
 
         int i = 0;
 

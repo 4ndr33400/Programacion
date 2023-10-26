@@ -1,23 +1,21 @@
 import java.util.Scanner;
 public class Tema2Ejercicio6 {
-    public static void tables (int number){
-        int  multiplier =0;
-        int result = 0;
-        while (multiplier < 11){
-            System.out.println(number + "*" + multiplier +" = " + result);
-            multiplier ++;
-            result = number * multiplier ;
-
+    public static void tables (int numero){
+        int  multiplicar =0;
+        int resultado = 0;
+        while (multiplicar < 11){
+            System.out.println(numero + "*" + multiplicar +" = " + resultado);
+            multiplicar ++;
+            resultado = numero * multiplicar ;
         }
     }
     public static void main (String [] args){
-        Scanner haha = new Scanner (System.in);
-        int number =1;
-        System.out.println("Introduce n to see all em tables from 1 to 10");
-        while (number < 11 ){
-            tables(number);
-            number++;
-
+        Scanner in = new Scanner (System.in);
+        int numero =1;
+        System.out.println("Introduce n para ver todas la tablas de multiplicar del 1 - 10");
+        while (numero < 11 ){
+            tables(numero);
+            numero++;
         }
     }
 }

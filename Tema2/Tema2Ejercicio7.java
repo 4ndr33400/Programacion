@@ -16,14 +16,14 @@ public class Tema2Ejercicio7 {
         }
     }
     public static void main (String [] args){
-        Scanner lemonslemons = new Scanner (System.in);
+        Scanner in = new Scanner (System.in);
         int Numero = 1;
         System.out.println("A continuacion introduce los numeros que desee identificar como primos");
         while (Numero != 0){
-            Numero = lemonslemons.nextInt();
+            Numero = in.nextInt();
             esPrimo(Numero);
             if (Numero == 0){
-                System.out.println("Bye BAE");
+                System.out.println("Bye bye");
                 break;
             }
         }

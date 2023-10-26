@@ -2,18 +2,18 @@ import java.util.Scanner;
 public class Tema2Ejercicio1 {
    public static int num( int i) {
        if (i > 0) {
-           return 1;
+           System.out.println ("+");
        } else if (i < 0) {
-           return -1;
+           System.out.println ("-");
        } else if (i == 0) {
-           return 0;
+           System.out.println ("0");
        }
        return i;
    }
    public static void main(String [] args){
-       Scanner wawa = new Scanner (System.in);
+       Scanner in = new Scanner (System.in);
        System.out.println ("Introduce un numero");
-       int i = wawa.nextInt();
+       int i = in.nextInt();
            System.out.println(num(i));
        }
 }

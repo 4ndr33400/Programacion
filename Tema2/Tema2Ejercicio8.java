@@ -18,17 +18,17 @@ public class Tema2Ejercicio8 {
         }return true;
     }
     public static void main (String [] args){
-        Scanner guagua = new Scanner (System.in);
+        Scanner in = new Scanner (System.in);
         int dias = 0;
         int mes = 0;
         int año = 0;
 
         System.out.print("Introduce los dias:");
-        dias = guagua.nextInt();
+        dias = in.nextInt();
         System.out.print("Introduce el mes :");
-        mes = guagua.nextInt();
+        mes = in.nextInt();
         System.out.print("Introduce el año: ");
-        año=guagua.nextInt();
+        año= in.nextInt();
 
         Dias_Mes(mes,dias,año);
     }

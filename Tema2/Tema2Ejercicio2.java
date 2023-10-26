@@ -6,19 +6,15 @@ public class Tema2Ejercicio2 {
        }else return false;
    }
    public static void main(String [] args){
-       Scanner lemons = new Scanner (System.in);
+       Scanner in = new Scanner (System.in);
        System.out.println("Introduce la edad");
 
-
-       int age = lemons.nextInt();
-
+       int age = in.nextInt();
 
        if (isAdult(age)){
            System.out.println("Your 'baby' should b payin bills by now");
        } else {
            System.out.println("I hate toddlers");
        }
-
-
    }
 }

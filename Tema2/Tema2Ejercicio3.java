@@ -1,7 +1,8 @@
 
 import java.util.Scanner;
 public class Tema2Ejercicio3 {
-   public static boolean validRadius(int rad){
+   public static boolean validRadius(){
+       int rad =0;
        if (rad > 0){
            return true;
        }else return false;
@@ -13,8 +14,9 @@ public class Tema2Ejercicio3 {
        return 3.14*rad*rad;
    }
    public static void main (String [] args){
-       Scanner wawa = new Scanner (System.in);
-       double rad = wawa.nextDouble();
+       Scanner in = new Scanner (System.in);
+       System.out.print("Introduce el radio de tu circulo :");
+       double rad = in.nextDouble();
        System.out.println("El area del circulo es " +calculateCircleArea(rad));
        System.out.println("El perimetro del circulo es " + calculateCirclePerimeter(rad));
    }

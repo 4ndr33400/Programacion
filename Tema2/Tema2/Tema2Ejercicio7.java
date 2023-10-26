@@ -1,3 +1,5 @@
+package Tema2;
+
 import java.util.Scanner;
 public class Tema2Ejercicio7 {
     public static void esPrimo(int Primo){

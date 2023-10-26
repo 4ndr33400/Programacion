@@ -1,3 +1,5 @@
+package Tema2;
+
 import java.util.Scanner;
 public class Tema2Ejercicio6 {
     public static void tables (int numero){

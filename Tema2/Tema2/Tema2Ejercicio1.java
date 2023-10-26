@@ -1,3 +1,5 @@
+package Tema2;
+
 import java.util.Scanner;
 public class Tema2Ejercicio1 {
    public static int num( int i) {

@@ -1,3 +1,5 @@
+package Tema2;
+
 import java.util.Scanner;
 public class Tema2Ejercicio10 {
     public static void main (String [] arg) {
@@ -23,7 +25,6 @@ public class Tema2Ejercicio10 {
                 }
             }
             case 3: {
-                Tema2Ejercicio3.validRadius();
                 System.out.print("Introduce el radio de tu circulo :");
                 double rad = in.nextDouble();
                 System.out.println("El area del circulo es " + Tema2Ejercicio3.calculateCircleArea(rad));

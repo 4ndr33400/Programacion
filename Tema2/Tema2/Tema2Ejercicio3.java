@@ -1,12 +1,6 @@
-
+package Tema2;
 import java.util.Scanner;
 public class Tema2Ejercicio3 {
-   public static boolean validRadius(){
-       int rad =0;
-       if (rad > 0){
-           return true;
-       }else return false;
-   }
    public static double calculateCirclePerimeter(double rad){
        return 3.14*rad;
    }

@@ -1,3 +1,5 @@
+package Tema2;
+
 import java.util.Scanner;
 public class Tema2Ejercicio2 {
    public static boolean isAdult (int edad){

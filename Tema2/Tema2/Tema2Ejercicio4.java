@@ -9,8 +9,8 @@ public class Tema2Ejercicio4 {
         return doll * 0.948658 ;
     }
     public static void showMenu() {
-        System.out.println("Choose RAHHHH: ");
-        System.out.println("1. Euros to Dollars \n2. Dollars to Euros");
+        System.out.println("Elije : ");
+        System.out.println("1. Euros a Dollars \n2. Dollars aEuros");
     }
     public static void main(String [] args) {
         Scanner in = new Scanner(System.in);
@@ -21,13 +21,13 @@ public class Tema2Ejercicio4 {
         int choose =in.nextInt();
 
         if (choose == 1) {
-            System.out.print("Introduce the amount of dollars you wanna convert : ");
+            System.out.print("Introduce la cantidad de dolares que quieres convertir : ");
             eur = in.nextDouble();
-            System.out.println("You have " + dollar2euro(eur) + " euros");
+            System.out.println("Tienes " + dollar2euro(eur) + " euros");
         } else if (choose == 2)
-            System.out.print("Introduce the amount of euros you wanna convert : ");
+            System.out.print("Introduce la cantidad de euros que quieres convertir  : ");
             doll = in.nextDouble();
-        System.out.println("You have " + euro2dollar(doll) + " dollars");
+        System.out.println("Tienes " + euro2dollar(doll) + " dolares");
     }
 }
 

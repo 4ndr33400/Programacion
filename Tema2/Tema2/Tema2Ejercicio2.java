@@ -14,9 +14,9 @@ public class Tema2Ejercicio2 {
        int age = in.nextInt();
 
        if (isAdult(age)){
-           System.out.println("Your 'baby' should b payin bills by now");
+           System.out.println("Es mayor de edad");
        } else {
-           System.out.println("I hate toddlers");
+           System.out.println("No es mayor de edad");
        }
    }
 }

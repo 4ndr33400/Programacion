@@ -11,7 +11,7 @@ public class Tema2Ejercicio3 {
        Scanner in = new Scanner (System.in);
        System.out.print("Introduce el radio de tu circulo :");
        double rad = in.nextDouble();
-       System.out.println("El area del circulo es " +calculateCircleArea(rad));
+       System.out.println("El area del circulo es " + calculateCircleArea(rad));
        System.out.println("El perimetro del circulo es " + calculateCirclePerimeter(rad));
    }
 }

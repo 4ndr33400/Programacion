@@ -2,22 +2,19 @@ package Tema2;
 
 import java.util.Scanner;
 public class Tema2Ejercicio8 {
-    public static boolean Dias_Mes (int mes,int dias, int año){
+    public static boolean Dias_Mes (int mes,int dias, int año) {
+        boolean ValidYear = false;
         if (mes > 0 && mes < 13) {
-            if (mes == 1 || mes == 3 || mes ==  5 || mes== 7 || mes == 8 || mes == 10 || mes == 12 && dias <= 31){
-                System.out.println ("La fecha es correcta");
-            } else if (mes == 2 ||mes == 4 ||mes == 6 ||mes == 9 ||mes == 11 && dias <= 30){
-                if ((año % 4 == 0 && mes==2 && dias <= 29) || (mes == 2 && dias == 28)){
-                    System.out.println("La fecha es correcta");
-                    return true;
+            if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12 && dias <= 31) {
+                ValidYear = true;
+            } else if (mes == 2 || mes == 4 || mes == 6 || mes == 9 || mes == 11 && dias <= 30) {
+                if ((año % 4 == 0 && mes == 2 && dias <= 29) || (mes == 2 && dias == 28)) {
+                    ValidYear = true;
                 }
-                System.out.println("La fecha es correcta");
-                return true;
+                ValidYear = true;
             }
-        } else {
-            System.out.println("NO");
-            return false;
-        }return true;
+        }
+        return ValidYear;
     }
     public static void main (String [] args){
         Scanner in = new Scanner (System.in);

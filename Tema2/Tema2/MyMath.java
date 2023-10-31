@@ -42,15 +42,24 @@ public class MyMath {
             return 0;
         }
     }
-    public static boolean isPrime (int number_prime){
-        int count =1;
-        boolean prime= false;
-        while (number_prime >= count ) {
-            count++;
-            if (number_prime % count == 0 && number_prime != count) {
-                prime = true;
-            }
+    public static boolean isPrime (int number_prime) {
+        int contador = 2;
+        boolean primo = true;
+        while ((primo) && contador != number_prime) {
+            if (number_prime % contador == 0)
+                primo = false;
+            contador++;
         }
-            return prime;
+        return true;
+    }
+    public static boolean isNotPrime (int number_prime){
+        int contador = 2;
+        boolean primo = true;
+        while ((primo) && contador != number_prime) {
+            if (number_prime % contador == 0)
+                primo = false;
+            contador++;
+        }
+        return false;
     }
 }

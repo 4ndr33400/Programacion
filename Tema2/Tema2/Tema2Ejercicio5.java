@@ -17,8 +17,6 @@ public class Tema2Ejercicio5 {
         System.out.print("Introduce el numero del que desees ver las tablas de multiplicar :");
         numero = in.nextInt();
         tablas(numero);
-
-
     }
 }
 

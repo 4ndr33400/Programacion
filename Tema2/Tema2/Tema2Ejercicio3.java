@@ -1,11 +1,9 @@
 package Tema2;
 import java.util.Scanner;
 public class Tema2Ejercicio3 {
-   public static double calculateCirclePerimeter(double rad){
-       return 3.14*rad;
-   }
+   public static double calculateCirclePerimeter(double rad){return Math.PI * rad;}
    public static double calculateCircleArea(double rad){
-       return 3.14*rad*rad;
+       return Math.PI * rad * rad;
    }
    public static void main (String [] args){
        Scanner in = new Scanner (System.in);

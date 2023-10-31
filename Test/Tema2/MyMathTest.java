@@ -39,7 +39,7 @@ class MyMathTest {
     /*
     @Test
     void rectangleAreaTest() {
-        assertEquals( 100, MyMath.rectangleArea(10, 10), 0.1);
+        assertEquals( 100, MyMath.rectangleArSystem.out.printlnea(10, 10), 0.1);
         assertEquals( 0, MyMath.rectangleArea(0, 10), 0.1);
         assertEquals( 0, MyMath.rectangleArea(10, 0), 0.1);
         assertEquals( 0, MyMath.rectangleArea(-1, 10), 0.1, "Un lado negativo devuelve área 0");
@@ -65,6 +65,7 @@ class MyMathTest {
         assertEquals( 314.159265359, MyMath.circleArea(10), 0.000000001, "Precisión insuficiente");
     }
     */
+    /*
     @Test
     void primeTest() {
         assertFalse(MyMath.isPrime(10), "10 no es primo");
@@ -73,7 +74,8 @@ class MyMathTest {
         assertFalse(MyMath.isPrime(0), "0 no es primo");
         assertFalse(MyMath.isPrime(-1), "Los números negativos no son primos");
     }
-/*
+    */
+
     @Test
     void notPrimeTest() {
         assertTrue(MyMath.isNotPrime(10), "10 no es primo");
@@ -82,7 +84,7 @@ class MyMathTest {
         assertTrue(MyMath.isNotPrime(0), "0 no es primo");
         assertTrue(MyMath.isNotPrime(-1), "Los números negativos no son primos");
     }
-
+/*
     @Test
     void figureCountTest() {
         assertEquals(1, MyMath.figureCount(1), "1 tiene 1 dígito");

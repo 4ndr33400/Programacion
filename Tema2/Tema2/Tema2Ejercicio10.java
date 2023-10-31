@@ -10,9 +10,9 @@ public class Tema2Ejercicio10 {
 
         switch (choose) {
             case 1: {
-                System.out.print("Introduce un numero para saber si es negativo, positivo o cero :");
+                Tema2Ejercicio1.main(arg);
                 int i = in.nextInt();
-                Tema2Ejercicio1.num(i);
+                Tema2Ejercicio1.numberSign(i);
                 break;
             }
             case 2: {
@@ -52,12 +52,9 @@ public class Tema2Ejercicio10 {
                 break;
             }
             case 6 : {
-                int numero =1;
-                System.out.println("Introduce n para ver todas la tablas de multiplicar del 1 - 10");
-                while (numero < 11 ){
-                    Tema2Ejercicio6.tables(numero);
-                    numero++;
-                }
+                Tema2Ejercicio6.main(arg);
+                int numero = in.nextInt();
+                Tema2Ejercicio5.tablas(numero);
                 break;
             }
             case 7: {

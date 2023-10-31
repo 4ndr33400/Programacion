@@ -16,32 +16,25 @@ public class Tema2Ejercicio10 {
                 break;
             }
             case 2: {
-                System.out.println("Introduce la edad");
+                Tema2Ejercicio2.main(arg);
                 int age = in.nextInt();
-                if (Tema2Ejercicio2.isAdult(age)) System.out.println("Your 'baby' should b payin bills by now");
-                else {
-                    System.out.println("I hate toddlers");
-                    break;
-                }
+                Tema2Ejercicio2.isAdult(age);
+                break;
             }
             case 3: {
-                System.out.print("Introduce el radio de tu circulo :");
+                Tema2Ejercicio3.main(arg);
                 double rad = in.nextDouble();
-                System.out.println("El area del circulo es " + Tema2Ejercicio3.calculateCircleArea(rad));
-                System.out.println("El perimetro del circulo es " + Tema2Ejercicio3.calculateCirclePerimeter(rad));
+                Tema2Ejercicio3.calculateCircleArea(rad);
+                Tema2Ejercicio3.calculateCirclePerimeter(rad);
                 break;
             }
             case 4: {
+                Tema2Ejercicio4.main(arg);
                 Tema2Ejercicio4.showMenu();
-                int eleccion =in.nextInt();
-                if (eleccion == 1) {
-                    System.out.print("Introduce la cantidad de dolares que quieras convertir a euros: ");
                     double eur = in.nextDouble();
-                    System.out.println("Tienes " + Tema2Ejercicio4.dollar2euro(eur) + " euros");
-                } else if (eleccion == 2)
-                    System.out.print("Introduce los euros que quieras convertir a dolares : ");
+                   Tema2Ejercicio4.dollar2euro(eur);
                     double doll = in.nextDouble();
-                System.out.println("Tienes " + Tema2Ejercicio4.euro2dollar(doll) + " dolares");
+                    Tema2Ejercicio4.euro2dollar(doll);
                 break;
             }
             case 5: {

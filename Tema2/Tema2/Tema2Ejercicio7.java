@@ -2,19 +2,11 @@ package Tema2;
 
 import java.util.Scanner;
 public class Tema2Ejercicio7 {
-    public static void esPrimo(int Primo){
-        int contador =1;
-        boolean primo = false;
-        while (Primo >= contador ){
-            contador++;
-            if (Primo % contador == 0 && Primo != contador){
-                primo = true;
-            }
-        }
-        if (primo){
-            System.out.println("Este es un numero primo :D");
-        }else{
-            System.out.println("No es un numero primo D:");
+    public static void esPrimo(int primo){
+        boolean esPrimo = true;
+        for (int divisor = 2; divisor < primo; divisor++) {
+            if (primo % divisor == 0) {
+            esPrimo = false;    }
         }
     }
     public static void main (String [] args){

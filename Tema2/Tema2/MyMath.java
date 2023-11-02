@@ -8,6 +8,7 @@ public class MyMath {
         }
     }
 
+
     public static double squareArea(double length_side_square) {
         if (length_side_square > 0) {
             return length_side_square * length_side_square;
@@ -15,6 +16,7 @@ public class MyMath {
             return 0;
         }
     }
+
 
     public static double rectanglePerimeter(double large_rectangle, double wide_rectangle) {
         if (large_rectangle > 0 && wide_rectangle > 0) {
@@ -24,6 +26,7 @@ public class MyMath {
         }
     }
 
+
     public static double rectangleArea(double large_rectangle, double wide_rectangle) {
         if (large_rectangle > 0 && wide_rectangle > 0) {
             return large_rectangle * wide_rectangle;
@@ -31,6 +34,7 @@ public class MyMath {
             return 0;
         }
     }
+
 
     public static double circlePerimeter(double circle_radius) {
         if (circle_radius > 0) {
@@ -40,6 +44,7 @@ public class MyMath {
         }
     }
 
+
     public static double circleArea(double circle_radius) {
         if (circle_radius > 0) {
             return Math.PI * (circle_radius * circle_radius);
@@ -47,6 +52,7 @@ public class MyMath {
             return 0;
         }
     }
+
 
     public static boolean isPrime(int number_prime) {
         boolean esPrimo = true;
@@ -63,12 +69,15 @@ public class MyMath {
         return esPrimo;
     }
 
+
     public static boolean isNotPrime(int number_prime) {
         return !isPrime(number_prime);
     }
 
+
     public static int figureCount(int number_count) {
         int digits = 0;
+
 
         if (number_count == 0) {
             digits++;
@@ -79,6 +88,7 @@ public class MyMath {
         }
         return digits;
     }
+
 
     public static int evenFigureCount(int even_number) {
         int even_number_count = 0;
@@ -107,37 +117,39 @@ public class MyMath {
         int count = factorial_number;
         int result = 1;
         while (count != 0){
-             result = result*count;
+            result = result*count;
             count--;
         }
         return result;
     }
-    /*
     public static int factorialRecursive (int recursive_factorial_number){
         int count = recursive_factorial_number;
         int result = 1;
         while (count != 0){
-            result = result*factorialRecursive(recursive_factorial_number);
+            result = recursive_factorial_number*factorialRecursive(recursive_factorial_number -1);
             count--;
         }
         return result;
     }
-    */
-     public static int quadraticEcuationSolutions (int a, int b, int c){
-         int discriminate = b * 2 - 4 * a *c;
-         int solution = 0;
-         if (discriminate > 0){
-             solution = 2;
-         } else if (discriminate == 0){
-             solution = 1;
-         } else if (discriminate < 0){
-             solution = 0;
-         }
-          return solution;
-     }
-     public static int figuresSumatory(int number){
-
-     }
+    public static int quadraticEcuationSolutions (int a, int b, int c){
+        int discriminate = b * 2 - 4 * a *c;
+        int solution = 0;
+        if (discriminate > 0){
+            solution = 2;
+        } else if (discriminate == 0){
+            solution = 1;
+        } else if (discriminate < 0){
+            solution = 0;
+        }
+        return solution;
+    }
+    public static int figuresSumatory(int number){
+        int result;
+        if (number == 1 ){
+            result = 1;
+        } else {
+            result = number+ figuresSumatory(number - 1);
+        }
+        return result;
+    }
 }
-
-

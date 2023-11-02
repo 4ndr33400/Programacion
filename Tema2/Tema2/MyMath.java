@@ -1,4 +1,7 @@
 package Tema2;
+
+import java.sql.SQLOutput;
+
 public class MyMath {
     public static double squarePerimeter(double length_side_square) {
         if (length_side_square > 0) {
@@ -68,7 +71,6 @@ public class MyMath {
         }
         return esPrimo;
     }
-
 
     public static boolean isNotPrime(int number_prime) {
         return !isPrime(number_prime);

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MyMathTest {
-    /*
+
     @Test
     void squarePerimeterTest() {
         assertEquals( 40.4, MyMath.squarePerimeter(10.1), 0.1);
@@ -36,7 +36,7 @@ class MyMathTest {
 
     @Test
     void rectangleAreaTest() {
-        assertEquals( 100, MyMath.rectangleArSystem.out.printlnea(10, 10), 0.1);
+        assertEquals( 100, MyMath.rectangleAreSystem.out.printlnea(10, 10), 0.1);
         assertEquals( 0, MyMath.rectangleArea(0, 10), 0.1);
         assertEquals( 0, MyMath.rectangleArea(10, 0), 0.1);
         assertEquals( 0, MyMath.rectangleArea(-1, 10), 0.1, "Un lado negativo devuelve área 0");
@@ -122,7 +122,7 @@ class MyMathTest {
         assertEquals(3628800, MyMath.factorial(10), "10! = 3628800");
         assertEquals(0, MyMath.factorial(-1), "-1! = 0, vamos a suponer que el factorial de un número negativo es 0");
     }
-*/
+
     @Test
     void factorialRecursiveTest() {
         assertEquals(2, MyMath.factorialRecursive(2), "2! = 1");
@@ -131,7 +131,7 @@ class MyMathTest {
         assertEquals(3628800, MyMath.factorialRecursive(10), "10! = 3628800");
         assertEquals(0, MyMath.factorialRecursive(-1), "-1! = 0, vamos a suponer que el factorial de un número negativo es 0");
     }
-/*
+
     @Test
     void quadraticEcuationSolutionsTest() {
         assertEquals(2, MyMath.quadraticEcuationSolutions(-2 , 2, 1), "-2 X2 + 2 X + 1 = 0 has 2 solutions");
@@ -146,5 +146,5 @@ class MyMathTest {
         assertEquals(6, MyMath.figuresSumatory(123), "123 -> Todos los dígitos suman 6");
         assertEquals(6, MyMath.figuresSumatory(-123), "-123 -> Todos los dígitos suman 6");
     }
-*/
+
 }

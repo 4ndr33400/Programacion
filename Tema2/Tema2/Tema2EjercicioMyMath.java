@@ -79,7 +79,7 @@ public class Tema2EjercicioMyMath {
                 System.out.println("There are " + MyMath.quadraticEcuationSolutions(a,b,c) + " solutions to that equation.");
                 break;
             case 8:
-                System.out.print("Introduce a number to see the result to the sumatory of each");
+                System.out.print("Introduce a number to see the result to the sumatory of each :");
                 int number = test.nextInt();
                 System.out.println("The sumatory is : " +MyMath.figuresSumatory(number));
                 break;

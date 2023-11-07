@@ -36,14 +36,13 @@ class MyMathTest {
 
     @Test
     void rectangleAreaTest() {
-        assertEquals( 100, MyMath.rectangleAreSystem.out.printlnea(10, 10), 0.1);
+        assertEquals( 100, MyMath.rectangleArea(10, 10), 0.1);
         assertEquals( 0, MyMath.rectangleArea(0, 10), 0.1);
         assertEquals( 0, MyMath.rectangleArea(10, 0), 0.1);
         assertEquals( 0, MyMath.rectangleArea(-1, 10), 0.1, "Un lado negativo devuelve área 0");
         assertEquals( 0, MyMath.rectangleArea(10, -10), 0.1, "Un lado negativo devuelve área 0");
         assertEquals( 102.01, MyMath.rectangleArea(10.1, 10.1), 0.000000001, "Precisión insuficiente");
     }
-
 
     @Test
     void circlePerimeterTest() {

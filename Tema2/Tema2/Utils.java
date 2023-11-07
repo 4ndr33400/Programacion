@@ -20,23 +20,39 @@ public class Utils{
 
     public static double getCoins (double getValue){
         double amount_coin = 0;
-        while (getValue != 0){
+        while (0 != getValue){
             if (getValue > 2){
                 amount_coin += 10000000;
+                getValue = getValue - 2;
             } else if (getValue > 1){
                 amount_coin += 1000000;
+                getValue = getValue - 1;
             } else if (getValue > 0.50){
                 amount_coin += 100000;
+                getValue = getValue - 0.50;
             } else if (getValue > 0.20) {
                 amount_coin += 10000;
+                getValue = getValue - 0.20;
             } else if (getValue > 0.10){
                 amount_coin += 1000;
-            } else if (getValue > 0.5){
+                getValue = getValue - 0.10;
+            } else if (getValue > 0.05){
                 amount_coin += 100;
+                getValue = getValue - 0.05;
+            } else if (getValue > 0.02){
+                amount_coin += 10;
+                getValue = getValue - 0.02;
+            } else if (getValue > 0.009){
+                amount_coin += 1;
+                getValue = getValue - 0.009;
+            } else {
+                break;
             }
         }
-
         return amount_coin;
+    }
+    public static int getNIF (int numberNIF){
+
     }
 
 }

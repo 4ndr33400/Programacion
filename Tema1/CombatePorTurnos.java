@@ -273,7 +273,7 @@ public class CombatePorTurnos {
         } else if (Vel2 > Vel1){
             System.out.println("El Jugador 2 ha sido mas rapido que el Jugador 1, por lo que este atacara primero   //Escribe n para continuar// ");
             next = shi.next().charAt(0);
-            if (Atq1 > Def2){
+            if (Atq2 > Def1){
                 System.out.println("El Jugador 2 encontro el punto debil del Jugador 1!!    //Escribe n para continuar//");
                 next = shi.next().charAt(0);
                 Vida1 = Vida1 - damage2;

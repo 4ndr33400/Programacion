@@ -29,7 +29,6 @@ public class Tema1Ejercicio24 {
                 break;
             }
             stop =in.nextLine();
-            stop =in.nextLine();
         }while (!stop.equals("stop"));
 
         System.out.println ("Out these "+students+ " students "+" these students passed the exam " + pass + " and these poor souls failed on combat R.I.P :( " + fail);

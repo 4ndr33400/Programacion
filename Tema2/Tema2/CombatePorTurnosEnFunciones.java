@@ -4,7 +4,18 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class CombatePorTurnosEnFunciones {
+    static int AttakPlayer1 = 0;
+    static int DefensePlayer1 = 0;
+    static int SpeedPlayer1 = 0;
+    static int HealthPlayer1 = 0;
+    static int ReHealthPlayer1 = 0;
+    static int AttakPlayer2 = 0;
+    static int DefensePlayer2 = 0;
+    static int SpeedPlayer2 = 0;
+    static int HealthPlayer2 = 0;
+    static int ReHealthPlayer2 = 0;
     static Random random = new Random();
+
     public static void showAsciiArtWinner() {
         System.out.println(
                 """
@@ -36,39 +47,80 @@ public class CombatePorTurnosEnFunciones {
                         ⣀⠀⢘⣛⣛⡛⠛⡛⣟⢛⡛⣛⡛⠛⠛⢻⣉⡉⡉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⢉⣛⣛⣛⣛⣛⣛⣛⣛⣛⣓""");
 
     }
+
     public static int HabilityPlayers(int Player, int Health, int hitPlayer) {
 
-        if (Player == 1 && Health < 50 && hitPlayer > 70){
+        if (Player == 1 && Health < 50 && hitPlayer > 70) {
             System.out.println("Harley Quinn ha lanzado su ataque especial 'Clown Strike' ");
-            hitPlayer =  random.nextInt(90,100);
-        } else if (Player == 2 && hitPlayer > 30){
+            hitPlayer = random.nextInt(90, 100);
+        } else if (Player == 2 && hitPlayer > 30) {
             System.out.println("Zombie ha lanzado su ataque espacial 'The Bite of Death' ");
-            hitPlayer = random.nextInt(40,50);
-        } else if (Player == 3 && hitPlayer > 70){
+            hitPlayer = random.nextInt(40, 50);
+        } else if (Player == 3 && hitPlayer > 70) {
             System.out.println("Chachito ha lanzado su habilidad especial 'Just a Few Scratches' ");
             hitPlayer = 100;
-        } else if (Player == 4 && Health < 50  && hitPlayer > 70){
+        } else if (Player == 4 && Health < 50 && hitPlayer > 70) {
             System.out.println("Dragon ha lanzado su habilidad especial 'Family BBQ' ");
-            hitPlayer = random.nextInt(100,150);
+            hitPlayer = random.nextInt(100, 150);
         }
         return hitPlayer;
+    }
+    public static int AttakPlayers (int Player){
+        int AttakPlayer = 0;
+        if (Player == 1){
+            AttakPlayer = 150;
+        } else if (Player == 2){
+            AttakPlayer = 90;
+        } else if (Player == 3){
+            AttakPlayer = 100;
+        } else if (Player == 4){
+            AttakPlayer = 150;
+        }
+        return AttakPlayer;
+    }
+    public static int DefensePlayers (int Player){
+        int DefensePlayer = 0;
+        if (Player == 1){
+            DefensePlayer = 90;
+        } else if (Player == 2){
+            DefensePlayer = 100;
+        } else if (Player == 3){
+            DefensePlayer = 150;
+        } else if (Player == 4){
+            DefensePlayer = 150;
+        }
+        return DefensePlayer;
+    }
+    public static int SpeedPlayers (int Player){
+        int SpeedPlayer = 0;
+        if (Player == 1){
+            SpeedPlayer = 100;
+        } else if (Player == 2){
+            SpeedPlayer = 80;
+        } else if (Player == 3){
+            SpeedPlayer = 150;
+        } else if (Player == 4){
+            SpeedPlayer = 50;
+        }
+        return SpeedPlayer;
+    }
+    public static int HealthPlayers (int Player){
+        int HealthPlayer = 0;
+        if (Player == 1){
+            HealthPlayer = 150;
+        } else if (Player == 2){
+            HealthPlayer = 150;
+        } else if (Player == 3){
+            HealthPlayer = 90;
+        } else if (Player == 4){
+            HealthPlayer = 100;
+        }
+        return HealthPlayer;
     }
     public static void main(String[] args) {
         Scanner shi = new Scanner(System.in);
 
         int Round = 2;
-///////////////////////////////
-        int AttakPlayer1 = 0;
-        int DefensePlayer1 = 0;
-        int SpeedPlayer1 = 0;
-        int HealthPlayer1 = 0;
-        int ReHealthPlayer1 = 0;
-///////////////////////////////
-        int AttakPlayer2 = 0;
-        int DefensePlayer2 = 0;
-        int SpeedPlayer2 = 0;
-        int HealthPlayer2 = 0;
-        int ReHealthPlayer2 = 0;
 
         char next;
 
@@ -158,7 +210,7 @@ public class CombatePorTurnosEnFunciones {
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣴⣾⡿⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠛⠻⠿⣿⣶⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
                         ⠀⠀⠀⣀⣠⣤⣤⣀⡀⠀⠀⣀⣴⣿⡿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠿⣿⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣄⠀⠀
                         ⢀⣤⣾⡿⠟⠛⠛⢿⣿⣶⣾⣿⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠿⣿⣷⣦⣀⣀⣤⣶⣿⡿⠿⢿⣿⡀⠀
-                        ⣿⣿⠏⠀⢰⡆⠀⠀⠉⢿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⢿⡿⠟⠋⠁⠀⠀⢸⣿⠇⠀
+                        ⣿⣿⠏⠀⢰⡆⠀⠀⠉⢿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⢿⡿⠟⠋⠁⠀⠀  ⢸⣿⠇⠀
                         ⣿⡟⠀⣀⠈⣀⡀⠒⠃⠀⠙⣿⡆⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠇⠀
                         ⣿⡇⠀⠛⢠⡋⢙⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀
                         ⣿⣧⠀⠀⠀⠓⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⠋⠀⠀⢸⣧⣤⣤⣶⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⡿⠀⠀
@@ -209,67 +261,67 @@ public class CombatePorTurnosEnFunciones {
 
         if (Player1 == 1) {
             System.out.println("Jugador 1 ha elegido a Harley Quinn");
-            AttakPlayer1 = 100;
-            DefensePlayer1 = 90;
-            SpeedPlayer1 = 100;
-            HealthPlayer1 = 150;
-            ReHealthPlayer1 = 150;
+            AttakPlayer1 = AttakPlayers(Player1);
+            DefensePlayer1 = DefensePlayers(Player1);
+            HealthPlayer1 = HealthPlayers(Player1);
+            SpeedPlayer1 = SpeedPlayers(Player1);
+            ReHealthPlayer1 = HealthPlayers(Player1);
         }
         if (Player2 == 1) {
             System.out.println("Jugador 2 ha elegido a Harley Quinn");
-            AttakPlayer2 = 100;
-            DefensePlayer2 = 90;
-            SpeedPlayer2 = 100;
-            HealthPlayer2 = 150;
-            ReHealthPlayer2 = 150;
+            AttakPlayer2 = AttakPlayers(Player2);
+            DefensePlayer2 = DefensePlayers(Player2);
+            HealthPlayer2 = HealthPlayers(Player2);
+            SpeedPlayer2 = SpeedPlayers(Player2);
+            ReHealthPlayer2 = HealthPlayers(Player2);
         }
         if (Player1 == 2) {
             System.out.println("Jugador 1 ha elegido a Zombie");
-            AttakPlayer1 = 90;
-            DefensePlayer1 = 100;
-            SpeedPlayer1 = 80;
-            HealthPlayer1 = 150;
-            ReHealthPlayer1 = 150;
+            AttakPlayer1 = AttakPlayers(Player1);
+            DefensePlayer1 = DefensePlayers(Player1);
+            HealthPlayer1 = HealthPlayers(Player1);
+            SpeedPlayer1 = SpeedPlayers(Player1);
+            ReHealthPlayer1 = HealthPlayers(Player1);
         }
         if (Player2 == 2) {
             System.out.println("Jugador 2 ha elegido a Zombie");
-            AttakPlayer2 = 90;
-            DefensePlayer2 = 100;
-            SpeedPlayer2 = 80;
-            HealthPlayer2 = 150;
-            ReHealthPlayer2 = 150;
+            AttakPlayer2 = AttakPlayers(Player2);
+            DefensePlayer2 = DefensePlayers(Player2);
+            HealthPlayer2 = HealthPlayers(Player2);
+            SpeedPlayer2 = SpeedPlayers(Player2);
+            ReHealthPlayer2 = HealthPlayers(Player2);
         }
         if (Player1 == 3) {
             System.out.println("Jugador 1 ha elegido a Chachito");
-            AttakPlayer1 = 100;
-            DefensePlayer1 = 150;
-            SpeedPlayer1 = 150;
-            HealthPlayer1 = 120;
-            ReHealthPlayer1 = 120;
+            AttakPlayer1 = AttakPlayers(Player1);
+            DefensePlayer1 = DefensePlayers(Player1);
+            HealthPlayer1 = HealthPlayers(Player1);
+            SpeedPlayer1 = SpeedPlayers(Player1);
+            ReHealthPlayer1 = HealthPlayers(Player1);
         }
         if (Player2 == 3) {
             System.out.println("Jugador 2 ha elegido a Chachito");
-            AttakPlayer2 = 100;
-            DefensePlayer2 = 150;
-            SpeedPlayer2 = 150;
-            HealthPlayer2 = 120;
-            ReHealthPlayer2 = 150;
+            AttakPlayer2 = AttakPlayers(Player2);
+            DefensePlayer2 = DefensePlayers(Player2);
+            HealthPlayer2 = HealthPlayers(Player2);
+            SpeedPlayer2 = SpeedPlayers(Player2);
+            ReHealthPlayer2 = HealthPlayers(Player2);
         }
         if (Player1 == 4) {
             System.out.println("Jugador 1 ha elegido a Dragon");
-            AttakPlayer1 = 150;
-            DefensePlayer1 = 150;
-            SpeedPlayer1 = 50;
-            HealthPlayer1 = 100;
-            ReHealthPlayer1 = 100;
+            AttakPlayer1 = AttakPlayers(Player1);
+            DefensePlayer1 = DefensePlayers(Player1);
+            HealthPlayer1 = HealthPlayers(Player1);
+            SpeedPlayer1 = SpeedPlayers(Player1);
+            ReHealthPlayer1 = HealthPlayers(Player1);
         }
         if (Player2 == 4) {
             System.out.println("Jugador 2 ha elegido a Dragon");
-            AttakPlayer2 = 150;
-            DefensePlayer2 = 150;
-            SpeedPlayer2 = 50;
-            HealthPlayer2 = 100;
-            ReHealthPlayer2 = 100;
+            AttakPlayer2 = AttakPlayers(Player2);
+            DefensePlayer2 = DefensePlayers(Player2);
+            HealthPlayer2 = HealthPlayers(Player2);
+            SpeedPlayer2 = SpeedPlayers(Player2);
+            ReHealthPlayer2 = HealthPlayers(Player2);
         }
 
         System.out.println("Va a comenzar el combate, estan preparados?.... Introduzca next por consola");
@@ -288,7 +340,7 @@ public class CombatePorTurnosEnFunciones {
                 System.out.println("El Jugador 2 ha sufrido una perdida de " + damage1 + " puntos de daño");
                 System.out.println("Al jugador 2 le quedan " + HealthPlayer2 + " puntos de vida OUCH     //Escribe n para continuar//");
                 next = shi.next().charAt(0);
-            } else if (damage1 == DefensePlayer2 || damage1 < DefensePlayer2) {
+            } else {
                 System.out.println("El Jugador 2 se ha defendido y no ha sufrido ningun daño!! ");
             }
 
@@ -302,47 +354,14 @@ public class CombatePorTurnosEnFunciones {
                 System.out.println("El Jugador 2 ataqua al Jugador 1 con " + damage2 + " puntos de daño");
                 System.out.println("Al jugador 1 le quedan " + HealthPlayer1 + " puntos de vida OUCH     //Escribe n para continuar//");
                 next = shi.next().charAt(0);
-            } else if (damage2 == DefensePlayer1 || damage2 < DefensePlayer1) {
+            } else {
                 System.out.println("El Jugador 1 se ha defendido y no ha sufrido ningun daño!! ");
             }
-
-        } else if (SpeedPlayer1 == SpeedPlayer2) {
-            System.out.println("Ambos jugadores son igual de rapidos, por lo que ambos jugadores corren hacia el otro queriendo atacar al mismo tiempo!!   //Escribe n para continuar//");
-            next = shi.next().charAt(0);
-            if (AttakPlayer1 > AttakPlayer2) {
-                System.out.println("El jugador 1 es mas fuerte!!");
-                System.out.println("Jugador 1 ataca al Jugador 2");
-                if (AttakPlayer1 > DefensePlayer2) {
-                    System.out.println("El Jugador 1 encontro el punto debil del Jugador 2 ");
-                    next = shi.next().charAt(0);
-                    HealthPlayer2 = HealthPlayer2 - damage1;
-                    System.out.println("El Jugador 2 ha sufrido una perdida de " + damage1 + " puntos de daño");
-                    System.out.println("Al jugador 2 le quedan " + HealthPlayer2 + " puntos de vida OUCH     //Escribe n para continuar//");
-                    next = shi.next().charAt(0);
-                } else if (damage1 == DefensePlayer2 || AttakPlayer1 < DefensePlayer2) {
-                    System.out.println("El Jugador 2 se ha defendido y no ha sufrido ningun daño!! ");
-                }
-            } else if (AttakPlayer2 > AttakPlayer1) {
-                System.out.println("El Jugador 2 ha sido mas rapido que el Jugador 1, por lo que este atacara primero   //Escribe n para continuar// ");
-                next = shi.next().charAt(0);
-                if (AttakPlayer1 > DefensePlayer2) {
-                    System.out.println("El Jugador 2 encontro el punto debil del Jugador 1!!    //Escribe n para continuar//");
-                    next = shi.next().charAt(0);
-                    HealthPlayer1 = HealthPlayer1 - damage2;
-                    System.out.println("El Jugador 1 ha sufrido una perdida de " + damage2 + " puntos de daño");
-                    System.out.println("Al jugador 1 le quedan " + HealthPlayer1 + " puntos de vida OUCH     //Escribe n para continuar//");
-                    next = shi.next().charAt(0);
-                } else if (damage2 == DefensePlayer1 || damage2 < DefensePlayer1) {
-                    System.out.println("El Jugador 1 se ha defendido y no ha sufrido ningun daño!! ");
-                }
-            }
         }
-
         System.out.println("Se ha realizado la primera ronda");
         System.out.println("Al Jugador 1 le quedan " + HealthPlayer1 + " puntos de vida ");
         System.out.println("Al Jugador 2 le quedan " + HealthPlayer2 + " puntos de vida");
         System.out.println(" // Introduce n para continuar // ");
-
         next = shi.next().charAt(0);
 
         while (HealthPlayer2 > 0 && HealthPlayer1 > 0) {
@@ -365,7 +384,7 @@ public class CombatePorTurnosEnFunciones {
                     System.out.println("El jugador 1 se prepara para atacar!!              //Escribe n para continuar//");
                     next = shi.next().charAt(0);
                     System.out.println("El jugador 1 ha atacado al Jugador 2 con " + HitPlayer1 + " puntos de daño");
-                    HitPlayer1 = HabilityPlayers(Player1,HealthPlayer1,HitPlayer1);
+                    HitPlayer1 = HabilityPlayers(Player1, HealthPlayer1, HitPlayer1);
                     HealthPlayer2 = HealthPlayer2 - HitPlayer1;
 
                     if (HealthPlayer2 < 0) {
@@ -397,7 +416,7 @@ public class CombatePorTurnosEnFunciones {
                     System.out.println("El jugador 2 se prepara para atacar!!              //Escribe n para continuar//");
                     next = shi.next().charAt(0);
                     System.out.println("El jugador 2 ha atacado a el Jugador 1 con " + HitPlayer2 + " puntos de daño");
-                    HitPlayer2 = HabilityPlayers(Player2,HealthPlayer2,HitPlayer2);
+                    HitPlayer2 = HabilityPlayers(Player2, HealthPlayer2, HitPlayer2);
                     HealthPlayer1 = HealthPlayer1 - HitPlayer2;
 
                     if (HealthPlayer1 < 0) {
@@ -433,7 +452,7 @@ public class CombatePorTurnosEnFunciones {
                     System.out.print("❤\uFE0F");
                 }
                 System.out.println(" // Introduce n para continuar // ");
-                next = shi.next().charAt(0);
+                next = shi.next().charAt(0);AttakPlayer2 = AttakPlayers(Player2);
             }
 
             if (HealthPlayer2 <= 0 || HealthPlayer1 <= 0 || Round > 10) {
@@ -494,4 +513,3 @@ public class CombatePorTurnosEnFunciones {
         }
     }
 }
-

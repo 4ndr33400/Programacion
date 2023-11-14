@@ -17,8 +17,13 @@ public class CombatePorTurnosEnFunciones {
     static int HealingPlayer2 = 0;
     static int ReHealthPlayer2 = 0;
     static Random random = new Random();
+    static Scanner shi = new Scanner(System.in);
+    static char next;
 
     public static void showAsciiArtWinner() {
+        next = shi.next().charAt(0);
+        System.out.println(" .....                // Introduce n para continuar// ");
+        next = shi.next().charAt(0);
         System.out.println(
                 """
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠉⠁⠒⠂⠤⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -47,7 +52,6 @@ public class CombatePorTurnosEnFunciones {
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠟⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
                         ⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣀⣛⣀⣀⣀⣀⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣀⣀⣀⣁⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀
                         ⣀⠀⢘⣛⣛⡛⠛⡛⣟⢛⡛⣛⡛⠛⠛⢻⣉⡉⡉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⢉⣛⣛⣛⣛⣛⣛⣛⣛⣛⣓""");
-
     }
 
     public static int HabilityPlayers(int Player, int Health, int hitPlayer) {
@@ -67,7 +71,6 @@ public class CombatePorTurnosEnFunciones {
         }
         return hitPlayer;
     }
-
     public static int AttakPlayers(int Player) {
         int AttakPlayer = 0;
         if (Player == 1) {
@@ -81,7 +84,6 @@ public class CombatePorTurnosEnFunciones {
         }
         return AttakPlayer;
     }
-
     public static int DefensePlayers(int Player) {
         int DefensePlayer = 0;
         if (Player == 1) {
@@ -95,7 +97,6 @@ public class CombatePorTurnosEnFunciones {
         }
         return DefensePlayer;
     }
-
     public static int SpeedPlayers(int Player) {
         int SpeedPlayer = 0;
         if (Player == 1) {
@@ -109,7 +110,6 @@ public class CombatePorTurnosEnFunciones {
         }
         return SpeedPlayer;
     }
-
     public static int HealthPlayers(int Player) {
         int HealthPlayer = 0;
         if (Player == 1) {
@@ -123,7 +123,6 @@ public class CombatePorTurnosEnFunciones {
         }
         return HealthPlayer;
     }
-
     public static int HealingPlayers(int Player) {
         int HealingPlayer = 0;
         if (Player == 1) {
@@ -137,15 +136,7 @@ public class CombatePorTurnosEnFunciones {
         }
         return HealingPlayer;
     }
-
-    public static void main(String[] args) {
-        Scanner shi = new Scanner(System.in);
-
-        int Round = 2;
-
-        char next;
-
-        System.out.println("Elije un personaje a continuacion: ");
+    public static void ASCIIartHaleyQuinn() {
         System.out.print("HARLEY QUINN");
         System.out.println(
                 """
@@ -178,12 +169,13 @@ public class CombatePorTurnosEnFunciones {
                         ⢱⡇⠀⠀⢀⠀⢀⣴⣿⣿⠟⠉⠀⠀⣠⡴⠚⠁⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣇⡈⣿⣿⡿⣿⡄⠀⠀⠀
                         ⠀⠙⠛⠋⠉⣠⣾⣿⡿⠃⠀⢀⡴⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢿⣿⠛⠿⣿⠀⠉⠣⠀⠀⠀
                         ⠀⠀⠀⠀⠘⠉⠀⠉⠀⠀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠂⠀⠀⠀⠀⠀⠀⠀⠀""");
-        System.out.println("Las estadisticas de Harley Quinn son :\n Vida : 110pt \n Ataque : 120pt \n Defensa : 90 pt \n Velocidad : 80pt \n Curacion : 100pt \n Golpe Critico : 'Clown Strike'");
-
         System.out.println("Introduce next para ver el siguiente personaje");
         next = shi.next().charAt(0);
-
+        System.out.println("Las estadisticas de Harley Quinn son :\n Vida : 110pt \n Ataque : 120pt \n Defensa : 90 pt \n Velocidad : 80pt \n Curacion : 100pt \n Golpe Critico : 'Clown Strike'");
+    }
+    public static void ASCIIartZombie() {
         System.out.println("ZOMBIE");
+        ;
         System.out.println(
                 """
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣶⡶⠶⠶⠾⠿⠿⠿⠟⠿⠿⠿⠿⣷⠶⣶⣦⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -215,12 +207,11 @@ public class CombatePorTurnosEnFunciones {
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⡀⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣶⠀⠘⠃⠀⠀⣰⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⠶⢶⣶⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠿⢀⣀⣤⣤⡶⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠛⠻⠷⠶⠶⠶⠶⠶⠶⠶⠿⠿⠛⠋⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀""");
-
-        System.out.println("Las estadisticas de Zombie son :\n Vida : 150pt \n Ataque : 80pt \n Defensa : 100pt \n Velocidad : 40pt \n Curacion : 120pt \n Golpe Critico : 'The Bite of Death'");
-
         System.out.println("Introduce next para ver el siguiente personaje");
         next = shi.next().charAt(0);
-
+        System.out.println("Las estadisticas de Zombie son :\n Vida : 150pt \n Ataque : 80pt \n Defensa : 100pt \n Velocidad : 40pt \n Curacion : 120pt \n Golpe Critico : 'The Bite of Death'");
+    }
+    public static void ASCIIartChachito() {
         System.out.println("CHACHITO");
         System.out.println(
                 """
@@ -244,12 +235,12 @@ public class CombatePorTurnosEnFunciones {
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠀⠀⠀⠀⠀⠀⢸⣧
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣆⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⣶⣾⣿⣿⣿⣿⣤⣄⣀⡀⠀⠀⠀⣿
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⢿⣻⣷⣶⣾⣿⣿⡿⢯⣛⣛⡋⠁⠀⠀⠉⠙⠛⠛⠿⣿⣿⡷⣶⣿""");
-
-        System.out.println("Las estadisticas de Chachito son :\n Vida : 100pt \n Ataque : 100pt \n Defensa : 120pt \n Velocidad : 90pt \n Curacion : 100pt \n Golpe Critico : 'Just a Few Scratches'");
-
         System.out.println("Introduce next para ver el siguiente personaje");
         next = shi.next().charAt(0);
 
+        System.out.println("Las estadisticas de Chachito son :\n Vida : 100pt \n Ataque : 100pt \n Defensa : 120pt \n Velocidad : 90pt \n Curacion : 100pt \n Golpe Critico : 'Just a Few Scratches'");
+    }
+    public static void ASCIIartDragon() {
         System.out.println("DRAGON");
         System.out.println(
                 """
@@ -271,7 +262,50 @@ public class CombatePorTurnosEnFunciones {
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣼⣀⣠⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀""");
 
         System.out.println("Las estadisticas de Dragon son :\n Vida : 120pt \n Ataque : 100pt \n Defensa : 120pt \n Velocidad : 50pt \n Curacion : 120pt \n Golpe Critico : 'Family BBQ'");
+    }
+    public static void ASCIIartDraw() {
+        System.out.println("Ambos jugadores caen al suelo exhaustos al superar el numero de rondas             //Introduce next para continuar//");
+        next = shi.next().charAt(0);
+        System.out.println("Se dan la mano pacificamente y se retiran del campo de batalla                //Introduce n para continuar");
+        next = shi.next().charAt(0);
+        System.out.println("""
+                Have some Shrek of peace :)
+                                       ⠀⢀⣠⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⠀⠀⠀⢀⣴⠟⠉⠀⠀⠀⠈⠻⣦⡀⠀⠀⠀⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣷⣀⢀⣾⠿⠻⢶⣄⠀⠀⣠⣶⡿⠶⣄⣠⣾⣿⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⢻⣿⣿⡿⣿⠿⣿⡿⢼⣿⣿⡿⣿⣎⡟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⡟⠉⠛⢛⣛⡉⠀⠀⠙⠛⠻⠛⠑⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣧⣤⣴⠿⠿⣷⣤⡤⠴⠖⠳⣄⣀⣹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣀⣟⠻⢦⣀⡀⠀⠀⠀⠀⣀⡈⠻⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⡿⠉⡇⠀⠀⠛⠛⠛⠋⠉⠉⠀⠀⠀⠹⢧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⡟⠀⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠃⠀⠈⠑⠪⠷⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣾⣿⣿⣿⣦⣼⠛⢦⣤⣄⡀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠑⠢⡀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⢀⣠⠴⠲⠖⠛⠻⣿⡿⠛⠉⠉⠻⠷⣦⣽⠿⠿⠒⠚⠋⠉⠁⡞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢦⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⢀⣾⠛⠁⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠒⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢣⠀⠀⠀
+                ⠀⠀⠀⠀⣰⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣑⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡇⠀⠀
+                ⠀⠀⠀⣰⣿⣁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣧⣄⠀⠀⠀⠀⠀⠀⢳⡀⠀
+                ⠀⠀⠀⣿⡾⢿⣀⢀⣀⣦⣾⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡰⣫⣿⡿⠟⠻⠶⠀⠀⠀⠀⠀⢳⠀
+                ⠀⠀⢀⣿⣧⡾⣿⣿⣿⣿⣿⡷⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⢀⡴⢿⣿⣧⠀⡀⠀⢀⣀⣀⢒⣤⣶⣿⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
+                ⠀⠀⡾⠁⠙⣿⡈⠉⠙⣿⣿⣷⣬⡛⢿⣶⣶⣴⣶⣶⣶⣤⣤⠤⠾⣿⣿⣿⡿⠿⣿⠿⢿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
+                ⠀⣸⠃⠀⠀⢸⠃⠀⠀⢸⣿⣿⣿⣿⣿⣿⣷⣾⣿⣿⠟⡉⠀⠀⠀⠈⠙⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
+                ⠀⣿⠀⠀⢀⡏⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⠿⠿⠛⠛⠉⠁⠀⠀⠀⠀⠀⠉⠠⠿⠟⠻⠟⠋⠉⢿⣿⣦⡀⢰⡀⠀⠀⠀⠀⠀⠀⠁
+                ⢀⣿⡆⢀⡾⠀⠀⠀⠀⣾⠏⢿⣿⣿⣿⣯⣙⢷⡄⠀⠀⠀⠀⠀⢸⡄⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣿⣻⢿⣷⣀⣷⣄⠀⠀⠀⠀⢸⠀
+                ⢸⠃⠠⣼⠃⠀⠀⣠⣾⡟⠀⠈⢿⣿⡿⠿⣿⣿⡿⠿⠿⠿⠷⣄⠈⠿⠛⠻⠶⢶⣄⣀⣀⡠⠈⢛⡿⠃⠈⢿⣿⣿⡿⠀⠀⠀⠀⠀⡀
+                ⠟⠀⠀⢻⣶⣶⣾⣿⡟⠁⠀⠀⢸⣿⢅⠀⠈⣿⡇⠀⠀⠀⠀⠀⣷⠂⠀⠀⠀⠀⠐⠋⠉⠉⠀⢸⠁⠀⠀⠀⢻⣿⠛⠀⠀⠀⠀⢀⠇
+                ⠀⠀⠀⠀⠹⣿⣿⠋⠀⠀⠀⠀⢸⣧⠀⠰⡀⢸⣷⣤⣤⡄⠀⠀⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡆⠀⠀⠀⠀⡾⠀⠀⠀⠀⠀⠀⢼⡇
+                ⠀⠀⠀⠀⠀⠙⢻⠄⠀⠀⠀⠀⣿⠉⠀⠀⠈⠓⢯⡉⠉⠉⢱⣶⠏⠙⠛⠚⠁⠀⠀⠀⠀⠀⣼⠇⠀⠀⠀⢀⡇⠀⠀⠀⠀⠀⠀⠀⡇
+                ⠀⠀⠀⠀⠀⠀⠻⠄⠀⠀⠀⢀⣿⠀⢠⡄⠀⠀⠀⣁⠁⡀⠀⢠⠀⠀⠀⠀⠀⠀⠀⠀⢀⣐⡟⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⢠⡇""");
+    }
+    public static void main(String[] args) {
+        Scanner shi = new Scanner(System.in);
 
+        int Round = 2;
+
+        System.out.println("Elije un personaje a continuacion: ");
+        ASCIIartHaleyQuinn();
+        ASCIIartZombie();
+        ASCIIartChachito();
+        ASCIIartDragon();
         System.out.println("Introduce next para elegir un personaje");
         next = shi.next().charAt(0);
 
@@ -352,7 +386,6 @@ public class CombatePorTurnosEnFunciones {
             HealingPlayer2 = HealingPlayers(Player2);
             ReHealthPlayer2 = HealthPlayers(Player2);
         }
-
         System.out.println("Va a comenzar el combate, estan preparados?.... Introduzca next por consola");
         next = shi.next().charAt(0);
 
@@ -372,7 +405,6 @@ public class CombatePorTurnosEnFunciones {
             } else {
                 System.out.println("El Jugador 2 se ha defendido y no ha sufrido ningun daño!! ");
             }
-
         } else if (SpeedPlayer2 > SpeedPlayer1) {
             System.out.println("El Jugador 2 ha sido mas rapido que el Jugador 1, por lo que este atacara primero   //Escribe n para continuar// ");
             next = shi.next().charAt(0);
@@ -399,8 +431,8 @@ public class CombatePorTurnosEnFunciones {
 
             int HealPlayer1 = random.nextInt(HealingPlayer1);
             int HealPlayer2 = random.nextInt(HealingPlayer2);
-            int HitPlayer1 = random.nextInt(85);
-            int HitPlayer2 = random.nextInt(85);
+            int HitPlayer1 = random.nextInt(AttackPlayer1);
+            int HitPlayer2 = random.nextInt(AttackPlayer2);
 
             int DecisionRound = 0;
 
@@ -432,7 +464,6 @@ public class CombatePorTurnosEnFunciones {
                     next = shi.next().charAt(0);
                 }
             }
-
             if (HealthPlayer1 > 0 && HealthPlayer2 > 0) {
                 System.out.println("Es el turno de el Jugador 2, puede decidir si atacar o curarse, que hace?");
                 System.out.println("\n 1 Atacar \n 2 Curarse");
@@ -484,54 +515,16 @@ public class CombatePorTurnosEnFunciones {
             if (HealthPlayer2 <= 0 || HealthPlayer1 <= 0 || Round > 10) {
                 if (HealthPlayer2 <= 0) {
                     System.out.println("El jugador 2 ve su vida reducida a 0         // Introduce n para continuar//");
-                    next = shi.next().charAt(0);
-                    System.out.println(" .....                // Introduce n para continuar// ");
-                    next = shi.next().charAt(0);
                     showAsciiArtWinner();
                     System.out.println("EL JUGADOR 1 GANA LA PARTIDA");
                     break;
-
                 } else if (HealthPlayer1 <= 0) {
                     System.out.println("El jugador 1 ve su vida reducida a 0         // Introduce n para continuar//");
-                    next = shi.next().charAt(0);
-                    System.out.println(" ...                // Introduce n para continuar// ");
-                    next = shi.next().charAt(0);
                     showAsciiArtWinner();
                     System.out.println("EL JUGADOR 2 GANA LA PARTIDA");
                     break;
-
                 } else if (Round == 10) {
-                    System.out.println("Ambos jugadores caen al suelo exhaustos al superar el numero de rondas             //Introduce next para continuar//");
-                    next = shi.next().charAt(0);
-                    System.out.println("Se dan la mano pacificamente y se retiran del campo de batalla                //Introduce n para continuar");
-                    next = shi.next().charAt(0);
-                    System.out.println("""
-                            Have some Shrek of peace :)
-                                                   ⠀⢀⣠⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⠀⠀⠀⢀⣴⠟⠉⠀⠀⠀⠈⠻⣦⡀⠀⠀⠀⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣷⣀⢀⣾⠿⠻⢶⣄⠀⠀⣠⣶⡿⠶⣄⣠⣾⣿⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⢻⣿⣿⡿⣿⠿⣿⡿⢼⣿⣿⡿⣿⣎⡟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⡟⠉⠛⢛⣛⡉⠀⠀⠙⠛⠻⠛⠑⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣧⣤⣴⠿⠿⣷⣤⡤⠴⠖⠳⣄⣀⣹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣀⣟⠻⢦⣀⡀⠀⠀⠀⠀⣀⡈⠻⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⡿⠉⡇⠀⠀⠛⠛⠛⠋⠉⠉⠀⠀⠀⠹⢧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⡟⠀⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠃⠀⠈⠑⠪⠷⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣾⣿⣿⣿⣦⣼⠛⢦⣤⣄⡀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠑⠢⡀⠀⠀⠀⠀⠀
-                            ⠀⠀⠀⠀⠀⠀⠀⢀⣠⠴⠲⠖⠛⠻⣿⡿⠛⠉⠉⠻⠷⣦⣽⠿⠿⠒⠚⠋⠉⠁⡞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢦⠀⠀⠀⠀
-                            ⠀⠀⠀⠀⠀⢀⣾⠛⠁⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠒⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢣⠀⠀⠀
-                            ⠀⠀⠀⠀⣰⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣑⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡇⠀⠀
-                            ⠀⠀⠀⣰⣿⣁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣧⣄⠀⠀⠀⠀⠀⠀⢳⡀⠀
-                            ⠀⠀⠀⣿⡾⢿⣀⢀⣀⣦⣾⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡰⣫⣿⡿⠟⠻⠶⠀⠀⠀⠀⠀⢳⠀
-                            ⠀⠀⢀⣿⣧⡾⣿⣿⣿⣿⣿⡷⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⢀⡴⢿⣿⣧⠀⡀⠀⢀⣀⣀⢒⣤⣶⣿⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
-                            ⠀⠀⡾⠁⠙⣿⡈⠉⠙⣿⣿⣷⣬⡛⢿⣶⣶⣴⣶⣶⣶⣤⣤⠤⠾⣿⣿⣿⡿⠿⣿⠿⢿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
-                            ⠀⣸⠃⠀⠀⢸⠃⠀⠀⢸⣿⣿⣿⣿⣿⣿⣷⣾⣿⣿⠟⡉⠀⠀⠀⠈⠙⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
-                            ⠀⣿⠀⠀⢀⡏⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⠿⠿⠛⠛⠉⠁⠀⠀⠀⠀⠀⠉⠠⠿⠟⠻⠟⠋⠉⢿⣿⣦⡀⢰⡀⠀⠀⠀⠀⠀⠀⠁
-                            ⢀⣿⡆⢀⡾⠀⠀⠀⠀⣾⠏⢿⣿⣿⣿⣯⣙⢷⡄⠀⠀⠀⠀⠀⢸⡄⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣿⣻⢿⣷⣀⣷⣄⠀⠀⠀⠀⢸⠀
-                            ⢸⠃⠠⣼⠃⠀⠀⣠⣾⡟⠀⠈⢿⣿⡿⠿⣿⣿⡿⠿⠿⠿⠷⣄⠈⠿⠛⠻⠶⢶⣄⣀⣀⡠⠈⢛⡿⠃⠈⢿⣿⣿⡿⠀⠀⠀⠀⠀⡀
-                            ⠟⠀⠀⢻⣶⣶⣾⣿⡟⠁⠀⠀⢸⣿⢅⠀⠈⣿⡇⠀⠀⠀⠀⠀⣷⠂⠀⠀⠀⠀⠐⠋⠉⠉⠀⢸⠁⠀⠀⠀⢻⣿⠛⠀⠀⠀⠀⢀⠇
-                            ⠀⠀⠀⠀⠹⣿⣿⠋⠀⠀⠀⠀⢸⣧⠀⠰⡀⢸⣷⣤⣤⡄⠀⠀⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡆⠀⠀⠀⠀⡾⠀⠀⠀⠀⠀⠀⢼⡇
-                            ⠀⠀⠀⠀⠀⠙⢻⠄⠀⠀⠀⠀⣿⠉⠀⠀⠈⠓⢯⡉⠉⠉⢱⣶⠏⠙⠛⠚⠁⠀⠀⠀⠀⠀⣼⠇⠀⠀⠀⢀⡇⠀⠀⠀⠀⠀⠀⠀⡇
-                            ⠀⠀⠀⠀⠀⠀⠻⠄⠀⠀⠀⢀⣿⠀⢠⡄⠀⠀⠀⣁⠁⡀⠀⢠⠀⠀⠀⠀⠀⠀⠀⠀⢀⣐⡟⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⢠⡇""");
+                    ASCIIartDraw();
                     break;
                 }
             }

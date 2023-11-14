@@ -71,6 +71,7 @@ public class CombatePorTurnosEnFunciones {
         }
         return hitPlayer;
     }
+
     public static int AttakPlayers(int Player) {
         int AttakPlayer = 0;
         if (Player == 1) {
@@ -84,6 +85,7 @@ public class CombatePorTurnosEnFunciones {
         }
         return AttakPlayer;
     }
+
     public static int DefensePlayers(int Player) {
         int DefensePlayer = 0;
         if (Player == 1) {
@@ -97,6 +99,7 @@ public class CombatePorTurnosEnFunciones {
         }
         return DefensePlayer;
     }
+
     public static int SpeedPlayers(int Player) {
         int SpeedPlayer = 0;
         if (Player == 1) {
@@ -110,6 +113,7 @@ public class CombatePorTurnosEnFunciones {
         }
         return SpeedPlayer;
     }
+
     public static int HealthPlayers(int Player) {
         int HealthPlayer = 0;
         if (Player == 1) {
@@ -123,6 +127,7 @@ public class CombatePorTurnosEnFunciones {
         }
         return HealthPlayer;
     }
+
     public static int HealingPlayers(int Player) {
         int HealingPlayer = 0;
         if (Player == 1) {
@@ -136,6 +141,7 @@ public class CombatePorTurnosEnFunciones {
         }
         return HealingPlayer;
     }
+
     public static void ASCIIartHaleyQuinn() {
         System.out.print("HARLEY QUINN");
         System.out.println(
@@ -173,9 +179,9 @@ public class CombatePorTurnosEnFunciones {
         System.out.println("Introduce next para ver el siguiente personaje");
         next = shi.next().charAt(0);
     }
+
     public static void ASCIIartZombie() {
         System.out.println("ZOMBIE");
-        ;
         System.out.println(
                 """
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣶⡶⠶⠶⠾⠿⠿⠿⠟⠿⠿⠿⠿⣷⠶⣶⣦⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -211,6 +217,7 @@ public class CombatePorTurnosEnFunciones {
         System.out.println("Introduce next para ver el siguiente personaje");
         next = shi.next().charAt(0);
     }
+
     public static void ASCIIartChachito() {
         System.out.println("CHACHITO");
         System.out.println(
@@ -239,6 +246,7 @@ public class CombatePorTurnosEnFunciones {
         System.out.println("Introduce next para ver el siguiente personaje");
         next = shi.next().charAt(0);
     }
+
     public static void ASCIIartDragon() {
         System.out.println("DRAGON");
         System.out.println(
@@ -262,6 +270,7 @@ public class CombatePorTurnosEnFunciones {
 
         System.out.println("Las estadisticas de Dragon son :\n Vida : 120pt \n Ataque : 100pt \n Defensa : 120pt \n Velocidad : 50pt \n Curacion : 120pt \n Golpe Critico : 'Family BBQ'");
     }
+
     public static void ASCIIartDraw() {
         System.out.println("Ambos jugadores caen al suelo exhaustos al superar el numero de rondas             //Introduce next para continuar//");
         next = shi.next().charAt(0);
@@ -294,6 +303,24 @@ public class CombatePorTurnosEnFunciones {
                 ⠀⠀⠀⠀⠹⣿⣿⠋⠀⠀⠀⠀⢸⣧⠀⠰⡀⢸⣷⣤⣤⡄⠀⠀⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡆⠀⠀⠀⠀⡾⠀⠀⠀⠀⠀⠀⢼⡇
                 ⠀⠀⠀⠀⠀⠙⢻⠄⠀⠀⠀⠀⣿⠉⠀⠀⠈⠓⢯⡉⠉⠉⢱⣶⠏⠙⠛⠚⠁⠀⠀⠀⠀⠀⣼⠇⠀⠀⠀⢀⡇⠀⠀⠀⠀⠀⠀⠀⡇
                 ⠀⠀⠀⠀⠀⠀⠻⠄⠀⠀⠀⢀⣿⠀⢠⡄⠀⠀⠀⣁⠁⡀⠀⢠⠀⠀⠀⠀⠀⠀⠀⠀⢀⣐⡟⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⢠⡇""");
+    }
+    public static int DamagePlayers(int Health, int Damage){
+        return Health = Health - Damage;
+    }
+    public static int HealingPlayer(int Health, int Healing){
+        return Health = Health + Healing;
+    }
+    public static int MaximumHealthPlayers(int Health, int ReHealing){
+        if (Health > ReHealing) {
+            Health = ReHealing;
+        }
+        return Health;
+    }
+    public static int MinimumHealthPlayers(int Health){
+        if (Health < 0) {
+            Health = 0;
+        }
+        return Health;
     }
     public static void main(String[] args) {
         Scanner shi = new Scanner(System.in);
@@ -444,19 +471,17 @@ public class CombatePorTurnosEnFunciones {
                     System.out.println("El jugador 1 se prepara para atacar!!              //Escribe n para continuar//");
                     next = shi.next().charAt(0);
                     System.out.println("El jugador 1 ha atacado al Jugador 2 con " + HitPlayer1 + " puntos de daño");
+
                     HitPlayer1 = HabilityPlayers(Player1, HealthPlayer1, HitPlayer1);
-                    HealthPlayer2 = HealthPlayer2 - HitPlayer1;
-                    if (HealthPlayer2 < 0) {
-                        HealthPlayer2 = 0;
-                    }
+                    HealthPlayer2 = DamagePlayers(HealthPlayer2,HitPlayer1);
+                    HealthPlayer2 = MinimumHealthPlayers(HealthPlayer2);
+
                     System.out.println("Al jugador 2 le quedan " + HealthPlayer2 + " puntos de vida             //Introduce n para continuar//");
                     next = shi.next().charAt(0);
 
                 } else if (DecisionRound == 2) {
-                    HealthPlayer1 = HealthPlayer1 + HealPlayer1;
-                    if (HealthPlayer1 > ReHealthPlayer1) {
-                        HealthPlayer1 = ReHealthPlayer1;
-                    }
+                    HealthPlayer1 = HealingPlayer(HealthPlayer1,HealingPlayer1);
+                    HealthPlayer1 = MaximumHealthPlayers(HealthPlayer1,ReHealthPlayer1);
                     System.out.println("El jugador 1 va en busca de una pocion         //Escribe n para continuar//");
                     next = shi.next().charAt(0);
                     System.out.println("El jugador 1 ha encontrado una pocion de " + HealPlayer1 + " puntos de vida, por lo que su salud aumenta a " + HealthPlayer1 + "           //Introduce n para continuar// ");
@@ -473,19 +498,14 @@ public class CombatePorTurnosEnFunciones {
                     next = shi.next().charAt(0);
                     System.out.println("El jugador 2 ha atacado a el Jugador 1 con " + HitPlayer2 + " puntos de daño");
                     HitPlayer2 = HabilityPlayers(Player2, HealthPlayer2, HitPlayer2);
-                    HealthPlayer1 = HealthPlayer1 - HitPlayer2;
-                    if (HealthPlayer1 < 0) {
-                        HealthPlayer1 = 0;
-                    }
+                    HealthPlayer1 = DamagePlayers(HealthPlayer1,HitPlayer2);
+                    HealthPlayer1 = MinimumHealthPlayers(HealthPlayer1);
                     System.out.println("Al jugador 1 le quedan " + HealthPlayer1 + " puntos de vida                 //Introduce n para continuar//");
                     next = shi.next().charAt(0);
 
                 } else if (DecisionRound == 2) {
-                    HealthPlayer2 = HealthPlayer2 + HealPlayer2;
-
-                    if (HealthPlayer2 > ReHealthPlayer2) {
-                        HealthPlayer2 = ReHealthPlayer2;
-                    }
+                    HealthPlayer2 = HealingPlayer(HealthPlayer2,HealingPlayer2);
+                    HealthPlayer2 = MaximumHealthPlayers(HealthPlayer2,ReHealthPlayer2);
                     System.out.println("El jugador 2 va en busca de una pocion         //Escribe n para continuar//");
                     next = shi.next().charAt(0);
                     System.out.println("El jugador 2 ha encontrado una pocion de " + HealPlayer2 + " puntos de vida, por lo que su salud aumenta a " + HealthPlayer2 + "          //Introduce n para continuar//");

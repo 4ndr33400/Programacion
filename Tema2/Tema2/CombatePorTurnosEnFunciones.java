@@ -169,9 +169,9 @@ public class CombatePorTurnosEnFunciones {
                         ⢱⡇⠀⠀⢀⠀⢀⣴⣿⣿⠟⠉⠀⠀⣠⡴⠚⠁⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣇⡈⣿⣿⡿⣿⡄⠀⠀⠀
                         ⠀⠙⠛⠋⠉⣠⣾⣿⡿⠃⠀⢀⡴⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢿⣿⠛⠿⣿⠀⠉⠣⠀⠀⠀
                         ⠀⠀⠀⠀⠘⠉⠀⠉⠀⠀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠂⠀⠀⠀⠀⠀⠀⠀⠀""");
+        System.out.println("Las estadisticas de Harley Quinn son :\n Vida : 110pt \n Ataque : 120pt \n Defensa : 90 pt \n Velocidad : 80pt \n Curacion : 100pt \n Golpe Critico : 'Clown Strike'");
         System.out.println("Introduce next para ver el siguiente personaje");
         next = shi.next().charAt(0);
-        System.out.println("Las estadisticas de Harley Quinn son :\n Vida : 110pt \n Ataque : 120pt \n Defensa : 90 pt \n Velocidad : 80pt \n Curacion : 100pt \n Golpe Critico : 'Clown Strike'");
     }
     public static void ASCIIartZombie() {
         System.out.println("ZOMBIE");
@@ -207,9 +207,9 @@ public class CombatePorTurnosEnFunciones {
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⡀⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣶⠀⠘⠃⠀⠀⣰⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⠶⢶⣶⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠿⢀⣀⣤⣤⡶⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠛⠻⠷⠶⠶⠶⠶⠶⠶⠶⠿⠿⠛⠋⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀""");
+        System.out.println("Las estadisticas de Zombie son :\n Vida : 150pt \n Ataque : 80pt \n Defensa : 100pt \n Velocidad : 40pt \n Curacion : 120pt \n Golpe Critico : 'The Bite of Death'");
         System.out.println("Introduce next para ver el siguiente personaje");
         next = shi.next().charAt(0);
-        System.out.println("Las estadisticas de Zombie son :\n Vida : 150pt \n Ataque : 80pt \n Defensa : 100pt \n Velocidad : 40pt \n Curacion : 120pt \n Golpe Critico : 'The Bite of Death'");
     }
     public static void ASCIIartChachito() {
         System.out.println("CHACHITO");
@@ -235,10 +235,9 @@ public class CombatePorTurnosEnFunciones {
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠀⠀⠀⠀⠀⠀⢸⣧
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣆⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⣶⣾⣿⣿⣿⣿⣤⣄⣀⡀⠀⠀⠀⣿
                         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⢿⣻⣷⣶⣾⣿⣿⡿⢯⣛⣛⡋⠁⠀⠀⠉⠙⠛⠛⠿⣿⣿⡷⣶⣿""");
+        System.out.println("Las estadisticas de Chachito son :\n Vida : 100pt \n Ataque : 100pt \n Defensa : 120pt \n Velocidad : 90pt \n Curacion : 100pt \n Golpe Critico : 'Just a Few Scratches'");
         System.out.println("Introduce next para ver el siguiente personaje");
         next = shi.next().charAt(0);
-
-        System.out.println("Las estadisticas de Chachito son :\n Vida : 100pt \n Ataque : 100pt \n Defensa : 120pt \n Velocidad : 90pt \n Curacion : 100pt \n Golpe Critico : 'Just a Few Scratches'");
     }
     public static void ASCIIartDragon() {
         System.out.println("DRAGON");

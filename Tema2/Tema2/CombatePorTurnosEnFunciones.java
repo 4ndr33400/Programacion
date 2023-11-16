@@ -434,6 +434,24 @@ public class CombatePorTurnosEnFunciones {
             }
         }
     }
+    public static void HealthBars(int Round, int HealthPlayerFunction1, int HealthPlayerFunction2){
+        if (HealthPlayerFunction1 > 0 && HealthPlayerFunction2 > 0) {
+            System.out.println("Se han realizado " + Round + " rondas");
+
+            System.out.println("Vida JUGADOR 1");
+            for (int i = 1; i <= HealthPlayerFunction1; i++) {
+                System.out.print("♡");
+            }
+            System.out.println(" //Introduce cualquier letra para continuar// ");
+            next = shi.next().charAt(0);
+            System.out.println("Vida JUGADOR 2");
+            for (int i = 1; i <= HealthPlayerFunction2; i++) {
+                System.out.print("♡");
+            }
+            System.out.println(" // Introduce cualquier letra para continuar // ");
+            next = shi.next().charAt(0);
+        }
+    }
     public static void main(String[] args) {
         Scanner shi = new Scanner(System.in);
 
@@ -517,25 +535,8 @@ public class CombatePorTurnosEnFunciones {
                 Player = 2;
                 PlayerTurns(DecisionRound,HitPlayer2,Player,HealthPlayer1,HealthPlayer2,HealingPlayer2,ReHealthPlayer2,HealPlayer2);
             }
-            if (HealthPlayer1 > 0 && HealthPlayer2 > 0) {
-                System.out.println("Se han realizado " + Round + " rondas");
 
-
-                System.out.println("Vida JUGADOR 1");
-                for (int i = 1; i <= HealthPlayer1; i++) {
-                    System.out.print("♡");
-                }
-                System.out.println(" //Introduce cualquier letra para continuar// ");
-                next = shi.next().charAt(0);
-                System.out.println("Vida JUGADOR 2");
-                for (int i = 1; i <= HealthPlayer2; i++) {
-                    System.out.print("♡");
-                }
-                System.out.println(" // Introduce cualquier letra para continuar // ");
-                next = shi.next().charAt(0);
-                AttackPlayer2 = attackPlayers(Player2);
-            }
-
+           HealthBars(Round,HealthPlayer1,HealthPlayer2);
 
             if (HealthPlayer2 <= 0 || HealthPlayer1 <= 0 || Round > 10) {
                 if (HealthPlayer2 <= 0) {
@@ -557,8 +558,3 @@ public class CombatePorTurnosEnFunciones {
         }
     }
 }
-
-
-
-
-

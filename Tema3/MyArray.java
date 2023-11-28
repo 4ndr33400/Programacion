@@ -1,17 +1,27 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class MyArray {
-    static int MyArray[] = new int[5];
-    static Scanner in = new Scanner(System.in);
-    public static void CreateArray(){
 
+public class MyArray {
+    static Scanner in = new Scanner(System.in);
+    public static int[] CreateArray() {
+        int MyArray[] = new int[3];
+        System.out.println("Introduzca 5 numeros a continuacion :");
+        for (int i = 0; i < 3; i++) {
+            System.out.print("Numero " + (i + 1) + " = ");
+            int number = in.nextInt();
+            MyArray[i] = number;
+        }
+        return MyArray;
     }
+
 
     public static void ArrayNumberPrint(int[] Array) {
         for (int i = 0; i < Array.length; i++) {
             System.out.println(Array[i]);
         }
     }
+
 
     public static int ArrayGreatestNumber(int[] Array) {
         int Maximo = Array[0];
@@ -23,6 +33,7 @@ public class MyArray {
         return Maximo;
     }
 
+
     public static int ArrayMinimumNumber(int[] Array) {
         int Minimo = Array[0];
         for (int i = 0; i < Array.length; i++) {
@@ -32,6 +43,7 @@ public class MyArray {
         }
         return Minimo;
     }
+
 
     public static double ArrayAverage(int[] Array) {
         double average = Array[0];
@@ -51,56 +63,63 @@ public class MyArray {
         }
         return ValueValidator;
     }
-    public static int SumArray (int [] Array){
-        System.out.println("Introduce los valores del segundo array :");
-        int counter = 0;
-        int sum = 0 ;
-        int MyArray2[] = new int[5];
-        for (int i = 0; i < MyArray2.length ;i++){
-                System.out.print("Numero " + (i+1) + " = ");
-                int number = in.nextInt();
-                MyArray2[i] = number;
+
+
+    public static int[] SumArray (int [] MyArray1, int [] MyArray2){
+        int[] suma = new int[3];
+        for (int i = 0; i < MyArray1.length || i < MyArray2.length; i++){
+            suma[i] = MyArray1[i] + MyArray2[i];
         }
-        System.out.print("Introduzca un numero del Array 1 :");
-        int Vector1 = in.nextInt();
-        for (int k : MyArray) {
-            if (k == Vector1) {
-                counter++;
-            } else {
-                System.out.println("El valor introducido del primer array no es correcto");
-                break;
-            }
+        return suma;
+    }
+
+
+    public static int [] RestArray (int [] MyArray1,int[] MyArray2) {
+        int[] resta = new int[3];
+        for (int i = 0; i < MyArray1.length || i < MyArray2.length; i++) {
+            resta[i] = MyArray1[i] - MyArray2[i];
         }
-        System.out.print("Introduzca un numero del Array 2 :");
-        int Vector2 = in.nextInt();
-        for (int j : MyArray2) {
-            if (j == Vector2) {
-                counter++;
-            } else {
-                System.out.println("El valor introducido del segundo array no es correcto");
-                break;
-            }
+        return resta;
+    }
+
+
+    public static int EscalarProductArray (int [] MyArray1 , int[] MyArray2){
+        int  result = 0;
+        int[] producto = new int[3];
+        for (int i = 0; i <MyArray1.length || i < MyArray2.length ; i++){
+            producto[i] = MyArray1[i]*MyArray2[i];
+            result += producto[i];
         }
-        if (counter == 2){
-            sum = Vector1+Vector2;
-        }
-        return sum;
+        return result;
+    }
+    public static void InvertirArray(int [] MyArray1){
+
+
     }
     public static void main(String[] args) {
-        int MyArray[] = new int[5];
-        System.out.println("Introduzca 5 numeros a continuacion :");
-        for (int i = 0; i < 5; i++) {
-            System.out.print("Numero " + (i+1) + " = ");
-            int number = in.nextInt();
-            MyArray[i] = number;
-        }
-        /*
-        System.out.println("El mayor es: " + ArrayGreatestNumber(MyArray));
-        System.out.println("El menor es: " + ArrayMinimumNumber(MyArray));
-        System.out.println("La media del array es: " + ArrayAverage(MyArray));
-        System.out.println(ArrayExistence(MyArray));
-         */
-        System.out.println(SumArray(MyArray));
+        int []MyArray1;
+        int []MyArray2;
+       /*
+       System.out.println("El mayor es: " + ArrayGreatestNumber(MyArray));
+       System.out.println("El menor es: " + ArrayMinimumNumber(MyArray));
+       System.out.println("La media del array es: " + ArrayAverage(MyArray));
+       System.out.println(ArrayExistence(MyArray));
+       System.out.println("Array 1:");
+       MyArray1= CreateArray();
+       System.out.println("Array 2:");
+       MyArray2 = CreateArray();
+       System.out.println(Arrays.toString(SumArray(MyArray1, MyArray2)));
+       System.out.println("Array 1:");
+       MyArray1= CreateArray();
+       System.out.println("Array 2:");
+       MyArray2 = CreateArray();
+       System.out.println(Arrays.toString(RestArray(MyArray1, MyArray2)));
+       System.out.println("Array 1 :");
+       MyArray1 = CreateArray();
+       System.out.println("Array 2 :");
+       MyArray2 = CreateArray();
+       System.out.println(EscalarProductArray(MyArray1,MyArray2));
+       */
     }
 }
 

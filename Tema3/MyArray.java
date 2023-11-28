@@ -5,9 +5,10 @@ import java.util.Scanner;
 public class MyArray {
     static Scanner in = new Scanner(System.in);
     public static int[] CreateArray() {
-        int MyArray[] = new int[3];
-        System.out.println("Introduzca 5 numeros a continuacion :");
-        for (int i = 0; i < 3; i++) {
+        int cantidad = 6;
+        int MyArray[] = new int[cantidad];
+        System.out.println("Introduzca "+ cantidad +" numeros a continuacion :");
+        for (int i = 0; i < cantidad; i++) {
             System.out.print("Numero " + (i + 1) + " = ");
             int number = in.nextInt();
             MyArray[i] = number;
@@ -93,8 +94,23 @@ public class MyArray {
         return result;
     }
     public static void InvertirArray(int [] MyArray1){
-
-
+        int k ;
+    for (int i = 0; i < MyArray1.length/2; i++){
+         k = MyArray1[i];
+         MyArray1[i] = MyArray1[MyArray1.length-i-1];
+         MyArray1[MyArray1.length-i-1] = k;
+    }
+        System.out.println(Arrays.toString(MyArray1));
+    }
+    public static boolean ArrayCapicua(int [] MyArray1){
+        boolean esCapicua = true;
+        int length = MyArray1.length;
+        for (int i = 0; i < MyArray1.length/2; i++){
+            if (MyArray1[i] != MyArray1[length - i -1]){
+                esCapicua = false;
+            }
+        }
+        return esCapicua;
     }
     public static void main(String[] args) {
         int []MyArray1;
@@ -119,7 +135,12 @@ public class MyArray {
        System.out.println("Array 2 :");
        MyArray2 = CreateArray();
        System.out.println(EscalarProductArray(MyArray1,MyArray2));
-       */
+       MyArray1 = CreateArray();
+       InvertirArray(MyArray1);
+        */
+        MyArray1 = CreateArray();
+        System.out.println(ArrayCapicua(MyArray1));
+
     }
 }
 

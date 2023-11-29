@@ -4,10 +4,11 @@ import java.util.Scanner;
 
 public class MyArray {
     static Scanner in = new Scanner(System.in);
+
     public static int[] CreateArray() {
         int cantidad = 6;
         int MyArray[] = new int[cantidad];
-        System.out.println("Introduzca "+ cantidad +" numeros a continuacion :");
+        System.out.println("Introduzca " + cantidad + " numeros a continuacion :");
         for (int i = 0; i < cantidad; i++) {
             System.out.print("Numero " + (i + 1) + " = ");
             int number = in.nextInt();
@@ -53,12 +54,13 @@ public class MyArray {
         }
         return average / Array.length;
     }
-    public static String ArrayExistence(int[] Array){
+
+    public static String ArrayExistence(int[] Array) {
         String ValueValidator = "Ese valor no esta en el array";
         System.out.print("Introduce el numero que desees comprobar si esta en el array: ");
         int Number = in.nextInt();
-        for (int i = 0; i < Array.length; i++){
-            if (Array[i] == Number){
+        for (int i = 0; i < Array.length; i++) {
+            if (Array[i] == Number) {
                 ValueValidator = "Ese valor esta en el array";
             }
         }
@@ -66,16 +68,16 @@ public class MyArray {
     }
 
 
-    public static int[] SumArray (int [] MyArray1, int [] MyArray2){
+    public static int[] SumArray(int[] MyArray1, int[] MyArray2) {
         int[] suma = new int[3];
-        for (int i = 0; i < MyArray1.length || i < MyArray2.length; i++){
+        for (int i = 0; i < MyArray1.length || i < MyArray2.length; i++) {
             suma[i] = MyArray1[i] + MyArray2[i];
         }
         return suma;
     }
 
 
-    public static int [] RestArray (int [] MyArray1,int[] MyArray2) {
+    public static int[] RestArray(int[] MyArray1, int[] MyArray2) {
         int[] resta = new int[3];
         for (int i = 0; i < MyArray1.length || i < MyArray2.length; i++) {
             resta[i] = MyArray1[i] - MyArray2[i];
@@ -84,37 +86,40 @@ public class MyArray {
     }
 
 
-    public static int EscalarProductArray (int [] MyArray1 , int[] MyArray2){
-        int  result = 0;
+    public static int EscalarProductArray(int[] MyArray1, int[] MyArray2) {
+        int result = 0;
         int[] producto = new int[3];
-        for (int i = 0; i <MyArray1.length || i < MyArray2.length ; i++){
-            producto[i] = MyArray1[i]*MyArray2[i];
+        for (int i = 0; i < MyArray1.length || i < MyArray2.length; i++) {
+            producto[i] = MyArray1[i] * MyArray2[i];
             result += producto[i];
         }
         return result;
     }
-    public static void InvertirArray(int [] MyArray1){
-        int k ;
-    for (int i = 0; i < MyArray1.length/2; i++){
-         k = MyArray1[i];
-         MyArray1[i] = MyArray1[MyArray1.length-i-1];
-         MyArray1[MyArray1.length-i-1] = k;
-    }
+
+    public static void InvertirArray(int[] MyArray1) {
+        int k;
+        for (int i = 0; i < MyArray1.length / 2; i++) {
+            k = MyArray1[i];
+            MyArray1[i] = MyArray1[MyArray1.length - i - 1];
+            MyArray1[MyArray1.length - i - 1] = k;
+        }
         System.out.println(Arrays.toString(MyArray1));
     }
-    public static boolean ArrayCapicua(int [] MyArray1){
+
+    public static boolean ArrayCapicua(int[] MyArray1) {
         boolean esCapicua = true;
         int length = MyArray1.length;
-        for (int i = 0; i < MyArray1.length/2; i++){
-            if (MyArray1[i] != MyArray1[length - i -1]){
+        for (int i = 0; i < MyArray1.length / 2; i++) {
+            if (MyArray1[i] != MyArray1[length - i - 1]) {
                 esCapicua = false;
             }
         }
         return esCapicua;
     }
+
     public static void main(String[] args) {
-        int []MyArray1;
-        int []MyArray2;
+        int[] MyArray1;
+        int[] MyArray2;
        /*
        System.out.println("El mayor es: " + ArrayGreatestNumber(MyArray));
        System.out.println("El menor es: " + ArrayMinimumNumber(MyArray));

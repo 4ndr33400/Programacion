@@ -4,6 +4,19 @@ import java.util.Scanner;
 
 public class MyArray {
     static Scanner in = new Scanner(System.in);
+    public static void menuArray(){
+        System.out.println("Elige una de las siguientes opciones a continuacion :");
+        System.out.println(" a) Imprime el array." +
+                "\n b) Cual es el maximo numero en el array." +
+                "\n c) Cual es el minimo numero en el array." +
+                "\n d) Cual es la media del array." +
+                "\n e) El elemento existe en el array?." +
+                "\n f) Cual es la suma de estos dos vectores." +
+                "\n g) Cual es la resta de estos dos vectores." +
+                "\n h) CUal es el producto escalar de estos dos vectores." +
+                "\n i) Invierte el orden del siguiente array." +
+                "\n j) Averigua si el array es capicua.");
+    }
 
     public static int[] CreateArray() {
         int cantidad = 6;
@@ -20,7 +33,8 @@ public class MyArray {
 
     public static void ArrayNumberPrint(int[] Array) {
         for (int i = 0; i < Array.length; i++) {
-            System.out.println(Array[i]);
+            System.out.println(Arrays.toString(Array));
+            break;
         }
     }
 
@@ -69,7 +83,7 @@ public class MyArray {
 
 
     public static int[] SumArray(int[] MyArray1, int[] MyArray2) {
-        int[] suma = new int[3];
+        int[] suma = new int[6];
         for (int i = 0; i < MyArray1.length || i < MyArray2.length; i++) {
             suma[i] = MyArray1[i] + MyArray2[i];
         }
@@ -78,7 +92,7 @@ public class MyArray {
 
 
     public static int[] RestArray(int[] MyArray1, int[] MyArray2) {
-        int[] resta = new int[3];
+        int[] resta = new int[6];
         for (int i = 0; i < MyArray1.length || i < MyArray2.length; i++) {
             resta[i] = MyArray1[i] - MyArray2[i];
         }
@@ -106,12 +120,12 @@ public class MyArray {
         System.out.println(Arrays.toString(MyArray1));
     }
 
-    public static boolean ArrayCapicua(int[] MyArray1) {
-        boolean esCapicua = true;
+    public static String ArrayCapicua(int[] MyArray1) {
+        String esCapicua = "Es capicua";
         int length = MyArray1.length;
         for (int i = 0; i < MyArray1.length / 2; i++) {
             if (MyArray1[i] != MyArray1[length - i - 1]) {
-                esCapicua = false;
+                esCapicua = "No es capicua";
             }
         }
         return esCapicua;
@@ -120,32 +134,56 @@ public class MyArray {
     public static void main(String[] args) {
         int[] MyArray1;
         int[] MyArray2;
-       /*
-       System.out.println("El mayor es: " + ArrayGreatestNumber(MyArray));
-       System.out.println("El menor es: " + ArrayMinimumNumber(MyArray));
-       System.out.println("La media del array es: " + ArrayAverage(MyArray));
-       System.out.println(ArrayExistence(MyArray));
-       System.out.println("Array 1:");
-       MyArray1= CreateArray();
-       System.out.println("Array 2:");
-       MyArray2 = CreateArray();
-       System.out.println(Arrays.toString(SumArray(MyArray1, MyArray2)));
-       System.out.println("Array 1:");
-       MyArray1= CreateArray();
-       System.out.println("Array 2:");
-       MyArray2 = CreateArray();
-       System.out.println(Arrays.toString(RestArray(MyArray1, MyArray2)));
-       System.out.println("Array 1 :");
-       MyArray1 = CreateArray();
-       System.out.println("Array 2 :");
-       MyArray2 = CreateArray();
-       System.out.println(EscalarProductArray(MyArray1,MyArray2));
-       MyArray1 = CreateArray();
-       InvertirArray(MyArray1);
-        */
-        MyArray1 = CreateArray();
-        System.out.println(ArrayCapicua(MyArray1));
+        menuArray();
+        System.out.print("Introduzca la letra de la opcion :");
+        String eleccion = in.nextLine();
 
+        switch(eleccion){
+            case "a":
+                MyArray1 = CreateArray();
+                ArrayNumberPrint(MyArray1);
+                break;
+            case "b":
+                MyArray1 = CreateArray();
+                System.out.println("El mayor es: " + ArrayGreatestNumber(MyArray1));
+                break;
+            case "c":
+                MyArray1 = CreateArray();
+                System.out.println("El menor es: " + ArrayMinimumNumber(MyArray1));
+                break;
+            case "d":
+                MyArray1 = CreateArray();
+                System.out.println("La media de " + Arrays.toString(MyArray1) + " es " + ArrayAverage(MyArray1));
+                break;
+            case "e":
+                MyArray1 = CreateArray();
+                System.out.println(ArrayExistence(MyArray1));
+                break;
+            case "f":
+                MyArray1 = CreateArray();
+                MyArray2 = CreateArray();
+                System.out.println("La suma entre " + Arrays.toString(MyArray1) + " y " + Arrays.toString(MyArray2) + " es " + Arrays.toString(SumArray(MyArray1,MyArray2)));
+                break;
+            case "g":
+                MyArray1 = CreateArray();
+                MyArray2 = CreateArray();
+                System.out.println("La resta entre " + Arrays.toString(MyArray1) + " y " + Arrays.toString(MyArray2) + " es " + Arrays.toString(RestArray(MyArray1,MyArray2)));
+                break;
+            case "h":
+                MyArray1 = CreateArray();
+                MyArray2 = CreateArray();
+                System.out.println("El producto escalar de " + Arrays.toString(MyArray1) + " y " + Arrays.toString(MyArray2) + " es " + EscalarProductArray(MyArray1,MyArray2));
+                break;
+            case "i":
+                MyArray1 = CreateArray();
+                System.out.println("Este array  " + Arrays.toString(MyArray1) + " invertido se ve asi: ");
+                InvertirArray(MyArray1);
+                break;
+            case "j":
+                MyArray1 = CreateArray();
+                System.out.println("Es el siguiente array capicua? " + Arrays.toString(MyArray1) + ArrayCapicua(MyArray1));
+                break;
+        }
     }
 }
 

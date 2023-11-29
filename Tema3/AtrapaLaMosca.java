@@ -31,8 +31,10 @@ public class AtrapaLaMosca {
                 } else if ((eleccion + 1) == FlyElection[i]) {
                     System.out.println("Estuviste a punto de matar a la mosca");
                     flyPositionCreate();
+                    continue;
                 } else if (eleccion != FlyElection[i]) {
                     System.out.println("Vuelve a intentarlo");
+                    continue;
                 }
             }
         }while (count <= 0);
@@ -44,7 +46,7 @@ public class AtrapaLaMosca {
         System.out.print("Introduce next para continuar :");
         String next = in.nextLine();
 
-        Arrays.toString(flyPositionCreate());
+        flyPositionCreate();
         int[] FlyArray = flyPositionCreate();
         CachTheFly(FlyArray);
 

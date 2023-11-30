@@ -15,40 +15,39 @@ public class AtrapaLaMosca {
                 returnArrayFly[i] = 0;
             }
         }
+        System.out.println(Arrays.toString(returnArrayFly));
         return returnArrayFly;
     }
-    public static void CachTheFly (int[] Array){
-        System.out.println("Donde crees que esta la mosca? ");
-        int eleccion = in.nextInt();
-        int[] FlyElection = flyPositionCreate();
-        int count = 0;
-        do {
-            for (int i = 0; i < FlyElection.length; i++) {
-                if (eleccion == FlyElection[i]) {
-                    System.out.println("Le has dado a la mosca :D ya puedes dormir en paz ijijijijjiji");
-                    count++;
-                    break;
-                } else if ((eleccion + 1) == FlyElection[i]) {
-                    System.out.println("Estuviste a punto de matar a la mosca");
-                    flyPositionCreate();
-                    continue;
-                } else if (eleccion != FlyElection[i]) {
-                    System.out.println("Vuelve a intentarlo");
-                    continue;
-                }
+    public static void TurnCatchTheFly(int[] Array) {
+        int[] FlyPositionArray = flyPositionCreate();
+        boolean Victory = false;
+        System.out.println("Donde crees que esta la mosca?");
+        while (Victory == false){
+            int eleccion = in.nextInt();
+            if (eleccion > 14 || eleccion < 0){
+                System.out.println("Numero incorrecto, vuelve a elegir");
             }
-        }while (count <= 0);
+            if (1 == FlyPositionArray[eleccion]){
+                System.out.println("Le has dado a la mosca");
+                Victory = true;
+            } else if (1 == FlyPositionArray[eleccion + 1] || 1 == FlyPositionArray[eleccion - 1]){
+                System.out.println("Has estado a punto de darle a la mosca");
+            } else{
+                System.out.println("Vuelve a intentarlo");
+            }
+
+        }
     }
     public static void main(String[] args){
         System.out.println("Bienvenido/a al juego de la mosca " +
-                "\n En este juego tendras que elegir un numero de entre el 0 y el 15, si el numero que elejiste esta cerca de la mosca esta se movera de posicion, " +
-                "y si no lo esta la mosca permanecera en su sitio. Buena suerte!");
+                "\nEn este juego tendras que elegir un numero de entre el 0 y el 15," +
+                "\nsi el numero que elejiste esta cerca de la mosca esta se movera de posicion," +
+                "\ny si no lo esta la mosca permanecera en su sitio. Buena suerte!");
         System.out.print("Introduce next para continuar :");
         String next = in.nextLine();
-
-        flyPositionCreate();
+        
         int[] FlyArray = flyPositionCreate();
-        CachTheFly(FlyArray);
+        TurnCatchTheFly(FlyArray);
 
     }
 }

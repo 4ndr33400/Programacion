@@ -4,17 +4,24 @@ import java.util.Scanner;
 public class WifiRouter {
     static int habitacionesNum = 20;
     static int[] ArrayRouter = new int[habitacionesNum];
-    static int PotenciaRouter = 5;
-
-
+    static int PotenciaRouter = 6;
     public static void ComprobacionRouter(int[] ArrayRouter, int numeroHabitacion, int PotenciaRouter) {
-        for (int i = 0; i < PotenciaRouter; i++) {
+        int HabitacionSubir = numeroHabitacion;
+        int HabitacionBajar = numeroHabitacion;
+        ArrayRouter[numeroHabitacion] = PotenciaRouter;
+        for (int i = 0; i < PotenciaRouter; PotenciaRouter--) {
            if (numeroHabitacion + i >= 0){
-               ArrayRouter[numeroHabitacion + i] = i;
+                if (HabitacionSubir < 20){
+                    ArrayRouter[HabitacionSubir] = PotenciaRouter;
+                }
            }
-           if(numeroHabitacion - i < numeroHabitacion) {
-               ArrayRouter[numeroHabitacion - i] = i;
+           if(numeroHabitacion - i <= numeroHabitacion) {
+               if (HabitacionBajar >= 0){
+                   ArrayRouter[HabitacionBajar] = PotenciaRouter;
+               }
            }
+           HabitacionBajar --;
+           HabitacionSubir ++;
         }
         System.out.println(Arrays.toString(ArrayRouter));
     }

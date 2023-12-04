@@ -9,7 +9,7 @@ public class AtrapaLaMosca {
     public static int[] flyPositionCreate() {
         int[] returnArrayFly = new int[15];
         int length = 15;
-        int flyPosition = random.nextInt(0, 14);
+        int flyPosition = random.nextInt(0, 15);
         for (int i = 0; i < length; i++) {
             if (flyPosition == i) {
                 returnArrayFly[i] = 1;
@@ -33,12 +33,34 @@ public class AtrapaLaMosca {
             if (1 == FlyPositionArray[eleccion]) {
                 System.out.println("Le has dado a la mosca");
                 Victory = true;
-            } else if (1 == FlyPositionArray[eleccion + 1] || 1 == FlyPositionArray[eleccion - 1]) {
-                System.out.println("Has estado a punto de darle a la mosca");
-                FlyPositionArray = flyPositionCreate();
             } else {
-                System.out.println("Vuelve a intentarlo");
-                Arrays.toString(FlyPositionArray);
+                if (eleccion == 14){
+                   if  ( 1 == FlyPositionArray[eleccion - 1]) {
+                       System.out.println("Has estado a punto de darle a la mosca");
+                       FlyPositionArray = flyPositionCreate();
+                   }else{
+                       System.out.println("Vuelve a intentarlo");
+                       Arrays.toString(FlyPositionArray);
+                   }
+                }
+                if (eleccion == 0){
+                    if  ( 1 == FlyPositionArray[eleccion + 1]) {
+                        System.out.println("Has estado a punto de darle a la mosca");
+                        FlyPositionArray = flyPositionCreate();
+                    } else {
+                        System.out.println("Vuelve a intentarlo");
+                        Arrays.toString(FlyPositionArray);
+                    }
+                }
+                if (eleccion != 0 && eleccion != 14){
+                    if (1 == FlyPositionArray[eleccion + 1] || 1 == FlyPositionArray[eleccion - 1]) {
+                        System.out.println("Has estado a punto de darle a la mosca");
+                        FlyPositionArray = flyPositionCreate();
+                    } else{
+                        System.out.println("Vuelve a intentarlo");
+                        Arrays.toString(FlyPositionArray);
+                    }
+                }
             }
             Arrays.toString(FlyPositionArray);
         }

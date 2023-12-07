@@ -15,7 +15,7 @@ public class BuscaMinas {
             MinaColocada = 0;
             do {
                 PosicionMina = random.nextInt(0, 20);
-                if (ArrayPosicionMinas[PosicionMina]== 0) {
+                if (ArrayPosicionMinas[PosicionMina] == 0) {
                     ArrayPosicionMinas[PosicionMina] = 7;
                     if(PosicionMina - 1 >= 0 && PosicionMina + 1 != 7){
                         ArrayPosicionMinas[PosicionMina - 1] = ArrayPosicionMinas[PosicionMina - 1] + 1;
@@ -31,18 +31,46 @@ public class BuscaMinas {
         return ArrayPosicionMinas;
     }
     public static void ImprimirArray(String[] array){
-        System.out.println(" ");
+        System.out.println("");
         for(int i = 0; i < array.length; i++){
             System.out.println(array[i] + " ");
         }
-        System.out.println(" ");
+        System.out.println("");
+    }
+    public static boolean ImprimirArray2(int[] array, int seleccion1 , String[] array2){
+        array2[seleccion1] = String.valueOf(array[seleccion1]);
+        for(int i = 0; i < array.length; i++){
+            if (seleccion1 == i){
+                System.out.println(array[i] + " ");
+            } else {
+                System.out.print("x" + " ");
+            }
+        }
+        return (array[seleccion1] != 5);
     }
     public static void main (String[] args){
         String[] array2;
         array2 = new String[]{"-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"};
         int seleccion1;
-        int seleccion2;
-        int ContadorParejas = 0;
+        int MinaTocada = 0;
+        int EspacioTocado = 0;
         int[] array1 = CreateArrayMina().clone();
+
+        do{
+            System.out.println("Donde crees que esta la mina? :");
+            seleccion1 = in.nextInt();
+
+            if (ImprimirArray2(array1,seleccion1,array2)){
+                MinaTocada++;
+            } else {
+                EspacioTocado ++;
+            }
+            ImprimirArray(array2);
+        } while (MinaTocada != 5 && EspacioTocado == 0);
+        if (MinaTocada == 0){
+            System.out.println("Has evitado todas las minas!");
+        } else {
+            System.out.println("Has tocado una mina");
+        }
     }
 }

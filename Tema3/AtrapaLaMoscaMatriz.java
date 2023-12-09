@@ -10,17 +10,64 @@ public class AtrapaLaMoscaMatriz {
         int lenght = 4;
         int FlyPositionFila = random.nextInt(0,4);
         int FlyPositionColumna = random.nextInt(0,4);
-        for (int x = 0; x < returnMatrizFly.length; x++){
-            for (int y = 0; y < returnMatrizFly[x].length; y++){
-                if (FlyPositionFila == x){
-                    returnMatrizFly[x][y] = 1;
-                } else {
-                    returnMatrizFly[x][y] = 0;
+        returnMatrizFly[FlyPositionFila][FlyPositionColumna] = 1;
+        System.out.println(Arrays.deepToString(returnMatrizFly));
+        return returnMatrizFly;
+    }
+    public static void TurnCachFly (int [][] Matriz){
+        int[][] FlyPosition = flyPositionCreate();
+        boolean Victory = false;
+        System.out.println("Donde crees que esta la mosca? ");
+
+        while (!Victory){
+            System.out.print("Selecciona la fila: ");
+            int seleccionFila = in.nextInt();
+            System.out.print("Selecciona la columna: ");
+            int seleccionColumna = in.nextInt();
+            if (seleccionFila > 3 || seleccionColumna > 3){
+                System.out.println("Numero incorrecto, vuelve a elegir");
+            }
+            if( 1 == FlyPosition[seleccionFila][seleccionColumna]){
+                System.out.println("Le has dado a la mosca!");
+                Victory = true;
+            } else {
+                if(seleccionFila != 0){
+                    if (1 == FlyPosition[seleccionFila][seleccionColumna - 1]){
+                        System.out.println("Has estado a punto de darle a la mosca!");
+                        FlyPosition = flyPositionCreate();
+                    } else {
+                        System.out.println("Vuelve a intentarlo");
+                    }
+                } else if (seleccionFila != 3) {
+                    if (1 == FlyPosition[seleccionFila][seleccionColumna + 1]){
+                        System.out.println("Has estado a punto de darle a la mosca!");
+                        FlyPosition = flyPositionCreate();
+                    }else {
+                        System.out.println("Vuelve a intentarlo");
+                    }
+                } else if (seleccionColumna != 0){
+                    if (1 == FlyPosition[seleccionFila  - 1][seleccionColumna]){
+                        System.out.println("Has estado a punto de darle a la mosca!");
+                        FlyPosition = flyPositionCreate();
+                    }else {
+                        System.out.println("Vuelve a intentarlo");
+                    }
+                } else if(seleccionColumna != 3){
+                    if (1 == FlyPosition[seleccionFila + 1][seleccionColumna]){
+                        System.out.println("Has estado a punto de darle a la mosca!");
+                        FlyPosition = flyPositionCreate();
+                    }else {
+                        System.out.println("Vuelve a intentarlo");
+                    }
                 }
             }
         }
-        System.out.println(Arrays.deepToString(returnMatrizFly));
-        return returnMatrizFly;
+        Arrays.deepToString(FlyPosition);
+    }
+    public static void main (String[] args){
+        System.out.println("Este es el juego de la mosca con una matriz!");
+        int[][] FlyMatriz = flyPositionCreate();
+        TurnCachFly(FlyMatriz);
     }
 
 }

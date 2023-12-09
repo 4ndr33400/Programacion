@@ -109,20 +109,22 @@ public class MyMatriz {
         }
         return resta;
     }
-    public static String MatrizUnidad(int[][] MyMatriz){
+
+    public static String MatrizUnidad(int[][] MyMatriz) {
         String comprobacion = "No es unidad";
 
-        for (int x = 0; x < MyMatriz.length;x++){
-            for (int y = 0; y < MyMatriz[x].length; y++){
-                if (MyMatriz[x][x] == 1 && x == y  ){
+        for (int x = 0; x < MyMatriz.length; x++) {
+            for (int y = 0; y < MyMatriz[x].length; y++) {
+                if (MyMatriz[x][x] == 1 && x == y) {
                     comprobacion = "Es unidad";
-                } else if (MyMatriz[x][y] == 0 && y!=x){
+                } else if (MyMatriz[x][y] == 0 && y != x) {
                     comprobacion = "Es unidad";
                 }
             }
         }
         return comprobacion;
     }
+
     public static void main(String[] args) {
         int[][] MyMatriz1;
         int[][] MyMatriz2;
@@ -159,9 +161,11 @@ public class MyMatriz {
         MyMatriz1 = CreateMatriz(numeroFilas, numeroColumnas);
         MyMatriz2 = CreateMatriz(numeroFilas, numeroColumnas);
         System.out.println("La resta entre " + Arrays.deepToString(MyMatriz1) + " y " + Arrays.deepToString(MyMatriz2) + " es " + Arrays.deepToString(RestArray(MyMatriz1, MyMatriz2)));
- */
+
         MyMatriz1 = CreateMatriz(numeroFilas,numeroColumnas);
         System.out.println("La siguiente matriz " + Arrays.deepToString(MyMatriz1));
         MatrizUnidad(MyMatriz1);
+
+ */
     }
 }

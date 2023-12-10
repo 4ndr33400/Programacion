@@ -65,7 +65,6 @@ public class AtrapaLaMosca {
             Arrays.toString(FlyPositionArray);
         }
     }
-
     public static void main(String[] args) {
         System.out.println("Bienvenido/a al juego de la mosca " +
                 "\nEn este juego tendras que elegir un numero de entre el 0 y el 15," +

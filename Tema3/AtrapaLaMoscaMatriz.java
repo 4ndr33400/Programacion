@@ -8,15 +8,16 @@ public class AtrapaLaMoscaMatriz {
     public static int[][] flyPositionCreate(){
         int[][] returnMatrizFly = new int [4][4];
         int lenght = 4;
-        int FlyPositionFila = random.nextInt(0,4);
-        int FlyPositionColumna = random.nextInt(0,4);
+        int FlyPositionFila = random.nextInt(4);
+        int FlyPositionColumna = random.nextInt(4);
         returnMatrizFly[FlyPositionFila][FlyPositionColumna] = 1;
         System.out.println(Arrays.deepToString(returnMatrizFly));
         return returnMatrizFly;
     }
-    public static void TurnCachFly (int [][] Matriz){
+    public static void TurnCachFly (int[][] Matriz){
         int[][] FlyPosition = flyPositionCreate();
         boolean Victory = false;
+        boolean adyacente = false;
         System.out.println("Donde crees que esta la mosca? ");
 
         while (!Victory){
@@ -31,34 +32,28 @@ public class AtrapaLaMoscaMatriz {
                 System.out.println("Le has dado a la mosca!");
                 Victory = true;
             } else {
-                if(seleccionFila != 0){
-                    if (1 == FlyPosition[seleccionFila][seleccionColumna - 1]){
-                        System.out.println("Has estado a punto de darle a la mosca!");
-                        FlyPosition = flyPositionCreate();
-                    } else {
-                        System.out.println("Vuelve a intentarlo");
+                if (seleccionFila != 0 && FlyPosition[seleccionFila + 1][seleccionColumna] == 1){
+                    if (seleccionFila == 3 && FlyPosition[seleccionFila - 1][seleccionColumna] == 1)
+                adyacente = true;
+                } else if (seleccionFila != 3 && FlyPosition[seleccionFila - 1][seleccionColumna] == 1){
+                    if (seleccionFila == 0 && FlyPosition[seleccionFila + 1][seleccionColumna] == 1)
+                adyacente = true;
+                } else if (seleccionColumna != 0 && FlyPosition[seleccionFila][seleccionColumna + 1] == 1 ){
+                    if (seleccionFila == 3 && FlyPosition[seleccionFila][seleccionColumna - 1] == 1)
+                adyacente = true;
+                } else if (seleccionColumna != 3 && FlyPosition[seleccionFila][seleccionColumna - 1] == 1){
+                    if (seleccionFila == 0 && FlyPosition[seleccionFila][seleccionColumna + 1] == 1)
+                adyacente = true;
+                } else if (seleccionFila != 0 && seleccionFila != 3 && seleccionColumna != 0 && seleccionColumna != 3){
+                    if (FlyPosition[seleccionFila +1][seleccionColumna +1] == 1 && FlyPosition [seleccionFila - 1][seleccionColumna + 1] == 1){
+                        adyacente = true;
                     }
-                } else if (seleccionFila != 3) {
-                    if (1 == FlyPosition[seleccionFila][seleccionColumna + 1]){
-                        System.out.println("Has estado a punto de darle a la mosca!");
-                        FlyPosition = flyPositionCreate();
-                    }else {
-                        System.out.println("Vuelve a intentarlo");
-                    }
-                } else if (seleccionColumna != 0){
-                    if (1 == FlyPosition[seleccionFila  - 1][seleccionColumna]){
-                        System.out.println("Has estado a punto de darle a la mosca!");
-                        FlyPosition = flyPositionCreate();
-                    }else {
-                        System.out.println("Vuelve a intentarlo");
-                    }
-                } else if(seleccionColumna != 3){
-                    if (1 == FlyPosition[seleccionFila + 1][seleccionColumna]){
-                        System.out.println("Has estado a punto de darle a la mosca!");
-                        FlyPosition = flyPositionCreate();
-                    }else {
-                        System.out.println("Vuelve a intentarlo");
-                    }
+                }
+                if (adyacente){
+                    System.out.println("Has estado a punto de darle a la mosca");
+                    FlyPosition = flyPositionCreate();
+                } else {
+                    System.out.println("Vuelve a intentarlo");
                 }
             }
         }

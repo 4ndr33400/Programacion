@@ -3,7 +3,7 @@ public class WifiRouterMatriz {
     static int numeroPisos = 20;
     static int potenciaRouter = 6;
     static int[][] MatrizRouter = new int[numeroHabitacionesPlanta][numeroPisos];
-
+/*
     public static void ComprobacionRouter (int[][] MatrizRouter , int numeroHabitacion , int numeroPiso){
         int HabitacionSubir = 0;
         int HabitacionBajar = 0;
@@ -15,4 +15,6 @@ public class WifiRouterMatriz {
            }
         }
     }
+
+ */
 }

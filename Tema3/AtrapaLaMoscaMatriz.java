@@ -34,16 +34,20 @@ public class AtrapaLaMoscaMatriz {
             } else {
                 if (seleccionFila != 0 && FlyPosition[seleccionFila + 1][seleccionColumna] == 1){
                     if (seleccionFila == 3 && FlyPosition[seleccionFila - 1][seleccionColumna] == 1)
-                adyacente = true;
+
+                        adyacente = true;
                 } else if (seleccionFila != 3 && FlyPosition[seleccionFila - 1][seleccionColumna] == 1){
                     if (seleccionFila == 0 && FlyPosition[seleccionFila + 1][seleccionColumna] == 1)
-                adyacente = true;
+
+                        adyacente = true;
                 } else if (seleccionColumna != 0 && FlyPosition[seleccionFila][seleccionColumna + 1] == 1 ){
                     if (seleccionFila == 3 && FlyPosition[seleccionFila][seleccionColumna - 1] == 1)
-                adyacente = true;
+
+                        adyacente = true;
                 } else if (seleccionColumna != 3 && FlyPosition[seleccionFila][seleccionColumna - 1] == 1){
-                    if (seleccionFila == 0 && FlyPosition[seleccionFila][seleccionColumna + 1] == 1)
-                adyacente = true;
+                    if (seleccionColumna == 0 && FlyPosition[seleccionFila][seleccionColumna + 1] == 1)
+
+                        adyacente = true;
                 } else if (seleccionFila != 0 && seleccionFila != 3 && seleccionColumna != 0 && seleccionColumna != 3){
                     if (FlyPosition[seleccionFila +1][seleccionColumna +1] == 1 && FlyPosition [seleccionFila - 1][seleccionColumna + 1] == 1){
                         adyacente = true;

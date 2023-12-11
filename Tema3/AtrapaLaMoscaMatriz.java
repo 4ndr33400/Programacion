@@ -35,7 +35,6 @@ public class AtrapaLaMoscaMatriz {
                 if (seleccionFila != 0 && FlyPosition[seleccionFila + 1][seleccionColumna] == 1){
                     if (seleccionFila == 3 && FlyPosition[seleccionFila - 1][seleccionColumna] == 1)
 
-
                         adyacente = true;
                 } else if (seleccionFila != 3 && FlyPosition[seleccionFila - 1][seleccionColumna] == 1){
                     if (seleccionFila == 0 && FlyPosition[seleccionFila + 1][seleccionColumna] == 1)

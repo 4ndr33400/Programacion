@@ -4,13 +4,12 @@ public class WifiRouterMatriz {
     static Scanner in = new Scanner(System.in);
     static int numeroHabitacionesPlanta = 5;
     static int numeroPisos = 10;
-    static int potenciaRouter = 3;
+    static int potenciaRouter = 4;
     static int[][] MatrizRouter = new int[numeroHabitacionesPlanta][numeroPisos];
 
     public static void imprimirMatriz(int[][] MatrizHotel) {
         for (int x = 0; x < MatrizHotel.length; x++) {
             for (int y = 0; y < MatrizHotel[0].length; y++) {
-                MatrizHotel[x][y] = (x * MatrizHotel.length) + (y + 1);
                 System.out.print(MatrizHotel[x][y] + " ");
             }
             System.out.println();
@@ -36,14 +35,13 @@ public class WifiRouterMatriz {
                         }
                     }
                 }
-
                 if (i == numeroPiso && j == numeroHabitacion) {
                     MatrizRouter[i][j] = potenciaRouter;
                 }
             }
         }
+        imprimirMatriz(MatrizRouter);
     }
-}
 
 public static void main(String[] args) {
 
@@ -51,7 +49,14 @@ public static void main(String[] args) {
     int numeroPiso = in.nextInt();
     System.out.print("Elige la habitacion (0 - 4): ");
     int numeroHabitacion = in.nextInt();
-    imprimirMatriz(MatrizRouter);
+
+        for(int x = 0; x < MatrizRouter.length;x++ ){
+            for (int y = 0; y <MatrizRouter[x].length; y++){
+                MatrizRouter[x][y] = 0;
+            }
+        }
+        comprobacionRouter(MatrizRouter,numeroHabitacion,numeroPiso);
+
 
 }
 

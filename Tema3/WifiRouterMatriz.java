@@ -35,29 +35,24 @@ public class WifiRouterMatriz {
                         }
                     }
                 }
-                if (i == numeroPiso && j == numeroHabitacion) {
-                    MatrizRouter[i][j] = potenciaRouter;
-                }
             }
         }
         imprimirMatriz(MatrizRouter);
     }
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    System.out.print("Elige el piso en el que se encuentra la habitacion (0 - 19): ");
-    int numeroPiso = in.nextInt();
-    System.out.print("Elige la habitacion (0 - 4): ");
-    int numeroHabitacion = in.nextInt();
+        System.out.print("Elige el piso en el que se encuentra la habitacion (0 - 19): ");
+        int numeroPiso = in.nextInt();
+        System.out.print("Elige la habitacion (0 - 4): ");
+        int numeroHabitacion = in.nextInt();
 
-        for(int x = 0; x < MatrizRouter.length;x++ ){
-            for (int y = 0; y <MatrizRouter[x].length; y++){
+        for (int x = 0; x < MatrizRouter.length; x++) {
+            for (int y = 0; y < MatrizRouter[x].length; y++) {
                 MatrizRouter[x][y] = 0;
             }
         }
-        comprobacionRouter(MatrizRouter,numeroHabitacion,numeroPiso);
-
-
-}
+        comprobacionRouter(MatrizRouter, numeroHabitacion, numeroPiso);
+    }
 
 }

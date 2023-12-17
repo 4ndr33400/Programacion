@@ -11,16 +11,14 @@ public class HundirLaFlota {
 
 
     public static void main(String[] args) {
-    boolean victoria = false;
 
-    do {
         imprimirTablero(colocarBarcos());
         System.out.print("Introduce la fila (1 - 10) :");
         int filaElegida = in.nextInt();
         System.out.print("Introduce la columna (A - J):");
         char columnaElegida = in.next().charAt(0);
         turnoBatalla(filaElegida,columnaElegida);
-    } while (!victoria);
+
 
 
     }
@@ -59,7 +57,9 @@ public class HundirLaFlota {
     public static void turnoBatalla (int filaElegida , char columnaElegida){
         int intentos = 50;
         int barcosHundidos = 0;
+        boolean victoria = false;
         do {
+            imprimirTablero(crearTablero());
             if (tablero[filaElegida][columnaElegida] == 'L'){
                 System.out.println("Le has dado a un barco!");
                 tablero[filaElegida][columnaElegida] = 'X';
@@ -70,11 +70,11 @@ public class HundirLaFlota {
             }
             if (barcosHundidos >= 10){
                 System.out.println("Has hundido todos los barcos!");
-                break;
+                victoria = true;
             }
             System.out.println("Te quedan " + intentos + " intentos");
         intentos--;
-        } while (intentos != 0);
+        } while (intentos != 0 || !victoria);
 
     }
 }

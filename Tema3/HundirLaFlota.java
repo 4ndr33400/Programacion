@@ -20,7 +20,6 @@ public class HundirLaFlota {
         turnoBatalla(filaElegida,columnaElegida);
 
     }
-
     public static char[][] crearTablero (){
         for(int x = 0; x < filas; x++){
             for (int y = 0; y < columnas; y++){
@@ -71,7 +70,7 @@ public class HundirLaFlota {
                 victoria = true;
             }
             System.out.println("Te quedan " + intentos + " intentos");
-        intentos--;
+            intentos--;
         } while (intentos != 0 || !victoria);
 
     }

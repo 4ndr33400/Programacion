@@ -19,11 +19,9 @@ public class HundirLaFlota {
         char columnaElegida = in.next().charAt(0);
         turnoBatalla(filaElegida,columnaElegida);
 
-
-
     }
+
     public static char[][] crearTablero (){
-        tablero = new char[filas][columnas];
         for(int x = 0; x < filas; x++){
             for (int y = 0; y < columnas; y++){
                 tablero[x][y] = '-';

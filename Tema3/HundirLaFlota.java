@@ -20,17 +20,21 @@ public class HundirLaFlota {
     public static char[][] crearTablero() {
         tablero = new char[filas][columnas];
         int valorletra = 65;
-        for (int i = 0; i < filas; i++) {
-            for (int j = 0; j < columnas; j++) {
-                if (i > 0 && j == 0) {
-                    char num = (char) (i - 1 + '0');
-                    tablero[i][j] = num;
-                } else if (i == 0 && j > 0) {
-                    char num_letra = (char) valorletra;
-                    tablero[i][j] = num_letra;
+
+        for (int x = 0; x < filas; x++) {
+            for (int y = 0; y < columnas; y++) {
+
+                if (x > 0 && y == 0) {
+                    char numeroLinea = (char) (x - 1 + '0');
+                    tablero[x][y] = numeroLinea;
+
+                } else if (x == 0 && y > 0) {
+                    char letraColumna = (char) valorletra;
+                    tablero[x][y] = letraColumna;
                     valorletra++;
+
                 } else {
-                    tablero[i][j] = '-';
+                    tablero[x][y] = '-';
                 }
             }
         }
@@ -60,7 +64,7 @@ public class HundirLaFlota {
     public static void turnoBatalla() {
         boolean victoria = false;
         int intentos = 50;
-        while (!victoria && intentos > 0){
+        while (!victoria && intentos > 0) {
 
             System.out.print("Introduce la fila (0 - 9): ");
             int filaElegida = in.nextInt() + 1;
@@ -68,28 +72,29 @@ public class HundirLaFlota {
             char columnaElegida = in.next().charAt(0);
 
             int columnaCambio = cambiarNumeroLetra(columnaElegida);
-            if (tablero[filaElegida][columnaCambio] == 'L'){
+            if (tablero[filaElegida][columnaCambio] == 'L') {
                 System.out.println("Le has dado a un barco");
                 tablero[filaElegida][columnaCambio] = 'X';
-            }else {
-                System.out.println("Has tocado water jiji!");
+            } else {
+                System.out.println("Has tocado agua!");
                 tablero[filaElegida][columnaCambio] = 'A';
             }
             imprimirTablero(tablero);
 
-            intentos --;
-            if (quedanBarcos() == 0){
+            intentos--;
+            if (quedanBarcos() == 0) {
                 System.out.println("Le has dado a todos los barcos :D");
                 victoria = true;
 
             }
         }
     }
-    public static int quedanBarcos(){
+
+    public static int quedanBarcos() {
         int contador = 0;
-        for (int x = 1 ; x < tablero.length ; x++){
-            for (int y = 1; y < tablero.length ;y++){
-                if (tablero[x][y] == 'L'){
+        for (int x = 1; x < tablero.length; x++) {
+            for (int y = 1; y < tablero.length; y++) {
+                if (tablero[x][y] == 'L') {
                     contador++;
                 }
             }

@@ -5,9 +5,10 @@ public class MyString {
     static Scanner in = new Scanner(System.in);
     public static void main(String[]args){
         System.out.println("Seleccione a continuacion una de las siguientes opciones :");
-        System.out.println("(a).Devolver cadena invertida y en mayusculas");
+        System.out.println("(a) Devolver cadena invertida y en mayusculas" +
+                "\n(b) Contar las vocales de la cadena");
         System.out.print("Introduzca la seleccion :");
-        String option = in.next();
+        String option = in.nextLine();
         switch(option){
             case "a":
                 System.out.println("Introduce la cadena: ");
@@ -15,19 +16,26 @@ public class MyString {
                 System.out.println(invertedMayus(introducedString));
                 break;
             case "b":
+                System.out.println("Introduce la cadena: ");
+                introducedString = in.next();
+                System.out.println("Hay " + vowelCount(introducedString) + " vocales");
+                break;
         }
     }
-     public static String invertedMayus (String String1){
+     public static String invertedMayus (String string1){
         String invertedString = "";
-        for(int i = String1.length() - 1; i >= 0; i--){
-           invertedString = invertedString + String1.charAt(i);
+        for(int i = string1.length() - 1; i >= 0; i--){
+           invertedString = invertedString + string1.charAt(i);
         }
         return invertedString.toUpperCase();
     }
-    public static int vowelCount (String String2){
-        int counter = 0;
-        for(int i = 0 ; i < String2.length() ; i++){
+    public static int vowelCount (String string2){
+        int vowelCounter = 0;
+        for(int i = 0 ; i < string2.length() ; i++){
+            if (string2.charAt(i) == 'a' || string2.charAt(i) == 'e'|| string2.charAt(i) == 'i'|| string2.charAt(i) == 'o'|| string2.charAt(i) == 'u'){
+                vowelCounter ++;
+            }
         }
-        return counter;
+        return vowelCounter;
     }
 }

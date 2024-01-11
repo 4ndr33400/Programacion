@@ -26,11 +26,14 @@ public class CaesarCipher {
 
         int asciiValue = 0;
         for(int i = 0; i < decryptedMessage.length(); i++){
-            if (asciiValue >= 65 && asciiValue <= 122 ){
+
+            asciiValue = decryptedMessage.charAt(i);
+
+            if (asciiValue >= 65 && asciiValue <= 90 ){
                 if(asciiValue == 'z'){
                  asciiValue = 65;
                 } else {
-                    asciiValue = 122;
+                    asciiValue = 90;
                 }
             }
         }

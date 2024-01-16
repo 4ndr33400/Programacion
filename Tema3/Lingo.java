@@ -36,10 +36,10 @@ public class Lingo {
             tryNumber++;
 
             if (hiddenWord.equals(userGuess)) {
-                System.out.println("¡Has ganado!");
+                System.out.println("Has ganado :D");
                 break;
             } else if (tryNumber > 5) {
-                System.out.println("¡Has perdido!");
+                System.out.println("Has perdido :(");
                 break;
             }
         } while (!hiddenWord.equals(userGuess) || tryNumber <= 5);

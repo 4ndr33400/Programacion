@@ -27,30 +27,33 @@ public class Reloj {
         return second;
     }
 
-    public void setHour(int hour) {
+    public void getHourMinutSecond (int hour, int minut, int second , int mode ) {
 
-        if (hour >= 24 || hour < 0){
-            this.hour = DEFAULT_HOUR;
-        } else  {
-            this.hour = hour;
+        if (mode == 24) {
+            if (hour >= 24 || hour < 0) {
+                this.hour = DEFAULT_HOUR;
+            }
+        } else if (mode == 12) {
+            if (hour >= 12 || hour < 0) {
+                this.hour = DEFAULT_HOUR;
+            }
         }
-    }
 
-    public void setMinut(int minut) {
-
-        if (minut >= 60 || minut < 0){
+        if (minut >= 60 || minut < 0) {
             this.minut = DEFAULT_MINUT;
         } else {
             this.minut = minut;
         }
-    }
 
-    public void setSecond(int second) {
-        if(second >= 60 || minut < 0){
+        if (second >= 60 || minut < 0) {
             this.second = DEFAULT_SECOND;
         } else {
             this.second = second;
         }
+    }
+
+    public void setSecond(int second) {
+
     }
     public void showTime(){
         System.out.println(hour + ":" + minut + ":" + second);

@@ -16,7 +16,7 @@ public class HangmanGame {
     }
 
     public static void showHangman(int numberErrors) {
-        if (numberErrors == 1){
+        if (numberErrors == 5){
             System.out.println("  " +
                     "+---+\n" +
                     "  |   |\n" +
@@ -25,7 +25,7 @@ public class HangmanGame {
                     " /    |\n" +
                     "      |\n" +
                     "=========");
-        } else if (numberErrors == 2){
+        } else if (numberErrors == 4){
             System.out.println(" " +
                     "+---+\n" +
                     "  |   |\n" +
@@ -45,7 +45,7 @@ public class HangmanGame {
                     "      |\n" +
                     "=========");
 
-        }else if (numberErrors == 4){
+        }else if (numberErrors == 2){
             System.out.println(" " +
                     "+---+\n" +
                     "  |   |\n" +
@@ -54,7 +54,7 @@ public class HangmanGame {
                     "      |\n" +
                     "      |\n" +
                     "=========");
-        }else if (numberErrors == 5){
+        }else if (numberErrors == 1){
             System.out.println(" " +
                     "+---+\n" +
                     "  |   |\n" +
@@ -63,7 +63,7 @@ public class HangmanGame {
                     "      |\n" +
                     "      |\n" +
                     "=========");
-        }else if (numberErrors == 6){
+        }else if (numberErrors == 0){
             System.out.println(" " +
                     "+---+\n" +
                     "  |   |\n" +
@@ -72,7 +72,7 @@ public class HangmanGame {
                     "      |\n" +
                     "      |\n" +
                     "=========");
-        } else if (numberErrors == 0){
+        } else if (numberErrors == 6){
             System.out.println("  " +
                     "+---+\n" +
                     "  |   |\n" +

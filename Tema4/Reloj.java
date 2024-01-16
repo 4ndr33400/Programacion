@@ -27,7 +27,7 @@ public class Reloj {
         return second;
     }
 
-    public void getHourMinutSecond (int hour, int minut, int second , int mode ) {
+    public void setHourMinutSecond (int hour, int minut, int second , int mode ) {
 
         if (mode == 24) {
             if (hour >= 24 || hour < 0) {
@@ -52,7 +52,7 @@ public class Reloj {
         }
     }
     public void showTime(){
-        System.out.println(hour + ":" + minut + ":" + second);
+        System.out.println("Son las = " + hour + ":" + minut + ":" + second);
     }
 
 }

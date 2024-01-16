@@ -51,10 +51,6 @@ public class Reloj {
             this.second = second;
         }
     }
-
-    public void setSecond(int second) {
-
-    }
     public void showTime(){
         System.out.println(hour + ":" + minut + ":" + second);
     }

@@ -12,7 +12,7 @@ public class PersonaPOO {
     public static final int DEFAULT_ISRETIRED_AGE = 65;
 
 
-    public PersonaPOO (int age, String name, String username, String id){
+    public PersonaPOO(int age, String name, String username, String id) {
 
         this.age = age;
         this.name = name;
@@ -33,7 +33,7 @@ public class PersonaPOO {
         return username;
     }
 
-    public String id (){
+    public String id() {
         return id;
     }
 
@@ -42,49 +42,77 @@ public class PersonaPOO {
         this.name = name;
         this.username = username;
 
-        if (age>0){
+        if (age > 0) {
             this.age = age;
         }
     }
 
-    public void printPersona(int age, String name, String username, String id){
+    public void printPersona(int age, String name, String username, String id) {
 
         System.out.println("Nombre: " + name +
                 "\nApellido: " + username +
                 "\nEdad: " + age +
                 "\nDNI: " + id);
     }
-    public boolean isAdult(int age){
+
+    public boolean isAdult(int age) {
         boolean isAdult = false;
 
-        if(age >= DEFAULT_ISADULT_AGE){
+        if (age >= DEFAULT_ISADULT_AGE) {
             isAdult = true;
         }
         return isAdult;
     }
-    public boolean isRetired(int age){
+
+    public boolean isRetired(int age) {
         boolean isRetired = false;
 
-        if(age >= DEFAULT_ISRETIRED_AGE){
+        if (age >= DEFAULT_ISRETIRED_AGE) {
             isRetired = true;
         }
         return isRetired;
     }
-    public int ageDifference(int ageUser1, int ageUser2){
+
+    public int ageDifference(int ageUser1, int ageUser2) {
 
         int ageDifference = ageUser1 - ageUser2;
 
-        return  ageDifference;
+        return ageDifference;
     }
 
-    public boolean checkID (String id){
+    public boolean checkID(String id) {
 
-        char[] validLetterID = new char[0];
+        boolean isIdValid = true;
+        char[] validLetterID = new char[]{'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
 
-        for (int i = 0; i < id.length(); i++){
-            if (i > 9 || ){
 
+        if (id.length() != 9) {
+            isIdValid = false;
+
+        } else {
+
+            for (int i = 0; i < 8; i++) {
+                if (!Character.isDigit(id.charAt(i))) {
+                    isIdValid = false;
+                    break;
+                }
+            }
+
+            char lastChar = Character.toUpperCase(id.charAt(8));
+
+            boolean isValidLetter = false;
+            for (char validLetter : validLetterID) {
+                if (lastChar == validLetter) {
+                    isValidLetter = true;
+                    break;
+                }
+            }
+
+            if (!isValidLetter) {
+                isIdValid = false;
             }
         }
+
+        return isIdValid;
     }
 }

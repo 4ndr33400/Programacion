@@ -13,7 +13,7 @@ public class PruebaReloj {
         int second = in.nextInt();
 
         Reloj reloj = new Reloj(hour,minut,second);
-        reloj.getHourMinutSecond(hour,minut,second,mode);
+        reloj.setHourMinutSecond(hour,minut,second,mode);
         reloj.showTime();
     }
 }

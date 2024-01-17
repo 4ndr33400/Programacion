@@ -14,6 +14,11 @@ public class Reloj {
         this.minut = minut;
         this.second = second;
     }
+    public Reloj(){
+        this.hour = DEFAULT_HOUR;
+        this.minut = DEFAULT_MINUT;
+        this.second = DEFAULT_SECOND;
+    }
 
     public int getHour() {
         return hour;
@@ -33,6 +38,7 @@ public class Reloj {
             if (hour >= 24 || hour < 0) {
                 this.hour = DEFAULT_HOUR;
             }
+
         } else if (mode == 12) {
             if (hour >= 12 || hour < 0) {
                 this.hour = DEFAULT_HOUR;

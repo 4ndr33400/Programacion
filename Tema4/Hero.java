@@ -9,17 +9,19 @@ public class Hero {
     public int experience;
     public int attack;
     public int defense;
+    public static final int DEFAULT_HEALTH = 300;
+    public static final int DEFAULT_ATTACK = 100;
+    public static final int DEFAULT_DEFENSE = 100;
     public final int potion = 10;
     public final int rest = 50;
     public final int maxAttak = (health / 2);
     public final int gainExpo = 10;
+    public final int expoGainHealth = 5;
 
-    public Hero(String name, int level, int health, int maxHealth, int experience, int attack, int defense) {
+    public Hero(String name, int level, int health, int attack, int defense) {
         this.name = name;
         this.level = level;
         this.health = health;
-        this.maxHealth = maxHealth;
-        this.experience = experience;
         this.attack = attack;
         this.defense = defense;
     }
@@ -55,27 +57,51 @@ public class Hero {
         return maxAttak;
     }
 
-    public int drinkPotion(int health, int maxHealth){
-        int healPlayer = health + potion;
-        if (healPlayer > maxHealth){
-            healPlayer = maxHealth;
+
+    public void setHealth(int health) {
+       if (health > DEFAULT_HEALTH){
+           this.health = DEFAULT_HEALTH;
+       }
+    }
+
+    public void setAttack(int attack) {
+        if (attack > DEFAULT_ATTACK){
+            this.attack = DEFAULT_ATTACK;
         }
-        return healPlayer;
+    }
+
+    public void setDefense(int defense) {
+       if (defense > DEFAULT_DEFENSE){
+           this.defense = DEFAULT_DEFENSE;
+       }
+    }
+    public void setLevel(int level){
+        if (level > 0){
+            this.level = 0;
+        }
+    }
+
+    public void drinkPotion(){
+        health = health + potion;
+        if (health > maxHealth){
+            health = maxHealth;
+        }
+
     }
     public void rest(){
-        int restPlayer = health + rest;
-        if (restPlayer > maxHealth){
-            restPlayer = maxHealth;
+        health = health + rest;
+        if (health > maxHealth){
+            health = maxHealth;
         }
     }
-    public String toString(){
-        String characterSheet = "//" + name + "//" +
-                "\nNivel: " + level +
-                "\nVida: " + health +
-                "\nExperiencia: " + experience +
-                "\nAtaque: " + attack +
-                "\nDefensa: " + defense;
-        return characterSheet;
+    public void infoCharacters(){
+        System.out.println( name +
+                "\n\uD83D\uDE3C Nivel: " + level +
+                "\n\uD83D\uDE3C Vida: " + health +
+                "\n\uD83D\uDE3C Experiencia: " + experience +
+                "\n\uD83D\uDE3C Ataque: " + attack +
+                "\n\uD83D\uDE3C Defensa: " + defense);
+
     }
     public int attackPlayer1(){
         int hitPlayer1 = random.nextInt(maxAttak);
@@ -84,7 +110,12 @@ public class Hero {
 
         return Math.abs(hitPlayer1);
     }
-    public int levelUp(){
-
+    public void levelUp(){
+        if (experience >= 50){
+            health = health + expoGainHealth;
+            attack++;
+            defense++;
+            level++;
+        }
     }
 }

@@ -2,12 +2,8 @@ public class PersonaPOO {
     public int age;
     public String name;
     public String username;
-    public String id;
+    public final String id;
 
-    public static final int DEFAULT_AGE = 0;
-    public static final String DEFAULT_NAME = "---";
-    public static final String DEFAULT_USERNAME = "---";
-    public static final String DEFAULT_ID = "---";
     public static final int DEFAULT_ISADULT_AGE = 18;
     public static final int DEFAULT_ISRETIRED_AGE = 65;
 
@@ -33,7 +29,7 @@ public class PersonaPOO {
         return username;
     }
 
-    public String id() {
+    public String getId() {
         return id;
     }
 
@@ -74,10 +70,9 @@ public class PersonaPOO {
     }
 
     public int ageDifference(int ageUser1, int ageUser2) {
-
         int ageDifference = ageUser1 - ageUser2;
 
-        return ageDifference;
+        return Math.abs(ageDifference);
     }
 
     public boolean checkID(String id) {
@@ -85,10 +80,8 @@ public class PersonaPOO {
         boolean isIdValid = true;
         char[] validLetterID = new char[]{'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
 
-
         if (id.length() != 9) {
             isIdValid = false;
-
         } else {
 
             for (int i = 0; i < 8; i++) {
@@ -97,9 +90,7 @@ public class PersonaPOO {
                     break;
                 }
             }
-
             char lastChar = Character.toUpperCase(id.charAt(8));
-
             boolean isValidLetter = false;
             for (char validLetter : validLetterID) {
                 if (lastChar == validLetter) {
@@ -107,12 +98,10 @@ public class PersonaPOO {
                     break;
                 }
             }
-
             if (!isValidLetter) {
                 isIdValid = false;
             }
         }
-
         return isIdValid;
     }
 }

@@ -106,7 +106,9 @@ public class Hero {
     }
     public int attackPlayer(Hero hero1, Hero hero2){
         int hitPlayer = random.nextInt(hero1.attack - hero2.defense , 100);
+
         hero2.health -= hitPlayer;
+
         if (hero2.health < 0) {
             hero2.health = 0;
         }
@@ -114,7 +116,7 @@ public class Hero {
         if (experience >= 50) {
             levelUp();
         }
-        System.out.println("daño : " + hitPlayer + " vida : " + hero2.health);
+        System.out.println("Daño : " + hitPlayer + " Vida : " + hero2.health);
         return hero2.health;
     }
     public void levelUp(){

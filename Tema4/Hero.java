@@ -10,6 +10,7 @@ public class Hero {
     public int experience;
     public int attack;
     public int defense;
+    public int hitPlayer;
 
     public static final int DEFAULT_HEALTH = 400;
     public static final int DEFAULT_ATTACK = 100;
@@ -23,108 +24,88 @@ public class Hero {
 
     public Hero(String name, int level, int health, int attack, int defense) {
         this.name = name;
-        this.level = level;
-        this.health = health;
-        this.attack = attack;
-        this.defense = defense;
+        setLevel(level);
+        setHealth(health);
+        setAttack(attack);
+        setDefense(defense);
     }
 
     public String getName() {
         return name;
     }
 
-    public int getLevel() {
-        return level;
-    }
-
-    public int getHealth() {
-        return health;
-    }
-
-    public int getMaxHealth() {
-        return maxHealth;
-    }
-
-    public int getExperience() {
-        return experience;
-    }
-
-    public int getAttack() {
-        return attack;
-    }
-
-    public int getDefense() {
-        return defense;
-    }
-
-
     public void setHealth(int health) {
+
        if (health > DEFAULT_HEALTH){
            this.health = DEFAULT_HEALTH;
+       } else if (health < 0){
+           this.health = 0;
+       } else {
+           this.health = health;
        }
+
     }
 
     public void setAttack(int attack) {
         if (attack > DEFAULT_ATTACK){
             this.attack = DEFAULT_ATTACK;
+        } else {
+            this.attack = attack;
         }
     }
 
     public void setDefense(int defense) {
        if (defense > DEFAULT_DEFENSE){
            this.defense = DEFAULT_DEFENSE;
+       } else {
+           this.defense = defense;
        }
     }
     public void setLevel(int level){
-        if (level > 1){
-            this.level = level;
-        }
+        this.level = 1;
     }
 
     public int drinkPotion(){
-        health = health + potion;
-        if (health > maxHealth){
-            health = maxHealth;
-        }
+        setHealth(health + potion);
         return health;
     }
     public int rest(){
-        health = health + rest;
-        if (health > maxHealth){
-            health = maxHealth;
-        }
+        setHealth(health + rest);
         return health;
     }
-    public void infoCharacters(){
-        System.out.println("----------------------------------------------------" +
+    public String toString(){
+        String infoCharacter = "----------------------------------------------------" +
+
                 "\n⚔\uFE0F " + name + " ⚔\uFE0F "+
                 "\n\uD83D\uDE3C Nivel: " + level +
                 "\n\uD83D\uDE3C Vida: " + health +
                 "\n\uD83D\uDE3C Experiencia: " + experience +
                 "\n\uD83D\uDE3C Ataque: " + attack +
-                "\n\uD83D\uDE3C Defensa: " + defense);
+                "\n\uD83D\uDE3C Defensa: " + defense;
+
+        return infoCharacter;
     }
-    public int attackPlayer(Hero hero1, Hero hero2){
-        int hitPlayer = random.nextInt(hero1.attack - hero2.defense , 100);
-
-        hero2.health -= hitPlayer;
-
-        if (hero2.health < 0) {
-            hero2.health = 0;
-        }
+    public void attackPlayer(Hero otherHero){
+        hitPlayer = random.nextInt(attack - otherHero.defense, 100);
+        otherHero.setHealth(otherHero.health - hitPlayer);
         experience += 10;
         if (experience >= 50) {
             levelUp();
         }
-        System.out.println("Daño : " + hitPlayer + " Vida : " + hero2.health);
-        return hero2.health;
+        System.out.println("Daño : " + hitPlayer + " Vida : " + otherHero.health);
     }
     public void levelUp(){
         if (experience >= 50){
-            health = health + expoGainHealth;
-            attack++;
-            defense++;
+            setHealth(health + expoGainHealth);
+            experience = 0;
+            setHealth(attack++);
+            setDefense(defense++);
             level++;
+        }
+    }
+    public void healPlayer(Hero hero){
+        if (health > 50){
+            health = hero.drinkPotion();
         }
     }
 }

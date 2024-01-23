@@ -32,11 +32,7 @@ public class HeroPruebas {
 
         Hero heroPlayer1 = new Hero(namePlayer1,levelPlayer1,healthPlayer1, attackPlayer1,defensePlayer1);
 
-        heroPlayer1.setHealth(healthPlayer1);
-        heroPlayer1.setAttack(attackPlayer1);
-        heroPlayer1.setDefense(defensePlayer1);
-        heroPlayer1.setLevel(levelPlayer1);
-        heroPlayer1.infoCharacters();
+        System.out.println(heroPlayer1);
 
         System.out.println("//Introduzca cualquier letra para continuar//");
         nextLine = in.nextLine();
@@ -59,12 +55,7 @@ public class HeroPruebas {
 
         Hero heroPlayer2 = new Hero(namePlayer2,levelPlayer2,healthPlayer2, attackPlayer2,defensePlayer2);
 
-        heroPlayer2.setHealth(healthPlayer2);
-        heroPlayer2.setAttack(attackPlayer2);
-        heroPlayer2.setDefense(defensePlayer2);
-        heroPlayer2.setLevel(levelPlayer2);
-
-        heroPlayer2.infoCharacters();
+        System.out.println(heroPlayer2);
 
         System.out.println("//Introduzca cualquier letra para comenzar la partida//");
         nextLine = in.nextLine().toLowerCase();
@@ -73,40 +64,35 @@ public class HeroPruebas {
         int rounds = 1;
         do{
             System.out.println("Es el turno de " + heroPlayer1.getName());
-            healthPlayer2 = heroPlayer1.attackPlayer(heroPlayer1,heroPlayer2);
+            heroPlayer1.attackPlayer(heroPlayer2);
 
             System.out.println(heroPlayer2.getName() + " corre hacia " + heroPlayer1.getName() + " para atacarle");
-            healthPlayer1 = heroPlayer2.attackPlayer(heroPlayer2,heroPlayer1);
+            heroPlayer2.attackPlayer(heroPlayer1);
 
-            healthPlayer1 = healPlayer(healthPlayer1,heroPlayer1);
-            healthPlayer2 = healPlayer(healthPlayer2,heroPlayer2);
+            heroPlayer1.healPlayer(heroPlayer1);
+            heroPlayer2.healPlayer(heroPlayer2);
+
+            System.out.println("Esta ha sido la " + rounds + " ronda." );
+            System.out.println(heroPlayer1);
+            System.out.println(heroPlayer2);
+            System.out.println("//Introduzca cualquier letra para seguir con la partida//");
+            nextLine = in.nextLine();
+            rounds++;
 
             if (healthPlayer1 <= 0 || healthPlayer2 <= 0) {
                 System.out.println("GAME OVER");
                 if (healthPlayer1 <= 0){
                     System.out.println(heroPlayer2.getName() + " gana la partida");
+
                 } else {
                     System.out.println(heroPlayer1.getName() + " gana la partida");
                 }
                 isGameOver = true;
             }
-
-            System.out.println("Esta ha sido la " + rounds + " ronda." );
-            heroPlayer1.infoCharacters();
-            heroPlayer2.infoCharacters();
-            System.out.println("//Introduzca cualquier letra para seguir con la partida//");
-            nextLine = in.nextLine();
-            rounds++;
+            if (isGameOver){
+                break;
+            }
 
         } while (!isGameOver);
-    }
-
-    public static int healPlayer(int healthPlayer, Hero hero){
-        if (healthPlayer > 50){
-            healthPlayer = hero.drinkPotion();
-        } else {
-            healthPlayer = hero.rest();
-        }
-        return healthPlayer;
     }
 }

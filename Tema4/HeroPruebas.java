@@ -5,7 +5,7 @@ public class HeroPruebas {
     public static void main (String[] args){
         System.out.println("A continuacion elige las stats del primer personaje");
         System.out.println("Recuerda que existen un maximo para las siguentes stats:" +
-                "\nVida: 300pt" +
+                "\nVida: 400pt" +
                 "\nAtaque: 100pt" +
                 "\nDefensa: 100pt " +
                 "\nNivel: 1" +
@@ -60,8 +60,9 @@ public class HeroPruebas {
         System.out.println("//Introduzca cualquier letra para comenzar la partida//");
         nextLine = in.nextLine().toLowerCase();
 
-        boolean isGameOver = false;
+
         int rounds = 1;
+
         do{
             System.out.println("Es el turno de " + heroPlayer1.getName());
             heroPlayer1.attackPlayer(heroPlayer2);
@@ -79,20 +80,17 @@ public class HeroPruebas {
             nextLine = in.nextLine();
             rounds++;
 
-            if (healthPlayer1 <= 0 || healthPlayer2 <= 0) {
+            if (heroPlayer1.getHealth() <= 0 || heroPlayer2.getHealth() <= 0) {
                 System.out.println("GAME OVER");
-                if (healthPlayer1 <= 0){
+                if (heroPlayer1.getHealth() <= 0){
                     System.out.println(heroPlayer2.getName() + " gana la partida");
 
                 } else {
                     System.out.println(heroPlayer1.getName() + " gana la partida");
                 }
-                isGameOver = true;
-            }
-            if (isGameOver){
                 break;
             }
 
-        } while (!isGameOver);
+        } while (heroPlayer1.getHealth() > 0 && heroPlayer2.getHealth() > 0);
     }
 }

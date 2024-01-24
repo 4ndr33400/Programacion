@@ -6,7 +6,6 @@ public class Hero {
     public String name;
     public int level;
     public int health;
-    public int maxHealth;
     public int experience;
     public int attack;
     public int defense;
@@ -18,8 +17,6 @@ public class Hero {
 
     public final int potion = 10;
     public final int rest = 50;
-
-    public final int gainExpo = 10;
     public final int expoGainHealth = 5;
 
     public Hero(String name, int level, int health, int attack, int defense) {
@@ -29,9 +26,17 @@ public class Hero {
         setAttack(attack);
         setDefense(defense);
     }
+    public Hero (int health, int attack, int defense){
+        setHealth(health);
+        setAttack(attack);
+        setDefense(defense);
+    }
 
     public String getName() {
         return name;
+    }
+    public int getHealth (){
+        return health;
     }
 
     public void setHealth(int health) {

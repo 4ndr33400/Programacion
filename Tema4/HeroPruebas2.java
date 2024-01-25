@@ -35,7 +35,7 @@ public class HeroPruebas2 {
 
         Hero heroPlayer = new Hero(namePlayer,levelPlayer,healthPlayer, attackPlayer,defensePlayer);
         System.out.println(heroPlayer);
-        Hero enemy = new Hero(100,50,50);
+
 
         int numberHorde = 1;
         do{
@@ -47,13 +47,49 @@ public class HeroPruebas2 {
             int numberEnemies = random.nextInt(1,3);
             Hero[] enemies = new Hero[numberEnemies];
 
-            for(int i = 0; i < enemies.length; i++) {
-                System.out.println("Se puede ver llegar "+ numberEnemies +" enemigo/os");
-                System.out.println(heroPlayer.getName() + " ataca a uno de los enemigos");
-                heroPlayer.attackPlayer(enemy);
-
-
+            for (int x = 0; x < enemies.length; x++){
+                enemies[x] = new Hero(100,50,50);
             }
+
+
+            for(int i = 1; i < enemies.length; i++) {
+                int chance2RunAway = random.nextInt(1,100);
+                System.out.println("Se puede ver llegar " + numberEnemies + " enemigo/os");
+                System.out.println(heroPlayer.getName() + " ataca a uno de los enemigos");
+
+                if(chance2RunAway > 10){
+                    System.out.println(heroPlayer.getName() + "Se prepara para atacar a los enemigos");
+                    heroPlayer.attackPlayer(enemies[i]);
+                    System.out.println("Los enemigos recuperan fuerzas");
+                    enemies[i].attackPlayer(heroPlayer);
+                } else {
+                    System.out.println( i + " enemigos han huido!!");
+                    break;
+                }
+
+                System.out.println(heroPlayer);
+            }
+
+            System.out.println("//Introduzca cualquier letra para continuar//");
+            nextLine = in.nextLine();
+
+            int chance2rest = random.nextInt(1,100000);
+            if (chance2rest <= 10){
+                System.out.println(heroPlayer.getName() + " tiene una oportunidad para poder esconderse y descansar.");
+                heroPlayer.rest();
+                System.out.println("Tu salud aumenta a " + heroPlayer.getHealth());
+            } else {
+                System.out.println(heroPlayer.getName() + " es sorprendido por otra horda!!");
+            }
+
+            int chance2FindPotion = random.nextInt(1, 100);
+            if (chance2FindPotion <= 10){
+                heroPlayer.drinkPotion();
+                System.out.println(heroPlayer.getName() + " encuentra una pocion que le aumenta la vida a " + heroPlayer.getHealth());
+            } else {
+                System.out.println("Despues de buscar por el lugar " + heroPlayer.getName() + " se rinde y se prepara para seguir peleando");
+            }
+
 
             if (heroPlayer.getHealth() <= 0){
                 System.out.println("Los enemigos han podido contigo!!");
@@ -61,6 +97,7 @@ public class HeroPruebas2 {
                 break;
             }
             numberHorde++;
+
         }while(heroPlayer.getHealth() > 0);
 
     }

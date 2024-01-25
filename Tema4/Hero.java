@@ -14,6 +14,7 @@ public class Hero {
     public static final int DEFAULT_HEALTH = 400;
     public static final int DEFAULT_ATTACK = 100;
     public static final int DEFAULT_DEFENSE = 100;
+    public static final String DEFAULT_NAME = "Unknown";
 
     public final int potion = 10;
     public final int rest = 50;

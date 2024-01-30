@@ -57,8 +57,8 @@ public class Reloj {
             this.second = second;
         }
     }
-    public void showTime(){
-        System.out.println("Son las = " + hour + ":" + minut + ":" + second);
+    public String toString(){
+        return "Son las = " + getHour() + ":" + getMinut() + ":" + getSecond();
     }
 
 }

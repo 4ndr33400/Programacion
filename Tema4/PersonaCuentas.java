@@ -1,26 +1,38 @@
 public class PersonaCuentas {
-    public String name;
-    public String surname;
-    public String age;
     public final String id;
-    public int[] bancAccount;
+    public Cuentas[] bankAccount;
+    public int numberAccounts;
 
-    public PersonaCuentas(int[] bancAccount, String id, String name, String surname, String age) {
-        this.name = name;
-        this.surname = surname;
-        this.bancAccount = bancAccount;
+
+
+    public PersonaCuentas(String id) {
+        bankAccount = new Cuentas[3];
         this.id = id;
+        this.numberAccounts = 0;
     }
 
     public String getId() {
         return id;
     }
 
-    public int[] getBancAccount() {
-        return bancAccount;
+    public Cuentas[] getBankAccount() {
+        return bankAccount;
     }
-    public String toString(){
-        return "";
+    public void addAccount(int newAccount){
+        if(numberAccounts < 3){
+            bankAccount = new Cuentas[newAccount];
+            numberAccounts++;
+        } else {
+            System.out.println("Ya tienes 3 cuentas");
+        }
     }
-
+    public boolean isDefaulter(){
+        boolean isDefaulter = false;
+        for (int x = 0; x < bankAccount.length; x++){
+            if (bankAccount[x].getCurrentBalance() < 0){
+                isDefaulter = true;
+            }
+        }
+        return isDefaulter;
+    }
 }

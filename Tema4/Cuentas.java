@@ -3,9 +3,8 @@ public class Cuentas {
     public int accountNumber;
     public int currentBalance;
 
-    public Cuentas(int accountNumber, int currentBalance) {
+    public Cuentas(int accountNumber) {
         this.accountNumber = accountNumber;
-        this.currentBalance = currentBalance;
     }
 
     public int getAccountNumber() {
@@ -15,10 +14,10 @@ public class Cuentas {
     public int getCurrentBalance() {
         return currentBalance;
     }
-    public void receiveCredit(){
-
+    public void receiveCredit(int recievedCredit){
+        currentBalance += recievedCredit;
     }
-    public void payBill(){
-
+    public void payBill(int amount2Pay){
+        currentBalance -= amount2Pay;
     }
 }

@@ -14,6 +14,6 @@ public class PruebaReloj {
 
         Reloj reloj = new Reloj(hour,minut,second);
         reloj.setHourMinutSecond(hour,minut,second,mode);
-        reloj.showTime();
+        System.out.println(reloj);
     }
 }

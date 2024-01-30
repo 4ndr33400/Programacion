@@ -69,8 +69,8 @@ public class PersonaPOO {
         return isRetired;
     }
 
-    public int ageDifference(int ageUser1, int ageUser2) {
-        int ageDifference = ageUser1 - ageUser2;
+    public int ageDifference(Persona persona) {
+        int ageDifference = this.age - persona.age;
 
         return Math.abs(ageDifference);
     }

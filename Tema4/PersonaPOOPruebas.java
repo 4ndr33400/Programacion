@@ -65,7 +65,7 @@ public class PersonaPOOPruebas {
             System.out.println(Persona2.getName() + " no esta retirad@");
         }
 
-        System.out.println("La diferencia de edad entre " + Persona1.getName() + " y " + Persona2.getName() + " es de: " + Persona1.ageDifference(Persona1.getAge(),Persona2.getAge()) );
+        System.out.println("La diferencia de edad entre " + Persona1.getName() + " y " + Persona2.getName() + " es de: ");
 
     }
 }

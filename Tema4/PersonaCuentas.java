@@ -18,9 +18,9 @@ public class PersonaCuentas {
     public Cuentas[] getBankAccount() {
         return bankAccount;
     }
-    public void addAccount(int newAccount){
+    public void addAccount(Cuentas newAccount){
         if(numberAccounts < 3){
-            bankAccount = new Cuentas[newAccount];
+            bankAccount[numberAccounts++] = newAccount;
             numberAccounts++;
         } else {
             System.out.println("Ya tienes 3 cuentas");

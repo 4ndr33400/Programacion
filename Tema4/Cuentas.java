@@ -1,20 +1,21 @@
 public class Cuentas {
 
     public int accountNumber;
-    public int currentBalance;
+    public double currentBalance;
 
-    public Cuentas(int accountNumber) {
+    public Cuentas(int accountNumber, int currentBalance) {
         this.accountNumber = accountNumber;
+        this.currentBalance = currentBalance;
     }
 
     public int getAccountNumber() {
         return accountNumber;
     }
 
-    public int getCurrentBalance() {
+    public double getCurrentBalance() {
         return currentBalance;
     }
-    public void receiveCredit(int recievedCredit){
+    public void receiveCredit(double recievedCredit){
         currentBalance += recievedCredit;
     }
     public void payBill(int amount2Pay){

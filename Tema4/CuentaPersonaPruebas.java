@@ -25,7 +25,12 @@ public class CuentaPersonaPruebas {
             case 2:
                 System.out.print("Introduce tu numero de cuenta bancaria: ");
                 bankAccount = in.nextInt();
-
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+                persona.isDefaulter();
         }
     }
 }

@@ -18,7 +18,7 @@ public class Cuentas {
     public void receiveCredit(double recievedCredit){
         currentBalance += recievedCredit;
     }
-    public void payBill(int amount2Pay){
+    public void payBill(double amount2Pay){
         currentBalance -= amount2Pay;
     }
 }

@@ -29,7 +29,7 @@ public class CuentaPersonaPruebas {
             case 1:
                 System.out.print("Introduce el DNI: ");
                 id = in.nextLine();
-
+                break;
             case 2:
                 System.out.print("Introduce tu numero de cuenta bancaria: ");
                 bankAccount = in.nextInt();
@@ -38,7 +38,7 @@ public class CuentaPersonaPruebas {
                 persona1.addAccount(cuenta1);
                 persona2.addAccount(cuenta2);
                 System.out.println("cuenta2: " + cuenta2.getAccountNumber());
-
+                break;
             case 3:
                 System.out.print("Introduce tu DNI: ");
                 id = in.nextLine();
@@ -48,19 +48,39 @@ public class CuentaPersonaPruebas {
                     System.out.println("Numero de cuenta: " + cuenta.getAccountNumber());
                     System.out.println("Saldo actual: " + cuenta.getCurrentBalance());
                 }
+                break;
             case 4:
                 System.out.print("Cual es tu nomina mensual?: ");
                 double recieveCredit = in.nextDouble();
                 cuenta1.receiveCredit(recieveCredit);
                 System.out.println("Tienes: " + cuenta1.getCurrentBalance() + " dinero en la cuenta");
-            case 5:
+                break;
+                case 5:
                 System.out.println("Persona con DNI " + persona2.getId() + " va a recibir un pago de 500€ de " + persona1.getId());
                 cuenta1.payBill(500);
                 cuenta2.receiveCredit(500);
+                break;
             case 6:
-
+                System.out.println("Quien va a realizar la transferencia?: ");
+                System.out.println("1. Cuenta con DNI " + persona1.getId() +
+                                   "\n2. Cuenta con DNI " + persona2.getId());
+                System.out.print("Introduce la seleccion: ");
+                option = in.nextInt();
+                if(option == 1){
+                    System.out.print("Cantidad a transferir: ");
+                    double amountCredit = in.nextDouble();
+                    cuenta1.payBill(amountCredit);
+                    cuenta2.receiveCredit(amountCredit);
+                } else if (option == 2){
+                    System.out.println("Cantidad a transferir: ");
+                    double amountCredit = in.nextDouble();
+                    cuenta2.payBill(amountCredit);
+                    cuenta1.receiveCredit(amountCredit);
+                }
+                break;
             case 7:
                 persona1.isDefaulter();
+                break;
         }
     }
 }

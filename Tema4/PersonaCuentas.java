@@ -15,13 +15,13 @@ public class PersonaCuentas {
         return id;
     }
 
+
     public Cuentas[] getBankAccount() {
         return bankAccount;
     }
     public void addAccount(Cuentas newAccount){
         if(numberAccounts < 3){
             bankAccount[numberAccounts++] = newAccount;
-            numberAccounts++;
         } else {
             System.out.println("Ya tienes 3 cuentas");
         }
@@ -34,5 +34,9 @@ public class PersonaCuentas {
             }
         }
         return isDefaulter;
+    }
+    public void showAccountsInfo(){
+        System.out.println("DNI: " + id +
+                "Numero Cuenta: " + bankAccount);
     }
 }

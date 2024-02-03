@@ -64,26 +64,40 @@ public class CuentaPersonaPruebas {
                         System.out.println("Debes añadir una cuenta antes.");
                     }
                     break;
-                    /*
+
                 case 3:
                     System.out.print("Introduce tu DNI: ");
                     id = in.nextLine();
                     System.out.println("Tienes las siguientes cuentas bancarias: ");
-                    for (int i = 0; i < persona1.getBankAccount().length; i++) {
-                        Cuentas cuenta = persona1.getBankAccount()[i];
-                        System.out.println("Numero de cuenta: " + cuenta.getAccountNumber());
-                        System.out.println("Saldo actual: " + cuenta.getCurrentBalance());
+                    for (int i = 0; i < users.length; i++) {
+                        if (id.equals(users[i].getId())) {
+                            Cuentas[] cuentas = users[i].getBankAccount();
+                            for (int j = 0; j < cuentas.length; j++) {
+                                Cuentas cuenta = cuentas[j];
+                                System.out.println("Numero de cuenta: " + cuenta.getAccountNumber());
+                                System.out.println("Saldo actual: " + cuenta.getCurrentBalance());
+                            }
+                        }
                     }
                     break;
                 case 4:
                     System.out.print("Cual es tu nomina mensual?: ");
                     double recieveCredit = in.nextDouble();
-                    cuenta1.receiveCredit(recieveCredit);
-                    System.out.println("Tienes: " + cuenta1.getCurrentBalance() + " dinero en la cuenta");
+                    for (int i = 0; i < users.length; i++) {
+                        if (id.equals(users[i].getId())) {
+                            Cuentas[] cuentas = users[i].getBankAccount();
+                            for (int j = 0; j < cuentas.length; j++) {
+                                Cuentas cuenta = cuentas[j];
+                                cuenta.receiveCredit(recieveCredit);
+                                System.out.println("Tienes: " + cuenta.getCurrentBalance() + " dinero en la cuenta");
+                            }
+                        }
+                    }
                     break;
+                    /*
                 case 5:
                     System.out.println("Persona con DNI " + persona2.getId() + " va a recibir un pago de 500€ de " + persona1.getId());
-                    cuenta1.payBill(500);
+                    Cuentas.payBill(500);
                     cuenta2.receiveCredit(500);
                     break;
                 case 6:
@@ -106,9 +120,14 @@ public class CuentaPersonaPruebas {
                     break;
 
                      */
-                case 7:
-                    for(){
 
+
+                case 7:
+                    System.out.println("Personas morosas:");
+                    for (int i = 0; i < users.length; i++) {
+                        if (users[i].isDefaulter()) {
+                            System.out.println("DNI: " + users[i].getId());
+                        }
                     }
                     break;
                 case 8:

@@ -71,9 +71,9 @@ public class CuentaPersonaPruebas {
                     System.out.print("Introduce tu DNI: ");
                     id = in.nextLine();
                     System.out.println("Tienes las siguientes cuentas bancarias: ");
-                    for (int i = 0; i < users.length; i++) {
-                        if (id.equals(users[i].getId())) {
-                            Cuentas[] cuentas = users[i].getBankAccount();
+                    for (PersonaCuentas user : users) {
+                        if (id.equals(user.getId())) {
+                            Cuentas[] cuentas = user.getBankAccount();
                             for (int j = 0; j < cuentas.length - 1; j++) {
                                 Cuentas cuenta = cuentas[j];
                                 System.out.println("Numero de cuenta: " + cuenta.getAccountNumber());

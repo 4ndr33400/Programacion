@@ -46,8 +46,10 @@ public class CuentaPersonaPruebas {
                     if(users.length != 0){
                         System.out.print("Introduce tu numero de cuenta bancaria: ");
                         accountNumber = in.nextInt();
+                        in.nextLine();
                         System.out.print("Cuanto dinero tienes en tu cuenta bancaria?: ");
                         currentBalance = in.nextInt();
+                        in.nextLine();
                         Cuentas newAccount = new Cuentas(accountNumber, currentBalance);
                         System.out.print("Cual es tu DNI: ");
                         id = in.nextLine();
@@ -72,7 +74,7 @@ public class CuentaPersonaPruebas {
                     for (int i = 0; i < users.length; i++) {
                         if (id.equals(users[i].getId())) {
                             Cuentas[] cuentas = users[i].getBankAccount();
-                            for (int j = 0; j < cuentas.length; j++) {
+                            for (int j = 0; j < cuentas.length - 1; j++) {
                                 Cuentas cuenta = cuentas[j];
                                 System.out.println("Numero de cuenta: " + cuenta.getAccountNumber());
                                 System.out.println("Saldo actual: " + cuenta.getCurrentBalance());
@@ -83,6 +85,9 @@ public class CuentaPersonaPruebas {
                 case 4:
                     System.out.print("Cual es tu nomina mensual?: ");
                     double recieveCredit = in.nextDouble();
+                    in.nextLine();
+                    System.out.println("Introduce el DNI: ");
+                    id = in.nextLine();
                     for (int i = 0; i < users.length; i++) {
                         if (id.equals(users[i].getId())) {
                             Cuentas[] cuentas = users[i].getBankAccount();

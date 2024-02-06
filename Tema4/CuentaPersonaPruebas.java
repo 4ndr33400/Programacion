@@ -61,7 +61,6 @@ public class CuentaPersonaPruebas {
                             }
                         }
 
-
                     } else {
                         System.out.println("Debes añadir una cuenta antes.");
                     }
@@ -74,6 +73,7 @@ public class CuentaPersonaPruebas {
                     for (PersonaCuentas user : users) {
                         if (id.equals(user.getId())) {
                             Cuentas[] cuentas = user.getBankAccount();
+
                             for (int j = 0; j < cuentas.length - 1; j++) {
                                 Cuentas cuenta = cuentas[j];
                                 System.out.println("Numero de cuenta: " + cuenta.getAccountNumber());
@@ -99,35 +99,8 @@ public class CuentaPersonaPruebas {
                         }
                     }
                     break;
-                    /*
+
                 case 5:
-                    System.out.println("Persona con DNI " + persona2.getId() + " va a recibir un pago de 500€ de " + persona1.getId());
-                    Cuentas.payBill(500);
-                    cuenta2.receiveCredit(500);
-                    break;
-                case 6:
-                    System.out.println("Quien va a realizar la transferencia?: ");
-                    System.out.println("1. Cuenta con DNI " + persona1.getId() +
-                            "\n2. Cuenta con DNI " + persona2.getId());
-                    System.out.print("Introduce la seleccion: ");
-                    option = in.nextInt();
-                    if (option == 1) {
-                        System.out.print("Cantidad a transferir: ");
-                        double amountCredit = in.nextDouble();
-                        cuenta1.payBill(amountCredit);
-                        cuenta2.receiveCredit(amountCredit);
-                    } else if (option == 2) {
-                        System.out.println("Cantidad a transferir: ");
-                        double amountCredit = in.nextDouble();
-                        cuenta2.payBill(amountCredit);
-                        cuenta1.receiveCredit(amountCredit);
-                    }
-                    break;
-
-                     */
-
-
-                case 7:
                     System.out.println("Personas morosas:");
                     for (int i = 0; i < users.length; i++) {
                         if (users[i].isDefaulter()) {
@@ -135,7 +108,7 @@ public class CuentaPersonaPruebas {
                         }
                     }
                     break;
-                case 8:
+                case 6:
                     System.out.println("adioh");
                     break;
 

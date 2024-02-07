@@ -22,4 +22,8 @@ public class Manatee extends Animal{
         System.out.println("GLUP GLUP GLUP");
     }
 
+    public void petTheManatee(){
+        System.out.println("El manatee se ha acercado a ti para que lo acaricies");
+    }
+
 }

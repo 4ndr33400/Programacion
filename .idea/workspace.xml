@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1184aae8-58c0-4f06-88e1-a9c2bae423b1" name="Changes" comment="ejericcios otra vez">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="1184aae8-58c0-4f06-88e1-a9c2bae423b1" name="Changes" comment="terminar persona">
+      <change afterPath="$PROJECT_DIR$/Tema4/POO_3/Ejercicio2/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tema4/POO_3/Ejercicio2/PruebaAnimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Programacion.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Programacion.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tema2/Tema2/MyMath.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema2/Tema2/MyMath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Tema2/MyMathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Tema2/MyMathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema4/POO_3/Ejercicio2/Frog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema4/POO_3/Ejercicio2/Frog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema4/POO_3/Ejercicio2/Manatee.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema4/POO_3/Ejercicio2/Manatee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema4/POO_3/Ejercicio2/Racoon.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema4/POO_3/Ejercicio2/Racoon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tema4/POO_3/Ejercicio2/Snail.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,39 +85,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.MyMathTest.quadraticEcuationSolutionsTest">
-    <configuration name="MyMathTest.evenFigureCountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Programacion" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tema2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tema2" />
-      <option name="MAIN_CLASS_NAME" value="Tema2.MyMathTest" />
-      <option name="METHOD_NAME" value="evenFigureCountTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyMathTest.factorialRecursiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Programacion" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tema2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tema2" />
-      <option name="MAIN_CLASS_NAME" value="Tema2.MyMathTest" />
-      <option name="METHOD_NAME" value="factorialRecursiveTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="MyMathTest.factorialTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Programacion" />
       <extension name="coverage">
@@ -165,10 +137,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MyMathTest.quadraticEcuationSolutionsTest" />
-        <item itemvalue="JUnit.MyMathTest.factorialRecursiveTest" />
         <item itemvalue="JUnit.MyMathTest.factorialTest" />
         <item itemvalue="JUnit.MyMathTest.oddFigureCountTest" />
-        <item itemvalue="JUnit.MyMathTest.evenFigureCountTest" />
       </list>
     </recent_temporary>
   </component>
@@ -317,7 +287,31 @@
       <option name="project" value="LOCAL" />
       <updated>1698745726513</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="acabar ejercicioCuentas">
+      <option name="closed" value="true" />
+      <created>1706648491653</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1706648491653</updated>
+    </task>
+    <task id="LOCAL-00019" summary="CuentasPersona">
+      <option name="closed" value="true" />
+      <created>1706952954617</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1706952954617</updated>
+    </task>
+    <task id="LOCAL-00020" summary="terminar persona">
+      <option name="closed" value="true" />
+      <created>1707246282130</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1707246282130</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -331,7 +325,10 @@
     <MESSAGE value="ejercicio8" />
     <MESSAGE value="ejercicios" />
     <MESSAGE value="ejericcios otra vez" />
-    <option name="LAST_COMMIT_MESSAGE" value="ejericcios otra vez" />
+    <MESSAGE value="acabar ejercicioCuentas" />
+    <MESSAGE value="CuentasPersona" />
+    <MESSAGE value="terminar persona" />
+    <option name="LAST_COMMIT_MESSAGE" value="terminar persona" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,23 +1,18 @@
 package POO_3.Ejercicio8;
 
 public class AtaqueEspadazo implements IAtaqueAvanzado{
-    public int costAttack = 15;
-    public int damageCause = 25;
-    public int currentMana;
-    public int fisicTiredness;
-
     @Override
-    public int throwAttack() {
-
+    public void throwAttack() {
+        System.out.println("Se ha lanzado un ataque espadazo");
     }
 
     @Override
-    public int costAttack() {
-
+    public CosteAtaque costAttack() {
+        return new CosteAtaque();
     }
 
     @Override
-    public int damageCaused() {
-
+    public DañoInflingido damageCaused() {
+        return new DañoInflingido();
     }
 }

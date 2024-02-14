@@ -2,17 +2,17 @@ package POO_3.Ejercicio8;
 
 public class AtaqueBolaDeFuego implements IAtaqueAvanzado{
     @Override
-    public int throwAttack() {
-
+    public void throwAttack() {
+        System.out.println("Se ha lanzado un ataque bola de fuego");
     }
 
     @Override
-    public int costAttack() {
-
+    public CosteAtaque costAttack() {
+        return new CosteAtaque();
     }
 
     @Override
-    public int damageCaused() {
-
+    public DañoInflingido damageCaused() {
+        return new DañoInflingido();
     }
 }

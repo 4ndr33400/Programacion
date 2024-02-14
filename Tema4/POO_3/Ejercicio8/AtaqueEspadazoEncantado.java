@@ -2,17 +2,17 @@ package POO_3.Ejercicio8;
 
 public class AtaqueEspadazoEncantado implements IAtaqueAvanzado{
     @Override
-    public int throwAttack() {
-        return 0;
+    public void throwAttack() {
+        System.out.println("Se ha lanzado un ataque de espadazo encantado");
     }
 
     @Override
-    public int costAttack() {
-        return 0;
+    public CosteAtaque costAttack() {
+        return new CosteAtaque();
     }
 
     @Override
-    public int damageCaused() {
-        return 0;
+    public DañoInflingido damageCaused() {
+        return new DañoInflingido();
     }
 }

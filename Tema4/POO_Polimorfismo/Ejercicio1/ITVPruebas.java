@@ -16,41 +16,38 @@ public class ITVPruebas {
           System.out.print("Si lo quiere recibir introduzca next: ");
           String option = in.nextLine().toLowerCase();
           if(option.equals("next")){
-              int vehicleType = random.nextInt(1, 3) + 1;
+              int vehicleType = random.nextInt( 3) + 1;
               switch (vehicleType) {
                   case 1:
                       System.out.println("Ha entrado un Turismo: ");
-                      System.out.println("Cual es el numero de matricula?: ");
+                      System.out.print("Cual es el numero de matricula?: ");
                       licensePlate = in.nextLine();
-                      vehicles[numeroVehiculos] = new Turism();
+                      System.out.print("A que hora ha llegado: ");
+
+                      vehicles[numeroVehiculos] = new Turism(licensePlate);
                       break;
                   case 2:
                       System.out.println("Ha entrado un Camion");
-                      System.out.println("Cual es el numero de matricula?: ");
+                      System.out.print("Cual es el numero de matricula?: ");
                       licensePlate = in.nextLine();
-                      vehicles[numeroVehiculos] = new Truck();
+                      vehicles[numeroVehiculos] = new Truck(licensePlate);
                       break;
                   case 3:
                       System.out.println("Ha entrado una moto");
-                      System.out.println("Cual es el numero de matricula?: ");
+                      System.out.print("Cual es el numero de matricula?: ");
                       licensePlate = in.nextLine();
-                      vehicles[numeroVehiculos] = new Cyclomotor();
+                      vehicles[numeroVehiculos] = new Cyclomotor(licensePlate);
                       break;
               }
               numeroVehiculos++;
           } else if (!option.equals("next") || numeroVehiculos <= 5){
               for (int i = 0; i < vehicles.length; i++){
                   Vehicle vehicle = vehicles[i];
-                  System.out.println("Coche numero " + i);
-                  System.out.println(vehicle);
+                  System.out.println("Coche numero: " + i);
+                  System.out.println(vehicle != null ? vehicle.toString() : "Desconocido");
               }
-              System.out.println("Adioh");
               break;
           }
-
       }while(numeroVehiculos <= 5);
-
-
-
     }
 }

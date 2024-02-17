@@ -1,23 +1,23 @@
 package POO_Polimorfismo.Ejercicio1;
 
-import java.util.ArrayList;
-
 public  class Vehicle {
     public String licensePlate;
-    public int incomeMoment;
+    public HoraLlegada horaLlegada;
+
+    public Vehicle(String licensePlate) {
+        this.licensePlate = licensePlate;
+    }
 
     public String getLicensePlate() {
         return licensePlate;
     }
 
-    public  void checkVehicle(){
-        System.out.println("Se ha revisado el vehiculo");
-    }
-    public  void checkTime(){
-        System.out.println("El vehiculo ha entrado a la hora");
+    public void getTime (int hora, int minuto, int segundo){
+        this.horaLlegada = new HoraLlegada(hora,minuto,segundo);
+
     }
     public  String toString(){
         return "Matricula: " + getLicensePlate() +
-                "\nHora de llegada: " + incomeMoment;
+                "\nHora de llegada: " + (horaLlegada != null ? horaLlegada.toString() : "Desconocida");
     }
 }

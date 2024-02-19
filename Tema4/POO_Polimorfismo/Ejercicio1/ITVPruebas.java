@@ -23,7 +23,6 @@ public class ITVPruebas {
                       System.out.print("Cual es el numero de matricula?: ");
                       licensePlate = in.nextLine();
                       System.out.print("A que hora ha llegado: ");
-
                       vehicles[numeroVehiculos] = new Turism(licensePlate);
                       break;
                   case 2:

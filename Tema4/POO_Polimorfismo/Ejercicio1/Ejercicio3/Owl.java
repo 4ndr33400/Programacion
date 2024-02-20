@@ -1,13 +1,10 @@
 package POO_Polimorfismo.Ejercicio1.Ejercicio3;
 
-public class Owl extends Animal implements IHaceRuido,IAnimalAtaca {
-    @Override
-    public void animalMakeNoise() {
-        System.out.println("El buho esta haciendo ruido");
-    }
+public class Owl extends Animal {
 
     @Override
-    public void animalAttacks() {
-        System.out.println("El buho va a atacar");
+    public void makeNoise() {
+        System.out.println("Se escucha a un buho ulular");
     }
+
 }

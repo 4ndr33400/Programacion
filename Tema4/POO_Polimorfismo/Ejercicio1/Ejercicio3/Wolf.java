@@ -1,13 +1,10 @@
 package POO_Polimorfismo.Ejercicio1.Ejercicio3;
 
-public class Wolf extends Animal implements IHaceRuido,IAnimalAtaca{
+public class Wolf extends Animal{
+
     @Override
-    public void animalMakeNoise() {
+    public void makeNoise() {
         System.out.println("El lobo esta aullando");
     }
 
-    @Override
-    public void animalAttacks() {
-        System.out.println("El lobo se acerca para atacar");
-    }
 }

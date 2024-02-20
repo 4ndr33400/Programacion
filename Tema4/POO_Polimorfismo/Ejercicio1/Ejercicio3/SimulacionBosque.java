@@ -15,7 +15,7 @@ public class SimulacionBosque {
         do {
             System.out.println("Se estan escuchando muchos ruidos");
             int chance = random.nextInt(100);
-            int typeAnimal = random.nextInt(1, 3);
+            int typeAnimal = random.nextInt( 4);
             switch (typeAnimal) {
                 case 1:
                     ((Owl) animales[0]).makeNoise();
@@ -26,6 +26,8 @@ public class SimulacionBosque {
                 case 3:
                     ((Bear) animales[2]).makeNoise();
                     break;
+                default:
+                    System.out.println("Solo era el viento");
             }
             if(animalAttack(chance)){
                 animales[0].animalAttack();

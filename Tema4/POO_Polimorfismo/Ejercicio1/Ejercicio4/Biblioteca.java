@@ -2,12 +2,13 @@ package POO_Polimorfismo.Ejercicio1.Ejercicio4;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Biblioteca {
-    static int option;
     static Scanner in = new Scanner(System.in);
-    static ArrayList<Producto> productos;
-    static int codProduct;
-    static String title;
+    private ArrayList<Producto> productos;
     public static void main(String[] args) {
+        String productType;
+        int codProduct;
+        int option;
+        Biblioteca biblioteca = new Biblioteca();
         do {
             System.out.println("1. Añadir item." +
                     "\n2. Buscar item." +
@@ -18,22 +19,75 @@ public class Biblioteca {
             option = in.nextInt();
             switch (option){
                 case 1:
-
+                    System.out.print("Que tipo de producto vas a añadir? (DVD, Libro o Revista): ");
+                    in.nextLine();
+                    productType = in.nextLine().toLowerCase();
+                    biblioteca.addItem(productType);
+                    break;
+                case 2:
+                    System.out.print("Introduce el codigo del item: ");
+                    codProduct = in.nextInt();
+                    biblioteca.findItem(codProduct);
+                    break;
+                case 3:
+                    System.out.print("Cual es el codigo del producto");
+                    codProduct = in.nextInt();
+                    biblioteca.removeItem(codProduct);
+                    break;
             }
 
         }while(option != 5);
     }
-    public static void addItem(Producto producto,String productType){
-        switch (productType){
-            case "DVD":
-                System.out.print("Introduce el titulo del DVD: ");
-                title = in.nextLine();
-                System.out.print("Introduce el codigo del DVD:");
-                codProduct = in.nextInt();
-                productos.add(new DVD(codProduct,title));
-            case "Revista":
 
+    public Biblioteca() {
+        productos = new ArrayList<>();
+    }
+    public void addItem(String productType){
+        System.out.print("Introduce el titulo de " + productType + ": ");
+        String title = in.nextLine().toLowerCase();
+        in.next();
+        System.out.print("Introduce el codigo de " + productType + ": ");
+        int codProduct = in.nextInt();
+
+        switch (productType){
+            case "dvd":
+                productos.add(new DVD(codProduct,title));
+                System.out.println("DVD añadido con exito.");
+                break;
+            case "revista":
+                productos.add(new Revistas(codProduct,title));
+                System.out.println("Revista añadida con exito.");
+                break;
+            case "libro":
+                productos.add(new Libros(codProduct,title));
+                System.out.println("Libro añadido con exito.");
+                break;
+            default:
+                System.out.println("Este producto no existe.");
+                break;
         }
     }
 
+    public void findItem(int codProduct){
+        for (Producto producto : productos){
+            if (producto.getCodProduct() == codProduct){
+                System.out.println("Se ha encontrado el item");
+                System.out.println(producto);
+            } else {
+                System.out.println("No se ha encontrado el producto");
+            }
+        }
+    }
+
+    public void removeItem(int codProduct) {
+
+        for (Producto producto : productos) {
+            if (producto.getCodProduct() == codProduct){
+                productos.remove(producto);
+                System.out.println("Se ha borrado el producto con exito");
+            } else {
+                System.out.println("No se ha encontrado el producto");
+            }
+        }
+    }
 }

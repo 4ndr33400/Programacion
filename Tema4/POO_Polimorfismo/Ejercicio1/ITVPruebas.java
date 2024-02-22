@@ -24,6 +24,7 @@ public class ITVPruebas {
                       licensePlate = in.nextLine();
                       System.out.print("A que hora ha llegado: ");
                       vehicles[numeroVehiculos] = new Turism(licensePlate);
+
                       break;
                   case 2:
                       System.out.println("Ha entrado un Camion");

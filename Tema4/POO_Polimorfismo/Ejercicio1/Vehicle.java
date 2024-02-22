@@ -1,8 +1,8 @@
 package POO_Polimorfismo.Ejercicio1;
 
 public  class Vehicle {
-    public String licensePlate;
-    public HoraLlegada horaLlegada;
+    private String licensePlate;
+    private HoraLlegada horaLlegada;
 
     public Vehicle(String licensePlate) {
         this.licensePlate = licensePlate;

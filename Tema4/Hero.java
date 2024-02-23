@@ -92,7 +92,7 @@ public class Hero {
         return infoCharacter;
     }
     public void attackPlayer(Hero otherHero){
-        hitPlayer = random.nextInt(attack - otherHero.defense, 100);
+        hitPlayer   = random.nextInt(attack - otherHero.defense, 100);
         otherHero.setHealth(otherHero.health - hitPlayer);
         experience += 10;
         if (experience >= 50) {

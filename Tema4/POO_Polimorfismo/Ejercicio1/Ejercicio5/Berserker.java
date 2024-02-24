@@ -5,11 +5,12 @@ public class Berserker extends Ataque implements ICombatiente{
     static Random random = new Random();
     private int fisicDamage;
     private int health;
-    private final int DEFAULT_MAGIC_ATTACK = 0;
+    private final String DEFAULT_DAMAGE_TYPE = "Daño fisico";
     private final String DEFAULT_ATTACK_TYPE = "Cuerpo a cuerpo";
+    private final String DEFAULT_NAME_FIGHTER = "Berserker";
 
-    public Berserker(int fisicDamage, int magicDamage, String attackType) {
-        super(fisicDamage, magicDamage, attackType);
+    public Berserker(String damageType, String attackType,int damageCaused) {
+        super(damageType,attackType,damageCaused);
     }
 
     public void setFisicDamage(int fisicDamage) {
@@ -19,21 +20,28 @@ public class Berserker extends Ataque implements ICombatiente{
     public int getHealth() {
         return health;
     }
-
     @Override
     public Ataque attack() {
         int hitPlayer = random.nextInt(1,50);
         hitPlayer = hitPlayer + (10 - getHealth());
-        return new Ataque(hitPlayer,0,"cuerpo a cuerpo");
+        return new Ataque(DEFAULT_DAMAGE_TYPE,DEFAULT_ATTACK_TYPE,hitPlayer);
     }
 
     @Override
-    public Ataque defense(Ataque ataque) {
-        int
+    public void defense(Ataque ataque){
+        if (ataque.getAttackType().equals("Ataque a distancia")){
+            health -= getDamageCaused() * 2;
+        } else {
+            health -= getDamageCaused();
+        }
     }
 
     @Override
     public boolean isAlive() {
-        return true;
+        boolean isAlive = true;
+        if (health <= 0){
+            isAlive = false;
+        }
+        return isAlive;
     }
 }

@@ -5,12 +5,6 @@ public class Ataque {
     private String damageType;
     private String attackType;
 
-    enum damageType{
-        PHISICAL,DISTANCED
-    }
-    enum attackType{
-
-    }
     public Ataque(String damageType, String attackType, int damageCaused) {
         this.damageCaused = damageCaused;
         this.damageType = damageType;

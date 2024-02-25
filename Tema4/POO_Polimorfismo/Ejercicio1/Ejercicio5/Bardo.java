@@ -6,14 +6,18 @@ public class Bardo extends Ataque implements ICombatiente{
     static Random random = new Random();
     private int fisicDamage;
     private int health;
-    private final String DEFAULT_DAMAGE_TYPE = "Daño Magico";
-    private final String DEFAULT_ATTACK_TYPE = "A distancia";
+    private String DEFAULT_DAMAGE_TYPE = "Daño fisico";
+
     public Bardo(String damageType, String attackType, int damageCaused) {
         super(damageType, attackType, damageCaused);
     }
 
     @Override
     public Ataque attack() {
+        int attackType = random.nextInt(100);
+        if (attackType > 50){
+            Ataque.getAttackType() = "Cuerpo a cuerpo";
+        }
         return null;
     }
 

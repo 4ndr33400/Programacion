@@ -6,7 +6,7 @@ import java.util.Random;
 public class CampoBatalla {
     static Scanner in = new Scanner(System.in);
     static Random random = new Random();
-    private ArrayList<Ataque> ataques;
+    private ArrayList<ICombatiente> ataques;
 
     public static void main(String[] args) {
         boolean isGameOver = false;
@@ -24,5 +24,6 @@ public class CampoBatalla {
     }
     public CampoBatalla() {
         ataques = new ArrayList<>();
+
     }
 }

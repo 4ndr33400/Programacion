@@ -4,24 +4,20 @@ import java.util.Random;
 
 public class Guerrero extends Ataque implements ICombatiente{
     static Random random = new Random();
-    private int fisicDamage;
     private int health;
-    private final String DEFAULT_DAMAGE_TYPE = "Daño fisico";
-    private final String DEFAULT_ATTACK_TYPE = "Cuerpo a cuerpo";
 
-    public Guerrero(String damageType, String attackType, int damageCaused) {
+    public Guerrero(Ataque.damageType damageType, Ataque.attackType attackType, int damageCaused) {
         super(damageType, attackType, damageCaused);
     }
-
     @Override
     public Ataque attack() {
         int hitPlayer = random.nextInt(1,50);
-        return new Ataque(DEFAULT_DAMAGE_TYPE,DEFAULT_ATTACK_TYPE,hitPlayer);
+        return new Ataque(damageType.CUERPO_a_CUERPO, attackType.FISICO,hitPlayer);
     }
 
     @Override
     public void defense(Ataque ataque) {
-        if (getDamageType().equals("Daño Fisico")){
+        if (Ataque.attackType.equals(Ataque.attackType.FISICO)){
             health -= getDamageCaused() / 2;
         } else {
             health -= getDamageCaused();

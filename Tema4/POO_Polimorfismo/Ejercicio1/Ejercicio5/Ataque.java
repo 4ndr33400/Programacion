@@ -2,10 +2,16 @@ package POO_Polimorfismo.Ejercicio1.Ejercicio5;
 
 public class Ataque {
     private int damageCaused;
-    private String damageType;
-    private String attackType;
+    enum damageType{
+        CUERPO_a_CUERPO, A_DISTANCIA
+    }
+     enum attackType{
+        FISICO, MAGICO
+    }
+    static damageType  damageType;
+    static attackType attackType;
 
-    public Ataque(String damageType, String attackType, int damageCaused) {
+    public Ataque(damageType damageType, attackType attackType, int damageCaused) {
         this.damageCaused = damageCaused;
         this.damageType = damageType;
         this.attackType = attackType;
@@ -15,11 +21,11 @@ public class Ataque {
         return damageCaused;
     }
 
-    public String getDamageType() {
+    public damageType getDamageType() {
         return damageType;
     }
 
-    public String getAttackType() {
+    public attackType getAttackType() {
         return attackType;
     }
 

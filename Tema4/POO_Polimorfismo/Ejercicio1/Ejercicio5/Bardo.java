@@ -6,9 +6,9 @@ public class Bardo extends Ataque implements ICombatiente{
     static Random random = new Random();
     private int health;
 
-    public Bardo(Ataque.damageType damageType, Ataque.attackType attackType, int damageCaused, int health) {
+    public Bardo(Ataque.damageType damageType, Ataque.attackType attackType, int damageCaused) {
         super(damageType, attackType, damageCaused);
-        this.health = health;
+
 
     }
 

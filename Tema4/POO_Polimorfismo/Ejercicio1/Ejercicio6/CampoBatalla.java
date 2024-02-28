@@ -15,7 +15,14 @@ public class CampoBatalla {
 
         do {
 
-
+            int pickAttacker = random.nextInt(combatientes.size());
+            int pickDefender = random.nextInt(combatientes.size());
+            ICombatiente attacker = combatientes.get(pickAttacker);
+            ICombatiente defender = combatientes.get(pickDefender);
+            defender.defense(attacker.attack());
+            if (!defender.isAlive()){
+                combatientes.remove(defender);
+            }
         }while(combatientes.size() > 1);
     }
     public static ArrayList<ICombatiente> addFighters(ArrayList<ICombatiente> combatientes) {

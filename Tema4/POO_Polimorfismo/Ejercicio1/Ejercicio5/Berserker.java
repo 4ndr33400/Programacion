@@ -1,31 +1,27 @@
 package POO_Polimorfismo.Ejercicio1.Ejercicio5;
 import java.util.Random;
 
-public class Berserker extends Ataque implements ICombatiente{
+public class Berserker implements ICombatiente{
     static Random random = new Random();
-
     private int health;
-
-    public Berserker(damageType damageType, attackType attackType, int damageCaused) {
-        super(damageType, attackType, damageCaused);
-    }
 
     public int getHealth() {
         return health;
     }
     @Override
     public Ataque attack() {
+        Ataque ataque = new Ataque(Ataque.damageType.CUERPO_a_CUERPO);
         int hitPlayer = random.nextInt(1,50);
-        hitPlayer = hitPlayer + (10 - getHealth());
-        return new Ataque(damageType.CUERPO_a_CUERPO,attackType.FISICO,hitPlayer);
+        ataque.setFisicDamage(hitPlayer + (10 - getHealth()));
+        return ataque;
     }
 
     @Override
     public void defense(Ataque ataque){
-        if (Ataque.damageType.equals(damageType.A_DISTANCIA)){
-            health -= getDamageCaused() * 2;
+        if (Ataque.damageType.equals(Ataque.damageType.A_DISTANCIA)){
+            health -= ataque.getDamageCaused() * 2;
         } else {
-            health -= getDamageCaused();
+            health -= ataque.getDamageCaused();
         }
     }
 

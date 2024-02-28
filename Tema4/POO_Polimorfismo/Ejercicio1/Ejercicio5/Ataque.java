@@ -2,19 +2,31 @@ package POO_Polimorfismo.Ejercicio1.Ejercicio5;
 
 public class Ataque {
     private int damageCaused;
-    enum damageType{
+    private int fisicDamage;
+    private int magicDamage;
+    public enum damageType{
         CUERPO_a_CUERPO, A_DISTANCIA
     }
-     enum attackType{
-        FISICO, MAGICO
-    }
-    static damageType  damageType;
-    static attackType attackType;
+    static damageType damageType;
 
-    public Ataque(damageType damageType, attackType attackType, int damageCaused) {
-        this.damageCaused = damageCaused;
+    public Ataque (damageType damageType){
         this.damageType = damageType;
-        this.attackType = attackType;
+    }
+
+    public void setFisicDamage(int fisicDamage) {
+        this.fisicDamage = fisicDamage;
+    }
+
+    public void setMagicDamage(int magicDamage) {
+        this.magicDamage = magicDamage;
+    }
+
+    public int getFisicDamage() {
+        return fisicDamage;
+    }
+
+    public int getMagicDamage() {
+        return magicDamage;
     }
 
     public int getDamageCaused() {
@@ -25,13 +37,8 @@ public class Ataque {
         return damageType;
     }
 
-    public attackType getAttackType() {
-        return attackType;
-    }
-
     public String toString(){
         return "⚔\uFE0F INFORMACION COMBATIENTE ⚔\uFE0F" +
-                "\nTipo de daño: " + damageType +
-                "\n Tipo de Ataque: " + attackType;
+                "\nTipo de daño: " + damageType ;
     }
 }

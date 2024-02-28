@@ -2,39 +2,35 @@ package POO_Polimorfismo.Ejercicio1.Ejercicio5;
 
 import java.util.Random;
 
-public class Bardo extends Ataque implements ICombatiente{
+public class Bardo implements ICombatiente{
     static Random random = new Random();
     private int health;
 
-    public Bardo(Ataque.damageType damageType, Ataque.attackType attackType, int damageCaused) {
-        super(damageType, attackType, damageCaused);
-
-
-    }
 
     @Override
     public Ataque attack() {
-        Ataque damageType;
+        Ataque ataque;
         int hitplayer = random.nextInt(50);
         int attackType = random.nextInt(100);
 
         if (hitplayer >= 40) {
             hitplayer = 100;
         }
-
         if (attackType > 50){
-            damageType = new Ataque(Ataque.damageType.A_DISTANCIA, Ataque.attackType.FISICO, hitplayer);
+            ataque = new Ataque(Ataque.damageType.A_DISTANCIA);
+            ataque.setMagicDamage(hitplayer);
 
         } else {
-            damageType = new Ataque(Ataque.damageType.CUERPO_a_CUERPO,Ataque.attackType.FISICO,hitplayer);
+            ataque = new Ataque(Ataque.damageType.CUERPO_a_CUERPO);
+            ataque.setFisicDamage(hitplayer);
         }
 
-        return damageType;
+        return ataque;
     }
 
     @Override
     public void defense(Ataque ataque) {
-        health -= getDamageCaused() * 2;
+        health -= ataque.getDamageCaused() * 2;
     }
 
     @Override

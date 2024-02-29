@@ -13,4 +13,9 @@ public  class Preguntas {
         this.correctAnswer = correctAnswer;
         this.questionStatement = questionStatement;
     }
+    public Preguntas(String questionStatement, boolean correctAnwser){
+        this.correctAnswer = String.valueOf(correctAnwser);
+        this.questionStatement = questionStatement;
+
+    }
 }

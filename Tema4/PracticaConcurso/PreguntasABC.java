@@ -6,7 +6,7 @@ public class PreguntasABC extends Preguntas{
     ArrayList<String> options;
     private String correctAnswer;
 
-    public PreguntasABC(String questionStatement, String correctAnswer,  ArrayList<String> options) {
+    public PreguntasABC(String questionStatement, String correctAnswer,ArrayList options ) {
         super(questionStatement, correctAnswer);
         this.options = options;
     }

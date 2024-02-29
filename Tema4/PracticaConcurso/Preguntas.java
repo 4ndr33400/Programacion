@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public  class Preguntas {
     private String questionStatement;
     private String correctAnswer;
+    private int questionPunctuation;
     private Premios premio;
     public boolean correctAnswer(String answer){
         return correctAnswer.equalsIgnoreCase(answer);
@@ -17,5 +18,9 @@ public  class Preguntas {
         this.correctAnswer = String.valueOf(correctAnwser);
         this.questionStatement = questionStatement;
 
+    }
+
+    public void setQuestionPunctuation(int questionPunctuation) {
+        this.questionPunctuation = questionPunctuation;
     }
 }

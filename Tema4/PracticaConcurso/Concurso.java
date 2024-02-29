@@ -19,8 +19,7 @@ public class Concurso {
         for (int x = 0; x < rows; x++){
             for (int y = 0; y < column;y++){
                 if (x > 0 && y == 0){
-                    contestTemplate[x][y] = randomQuestion();
-
+                    contestTemplate[x][y] = new Casilla(randomQuestion(),)
                 }
             }
         }
@@ -28,7 +27,6 @@ public class Concurso {
     }
     public static Preguntas randomQuestion(){
         ArrayList<Preguntas> preguntas = null;
-
         int randomTypeQuestion = random.nextInt(3);
         switch (randomTypeQuestion){
             case 1:
@@ -38,7 +36,7 @@ public class Concurso {
             case 3:
                 preguntas = addFreeAnswer();
         }
-        return preguntas;
+        return preguntas.get(random.nextInt(preguntas.size()));
     }
     public static ArrayList<Preguntas> addABCQuestion(){
 
@@ -47,25 +45,21 @@ public class Concurso {
         options1.add("A) Luigi");
         options1.add("B) Mario");
         options1.add("C) Bowser");
-
         ArrayList<String> options2 = new ArrayList<>();
         options2.add("A) Bungie");
         options2.add("B) Ubisoft");
         options2.add("C) Electronic Arts");
         preguntas.add(new PreguntasABC("¿Qué compañía desarrolló la serie de videojuegos \"Halo\"?", "A", options2));
-
         ArrayList<String> options3 = new ArrayList<>();
         options3.add("A) Minecraft");
         options3.add("B) Grand Theft Auto V");
         options3.add("C) Tetris");
         preguntas.add(new PreguntasABC("¿Cuál es el juego más vendido de todos los tiempos hasta la fecha?", "A", options3));
-
         ArrayList<String> options4 = new ArrayList<>();
         options4.add("A) Digimon World");
         options4.add("B) Final Fantasy");
         options4.add("C) Pokémon");
         preguntas.add(new PreguntasABC("¿Qué videojuego popular presenta un mundo abierto lleno de criaturas para atrapar llamadas Pokémon?", "C", options4));
-
         ArrayList<String> options5 = new ArrayList<>();
         options5.add("A) Hideo Kojima");
         options5.add("B) Shigeru Miyamoto");
@@ -77,25 +71,21 @@ public class Concurso {
         options6.add("B) Plataforma");
         options6.add("C) Aventura");
         preguntas.add(new PreguntasABC("¿Cuál es el género principal del juego \"Street Fighter\"?", "A", options6));
-
         ArrayList<String> options7 = new ArrayList<>();
         options7.add("A) Ezio Auditore");
         options7.add("B) Altair Ibn-La'Ahad");
         options7.add("C) Connor Kenway");
         preguntas.add(new PreguntasABC("¿Cuál es el nombre del protagonista en la serie de videojuegos \"Assassin's Creed\"?", "A", options7));
-
         ArrayList<String> options8 = new ArrayList<>();
         options8.add("A) Call of Duty: Warzone");
         options8.add("B) PUBG (PlayerUnknown's Battlegrounds)");
         options8.add("C) Fortnite");
         preguntas.add(new PreguntasABC("¿Qué juego popular de battle royale fue desarrollado por Epic Games?", "C", options8));
-
         ArrayList<String> options9 = new ArrayList<>();
         options9.add("A) Final Fantasy VII");
         options9.add("B) Final Fantasy IX");
         options9.add("C) Final Fantasy X");
         preguntas.add(new PreguntasABC("¿Qué título de la serie \"Final Fantasy\" es considerado como uno de los más influyentes en la historia de los videojuegos?", "A", options9));
-
         ArrayList<String> options10 = new ArrayList<>();
         options10.add("A) Geralt de Rivia");
         options10.add("B) Ciri");
@@ -107,25 +97,21 @@ public class Concurso {
         options11.add("B) Forza Motorsport");
         options11.add("C) Gran Turismo");
         preguntas.add(new PreguntasABC("¿Qué juego popular de carreras presenta a personajes como Mario, Luigi y Yoshi compitiendo en karts?", "D", options11));
-
         ArrayList<String> options12 = new ArrayList<>();
         options12.add("A) Skyrim");
         options12.add("B) Morrowind");
         options12.add("C) Arena");
         preguntas.add(new PreguntasABC("¿Cuál es el título del primer juego de la serie \"The Elder Scrolls\" lanzado en 1994?", "C", options12));
-
         ArrayList<String> options13 = new ArrayList<>();
         options13.add("A) Terraria");
         options13.add("B) Stardew Valley");
         options13.add("C) Rust");
         preguntas.add(new PreguntasABC("¿Qué juego es conocido por su mundo de construcción y supervivencia, donde los jugadores pueden crear estructuras y explorar un vasto terreno?", "D", options13));
-
         ArrayList<String> options14 = new ArrayList<>();
         options14.add("A) Mass Effect");
         options14.add("B) Star Wars: Knights of the Old Republic");
         options14.add("C) Destiny");
         preguntas.add(new PreguntasABC("¿Qué serie de juegos se desarrolla en un universo de ciencia ficción donde los jugadores asumen el papel de un Comandante Shepard en una misión para salvar la galaxia?", "A", options14));
-
         ArrayList<String> options15 = new ArrayList<>();
         options15.add("A) Electronic Arts");
         options15.add("B) Ubisoft");
@@ -137,25 +123,21 @@ public class Concurso {
         options16.add("B) Banjo-Kazooie");
         options16.add("C) Rayman");
         preguntas.add(new PreguntasABC("¿Qué juego popular de plataformas lanzado en 1996 presentó a un marsupial llamado Crash Bandicoot como protagonista?", "D", options16));
-
         ArrayList<String> options17 = new ArrayList<>();
         options17.add("A) Resident Evil");
         options17.add("B) Silent Hill");
         options17.add("C) Dead Space");
         preguntas.add(new PreguntasABC("¿Cuál es el título del juego de terror de supervivencia en el que los jugadores controlan a un personaje llamado Jill Valentine mientras intenta escapar de una mansión infestada de zombis?", "A", options17));
-
         ArrayList<String> options18 = new ArrayList<>();
         options18.add("A) Uncharted");
         options18.add("B) Tomb Raider");
         options18.add("C) Prince of Persia");
         preguntas.add(new PreguntasABC("¿Qué videojuego de acción y aventura sigue las aventuras de Nathan Drake, un cazador de tesoros y explorador?", "A", options18));
-
         ArrayList<String> options19 = new ArrayList<>();
         options19.add("A) Marvel vs. Capcom");
         options19.add("B) Mortal Kombat");
         options19.add("C) Tekken");
         preguntas.add(new PreguntasABC("¿En qué juego de lucha se enfrentan personajes icónicos de franquicias como Street Fighter, Mega Man y Sonic the Hedgehog?", "A", options19));
-
         ArrayList<String> options20 = new ArrayList<>();
         options20.add("A) Baldur's Gate");
         options20.add("B) Diablo");
@@ -167,25 +149,21 @@ public class Concurso {
         options21.add("B) Team Fortress 2");
         options21.add("C) Overwatch");
         preguntas.add(new PreguntasABC("¿Qué juego de disparos en primera persona es conocido por su modo multijugador altamente competitivo y su comunidad activa?", "A", options21));
-
         ArrayList<String> options22 = new ArrayList<>();
         options22.add("A) Civilization");
         options22.add("B) Age of Empires");
         options22.add("C) StarCraft");
         preguntas.add(new PreguntasABC("¿Qué juego de estrategia en tiempo real permite a los jugadores construir y administrar su propio imperio desde la antigüedad hasta la era moderna?", "B", options22));
-
         ArrayList<String> options23 = new ArrayList<>();
         options23.add("A) Solid Snake");
         options23.add("B) Big Boss");
         options23.add("C) Liquid Snake");
         preguntas.add(new PreguntasABC("¿Cuál es el nombre del personaje principal en la serie de juegos \"Metal Gear Solid\"?", "A", options23));
-
         ArrayList<String> options24 = new ArrayList<>();
         options24.add("A) The Legend of Zelda");
         options24.add("B) Dark Souls");
         options24.add("C) Bloodborne");
         preguntas.add(new PreguntasABC("¿Qué juego de aventuras presenta a un grupo de personajes explorando un mundo de fantasía mientras luchan contra monstruos y jefes?", "A", options24));
-
         ArrayList<String> options25 = new ArrayList<>();
         options25.add("A) World of Warcraft");
         options25.add("B) Final Fantasy XIV");

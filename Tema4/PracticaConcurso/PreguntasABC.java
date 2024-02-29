@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class PreguntasABC extends Preguntas{
     ArrayList<String> options;
     private String correctAnswer;
+    private final int DEFAULT_QUESTION_PUNCTUATION = 10;
 
     public PreguntasABC(String questionStatement, String correctAnswer,ArrayList options ) {
         super(questionStatement, correctAnswer);

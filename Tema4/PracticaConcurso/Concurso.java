@@ -4,11 +4,21 @@ import java.util.Random;
 
 
 public class Concurso {
-    private static ArrayList<Preguntas> preguntas;
-    private static ArrayList<Premios> premios;
+    private static ArrayList<Preguntas> preguntas = new ArrayList<>();
+    private static ArrayList<Premios> premios = new ArrayList<>();
     private static Preguntas[][] contestTemplate;
     static Random random = new Random();
+    static int questionPunctuation;
     public static void main(String[] args) {
+        boolean didItFinish = false;
+        System.out.println("Bienvenido al concurso!!");
+        System.out.println("A continuacion aparecera una plantilla de regalos, elige el que quieras para responder una pregunta!!");
+        int totalPunctuation = 0;
+        do {
+            displayTemplate(createTemplate());
+
+
+        } while(!didItFinish);
 
     }
 
@@ -19,22 +29,34 @@ public class Concurso {
         for (int x = 0; x < rows; x++){
             for (int y = 0; y < column;y++){
                 if (x > 0 && y == 0){
-                    contestTemplate[x][y] = new Casilla(randomQuestion(),)
+                    Preguntas pregunta = randomQuestion();
+                    pregunta.setQuestionPunctuation(questionPunctuation);
+                    contestTemplate[x][y] = pregunta;
                 }
             }
         }
         return contestTemplate;
     }
+    public static void displayTemplate(Preguntas[][] createdTemplate){
+        for (int x = 0; x < 5; x++){
+            for (int y = 0; y < 5; y++){
+                    System.out.print("\uD83C\uDF81 ");
+            }
+            System.out.println();
+        }
+    }
     public static Preguntas randomQuestion(){
-        ArrayList<Preguntas> preguntas = null;
-        int randomTypeQuestion = random.nextInt(3);
+        int randomTypeQuestion = random.nextInt(3 + 1);
         switch (randomTypeQuestion){
             case 1:
                 preguntas = addABCQuestion();
+                questionPunctuation = 15;
             case 2:
                 preguntas = addTFQuestion();
+                questionPunctuation = 10;
             case 3:
                 preguntas = addFreeAnswer();
+                questionPunctuation = 5;
         }
         return preguntas.get(random.nextInt(preguntas.size()));
     }

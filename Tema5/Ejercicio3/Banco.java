@@ -15,7 +15,9 @@ public class Banco {
                     removeFirstUser();
                     break;
                 case 3:
-
+                    System.out.println("Introduce el numero de cola: ");
+                    int numberQueue = in.nextInt();
+                    removeAnyUser(numberQueue);
                     break;
                 case 4:
                     exitQueue = true;
@@ -45,14 +47,19 @@ public class Banco {
 
     public static void removeFirstUser(){
         if (!banco.isEmpty()){
-            Usuario primerUser = banco.remove(0);
+            Usuario removeFirstUser = banco.remove(0);
             System.out.println("El primer usuario ha sido atendido");
         } else {
             System.out.println("No hay nadie en cola");
         }
     }
-    public static void removeAnyUser(String dni){
-        Usuario randomUser = null;
+    public static void removeAnyUser(int posicion){
+        if(!banco.isEmpty()){
+            Usuario removeAnyUser = banco.remove(posicion);
+            System.out.println("Se ha eliminado el usuario en cola");
+        } else {
+            System.out.println("Este usuario no se encuentra en cola");
+        }
     }
 
 }

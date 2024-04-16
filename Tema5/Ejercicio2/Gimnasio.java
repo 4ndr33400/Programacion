@@ -1,5 +1,4 @@
 package Ejercicio2;
-import java.sql.SQLOutput;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;

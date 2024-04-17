@@ -9,4 +9,11 @@ public class Pajaros extends Avistamientos{
         this.weigth = weigth;
         this.specie = specie;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\nPeso: " + weigth +
+                "\nEspecie: " + specie;
+    }
 }

@@ -14,16 +14,22 @@ public class ParqueNatural {
                     addSighting();
                     break;
                 case 2:
-
+                    showDiurnSightings();
+                    break;
                 case 3:
-
+                    showNocturnSigthings();
+                    break;
                 case 4:
-
+                    showWolfPack();
+                    break;
                 case 5:
-
+                    showSnakes();
+                    break;
                 case 6:
-
+                    showBirds();
+                    break;
                 case 7:
+                    System.out.println("bye");
                     break;
             }
         }while(!endOfDay);
@@ -74,5 +80,39 @@ public class ParqueNatural {
                 break;
         }
     }
-    public static void
+    public static void showDiurnSightings(){
+        for (Avistamientos avistamiento : avistamientos){
+            if(avistamiento.getTimeDay() >= 8){
+                System.out.println(avistamiento);
+            }
+        }
+    }
+    public static void showNocturnSigthings(){
+        for (Avistamientos avistamiento : avistamientos){
+            if (avistamiento.getTimeDay() >= 20 || avistamiento.getTimeDay() <= 8){
+                System.out.println(avistamiento);
+            }
+        }
+    }
+    public static void showWolfPack(){
+        for (Avistamientos avistamiento : avistamientos){
+            if (avistamiento instanceof ManadaLobos){
+                System.out.println(avistamiento);
+            }
+        }
+    }
+    public static void showSnakes(){
+        for (Avistamientos avistamiento : avistamientos){
+            if (avistamiento instanceof Serpiente){
+                System.out.println(avistamiento);
+            }
+        }
+    }
+    public static void showBirds(){
+        for (Avistamientos avistamiento : avistamientos){
+            if (avistamiento instanceof Pajaros){
+                System.out.println(avistamiento);
+            }
+        }
+    }
 }

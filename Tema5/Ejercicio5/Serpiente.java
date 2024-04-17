@@ -9,4 +9,11 @@ public class Serpiente extends Avistamientos{
         this.length = lenght;
         this.specie = specie;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\nLongitud: " + length +
+                "\nEspecie: " + specie;
+    }
 }

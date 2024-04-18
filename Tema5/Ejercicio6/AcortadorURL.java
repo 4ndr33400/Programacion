@@ -8,6 +8,7 @@ public class AcortadorURL {
     static Scanner in = new Scanner(System.in);
     static Random random = new Random();
     static Map<String,String> url = new HashMap<>();
+    static String urlInput;
     public static void main(String[] args) {
         boolean isDone = false;
         do {
@@ -16,16 +17,20 @@ public class AcortadorURL {
                     createKey();
                     break;
                 case 2:
-                    findUrl();
+                    System.out.print("Introduce la clave: ");
+                    urlInput = in.next();
+                    findUrl(urlInput);
                     break;
                 case 3:
-
+                    System.out.print("Introduce la clave: ");
+                    urlInput = in.next();
+                    removeUrl(urlInput);
                     break;
                 case 4:
-
+                    showAllUrl();
                     break;
                 case 5:
-
+                    System.out.println("Adios");
                     break;
             }
 
@@ -55,7 +60,25 @@ public class AcortadorURL {
         }
         return new String(caracteres);
     }
-    public static void findUrl(){
+    public static void findUrl(String key){
+        if (url.containsKey(key)){
+            System.out.println("La url asociada a esta clave es: "+ url.get(key));
+        } else {
+            System.out.println("La clave no esta asociada a ninguna url");
+        }
+    }
+    public static void removeUrl(String key){
+        if (url.containsKey(key)){
+            url.remove(key);
+            System.out.println("Se ha eliminado la clave y la url asociada");
+        } else {
+            System.out.println("La clave no esta asociada a ninguna url");
+        }
+    }
+    public static void showAllUrl(){
+        for (Map.Entry<String,String>entrada:url.entrySet()){
+            System.out.println(entrada.getKey() + ": " + entrada.getValue());
+        }
 
     }
 }

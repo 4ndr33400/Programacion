@@ -53,7 +53,9 @@ public class Serpiente {
     }
 
     private void snakeShedSkin(){
-        char newBody = generateNewColor();
-        for (int i = 0; i < newBody)
+        for (int i = 0; i < bodySnake.size(); i++){
+            char newColor = generateNewColor();
+            bodySnake.set(i, newColor);
+        }
     }
 }

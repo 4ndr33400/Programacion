@@ -11,22 +11,25 @@ import java.util.List;
 public class ProgramaFlattener {
     public static void main(String[] args) {
 
-        List<String> routes = new ArrayList<>();
-        routes.add("/tmp/niats/aaa/a.txt");
-        routes.add("/tmp/niats/aaa/bbb/b.txt");
-        routes.add("/tmp/niats/aaa/ccc/c.txt");
-        routes.add("/tmp/niats/aaa/ccc/ddd/d.txt");
-        routes.add("/tmp/niats/aaa/eee/e.txt");
-        routes.add("/tmp/niats/fff/f.txt");
-        routes.add("/tmp/niats/n.txt");
-
-
-            Path origin = Path.of(routes.get());
-            Path destiny = Path.of("/tmp/niats" + origin.getFileName());
-            try {
-                Files.move(origin, destiny, StandardCopyOption.REPLACE_EXISTING);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+        try{
+            List<Path> routes = Files.walk(Path.of("/tmp/niats")).toList();
+            for (Path route : routes){
+                if (Files.isRegularFile(route)){
+                    Path destiny = Path.of("/tmp/niats/" + route.getFileName());
+                    try{
+                        Files.move(route,destiny,StandardCopyOption.REPLACE_EXISTING);
+                    } catch (IOException e){
+                        throw new RuntimeException(e);
+                    }
+                }
             }
+            for (Path directory : routes){
+                if (!directory.equals("/tmp/niats")){
+                   Files.deleteIfExists(directory);
+                }
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

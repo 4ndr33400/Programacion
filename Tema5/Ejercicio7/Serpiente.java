@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Serpiente {
     Random random = new Random();
-    int age;
+    private int age;
     List<Character> bodySnake;
 
     public Serpiente(int age, List<Character> bodySnake) {
@@ -23,11 +23,20 @@ public class Serpiente {
         char[] colors = {'a','v','c'};
         return colors[random.nextInt(colors.length)];
     }
-    void live(){
+    void simulateLife(){
         snakeBorn();
 
-        if (!isSnakeAlive()){
-
+        while(isSnakeAlive()){
+            age++;
+            System.out.println("Edad de la serpiente: " + age
+            + "\nEstado de la serpiente: " + bodySnake);
+            if (age < 10){
+                snakeGrow();
+                snakeShedSkin();
+            } else {
+                snakeDecrease();
+            }
+            snakeGetsAttacked();
         }
 
     }
@@ -49,6 +58,7 @@ public class Serpiente {
     private void snakeGetsAttacked(){
         if (random.nextInt(0,10) >= 9){
             bodySnake.clear();
+            System.out.println("La serpiente ha muerto");
         }
     }
 

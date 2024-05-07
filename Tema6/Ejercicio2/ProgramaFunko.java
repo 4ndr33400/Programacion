@@ -6,7 +6,6 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 public class ProgramaFunko {
     static Scanner in = new Scanner(System.in);
     static List<String> dataFunkos = new ArrayList<>();

@@ -1,18 +1,15 @@
 package Ejercicio1;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ProgramaFlattener {
     public static void main(String[] args) {
-
         try{
-            List<Path> routes = Files.walk(Path.of("/tmp/niats")).toList();
+            List<Path> routes = Files.walk(Path.of("/tmp/niats/")).toList();
             for (Path route : routes){
                 if (Files.isRegularFile(route)){
                     Path destiny = Path.of("/tmp/niats/" + route.getFileName());
@@ -24,7 +21,7 @@ public class ProgramaFlattener {
                 }
             }
             for (Path directory : routes){
-                if (!directory.equals("/tmp/niats")){
+                if (!directory.equals("/tmp/niats/")){
                    Files.deleteIfExists(directory);
                 }
             }

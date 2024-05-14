@@ -30,6 +30,7 @@ public class ProgramaFunko {
     }
     public static void switchMenu(){
         loadFunkos();
+
         switch(menu()){
             case 1:
             addFunko();
@@ -49,12 +50,29 @@ public class ProgramaFunko {
         }
     }
     public static void addFunko(){
+        /*
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        System.out.println("Cual es el codigo del Funko: ");
+        String code = in.nextLine();
+        System.out.println("Cual es el nombre del Funko: ");
+        String name = in.nextLine();
+        System.out.println("Cual es el modelo del Funko: ");
+        String model = in.nextLine();
+        System.out.println("Cual es el precio del Funko: ");
+        Double price = in.nextDouble();
+        System.out.println("Cual es la fecha de lanzamiento del Funko: ");
 
+
+        funkos.add(new Funko(code,name,model,price,));
+
+         */
     }
     public static List<Funko> loadFunkos(){
         List<String> dataCSV;
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
         try{
+
             dataCSV = Files.readAllLines(path);
             for (int i = 0; i < dataCSV.size(); i++){
                 dataFunkos.add(Arrays.toString(dataCSV.get(i).split(",")));
@@ -66,13 +84,32 @@ public class ProgramaFunko {
                     } catch (ParseException e) {
                         throw new RuntimeException(e);
                     }
-                    funkos.add(new Funko(dataFunkos.get(0), dataFunkos.get(1),dataFunkos.get(2),funkoPrice,date ));
+                    funkos.add(new Funko(dataFunkos.get(0), dataFunkos.get(1),dataFunkos.get(2),funkoPrice,date));
                     dataFunkos.clear();
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
         return List.of();
+    }
+    public static void saveFunkos(){
+
+    }
+    public static void deleteFunko(){
+        System.out.println("Codigo del funko a borrar: ");
+        String code = in.nextLine();
+
+        funkos.removeIf(funkos -> funkos.getFunkoCode().equalsIgnoreCase(code));
+
+    }
+    public static void showAllFunkos(){
+        for (Funko funko : funkos){
+            System.out.println(funko);
+        }
+    }
+
+    public static void showMostExpensiveFunko(){
+
     }
 }
 

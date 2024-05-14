@@ -16,4 +16,8 @@ public class Funko {
         this.funkoPrice = funkoPrice;
         this.funkoDate = funkoDate;
     }
+
+    public String getFunkoCode() {
+        return funkoCode;
+    }
 }

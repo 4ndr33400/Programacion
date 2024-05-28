@@ -76,10 +76,9 @@ public class ProgramaFunko {
         saveFunkos(funkos);
     }
     public static List<Funko> loadFunkos(){
-
+        List<String> dataFunkos = new ArrayList<>();
         List<String> dataCSV;
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-
         try{
             dataCSV = Files.readAllLines(path);
             for (int i = 0; i < dataCSV.size(); i++){
@@ -133,6 +132,18 @@ public class ProgramaFunko {
     }
     public static void showModelsFunko(){
 
+        List<String> model = new ArrayList<>();
+        for (Funko funko : funkos){
+            if (!(funkos.contains(funko.getFunkoModel()))){
+                model.add(funko.getFunkoModel());
+            }
+        }
+
+        for (int i = 0; i < model.size(); i++) {
+            int finalI = i;
+            System.out.println(model.get(i));
+            funkos.stream().filter(p -> p.getFunkoModel().equals(model.get(finalI))).forEach(System.out::println);
+        }
     }
 }
 

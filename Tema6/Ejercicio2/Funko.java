@@ -20,4 +20,8 @@ public class Funko {
     public String getFunkoCode() {
         return funkoCode;
     }
+
+    public String getFunkoModel() {
+        return funkoModel;
+    }
 }

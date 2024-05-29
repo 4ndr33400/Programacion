@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1184aae8-58c0-4f06-88e1-a9c2bae423b1" name="Changes" comment="acabar ej 1 ficheros">
-      <change afterPath="$PROJECT_DIR$/EXAMEN_FINAL/Ejercicio1/Artista.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EXAMEN_FINAL/Ejercicio1/ArtistsProgram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EXAMEN_FINAL/Ejercicio1/Cantante.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EXAMEN_FINAL/Ejercicio1/DJs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EXAMEN_FINAL/Ejercicio1/Disco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EXAMEN_FINAL/Ejercicio1/Grupo.java" afterDir="false" />
+    <list default="true" id="1184aae8-58c0-4f06-88e1-a9c2bae423b1" name="Changes" comment="practicar para el examen">
+      <change afterPath="$PROJECT_DIR$/EXAMEN_FINAL/Ejercicio2/Billete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EXAMEN_FINAL/Ejercicio2/Cartera.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EXAMEN_FINAL/Ejercicio2/Dinero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EXAMEN_FINAL/Ejercicio2/MainBanco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EXAMEN_FINAL/Ejercicio2/Moneda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EXAMEN_FINAL/Ejercicio2/Tarjeta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programacion.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Programacion.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tema6/Ejercicio2/Funko.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema6/Ejercicio2/Funko.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tema6/Ejercicio2/ProgramaFunko.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tema6/Ejercicio2/ProgramaFunko.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EXAMEN_FINAL/Ejercicio1/Artista.java" beforeDir="false" afterPath="$PROJECT_DIR$/EXAMEN_FINAL/Ejercicio1/Artista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EXAMEN_FINAL/Ejercicio1/ArtistsProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/EXAMEN_FINAL/Ejercicio1/ArtistsProgram.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,7 +320,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714671433859</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="practicar para el examen">
+      <option name="closed" value="true" />
+      <created>1716918940750</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1716918940750</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -339,7 +346,8 @@
     <MESSAGE value="CuentasPersona" />
     <MESSAGE value="terminar persona" />
     <MESSAGE value="acabar ej 1 ficheros" />
-    <option name="LAST_COMMIT_MESSAGE" value="acabar ej 1 ficheros" />
+    <MESSAGE value="practicar para el examen" />
+    <option name="LAST_COMMIT_MESSAGE" value="practicar para el examen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

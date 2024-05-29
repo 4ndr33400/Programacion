@@ -8,7 +8,7 @@ public abstract class Artista {
     private String musicGenre;
     private List<Disco> artistDiscos;
 
-    public Artista(String name, int year,String musicGenre) {
+    public Artista(String name, int year,String musicGenre, List<Disco> artistDiscos) {
         this.name = name;
         this.year = year;
         this.musicGenre = musicGenre;
@@ -26,6 +26,7 @@ public abstract class Artista {
     public String toString() {
         return "Nombre: " + name +
                 "\nAño: " + year +
-                "\nGenero de musica: " + musicGenre;
+                "\nGenero de musica: " + musicGenre +
+                "\nDiscos: " + artistDiscos;
     }
 }
